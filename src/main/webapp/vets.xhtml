@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
+
+<h:body>
+    <ui:composition template="./template.xhtml">
+        <ui:define name="content">
+            <h2>Veterinarians</h2>
+            <h:form>
+                <h:panelGrid id="grid" columns="2" style="vertical-align: middle">
+                    <h:inputText value="#{vetController.searchterm}"/>
+                    <h:commandButton action="#{vetController.search}" value="Search" styleClass="btn"/>
+                </h:panelGrid>
+                <h:dataTable value="#{vetController.vets}" var="vet" styleClass="table table-striped table-hover">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Vorname"/>
+                        </f:facet>
+                        <h:outputText value="#{vet.firstName}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Name"/>
+                        </f:facet>
+                        <h:outputText value="#{vet.lastName}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Specialties"/>
+                        </f:facet>
+                        <h:outputText value="#{vet.specialtiesAsString}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Edit"/>
+                        </f:facet>
+                        <h:commandLink action="#{vetController.getEditForm(vet.id)}"><i
+                                class="icon-edit"/></h:commandLink>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Delete"/>
+                        </f:facet>
+                        <h:commandLink action="#{vetController.deleteVet(vet.id)}"><i
+                                class="icon-trash"/></h:commandLink>
+                    </h:column>
+                </h:dataTable>
+                <i class="icon-plus-sign"/><h:commandLink
+                    action="#{vetController.getNewVetForm}">Add New Veterinarian</h:commandLink><br/>
+                <br/>
+                <i class="icon-circle-arrow-right"/><h:outputLink value="./rest/vets/xml">View as XML</h:outputLink>
+                <i class="icon-circle-arrow-right"/><h:outputLink
+                    value="./rest/vets/feed">Subscribe to Atom feed</h:outputLink>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

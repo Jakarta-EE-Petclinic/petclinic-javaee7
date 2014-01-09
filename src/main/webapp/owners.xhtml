@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
+
+<h:body>
+
+    <ui:composition template="./template.xhtml">
+
+        <ui:define name="content">
+            <h2>Owners</h2>
+            <h:form>
+                <h:panelGrid id="grid" columns="2" style="vertical-align: middle">
+                    <h:inputText value="#{ownerController.searchterm}" />
+                    <h:commandButton action="#{ownerController.search}" value="Search" styleClass="btn"/>
+                </h:panelGrid>
+
+                <h:dataTable value="#{ownerController.ownerList}" var="owner" styleClass="table table-striped table-hover">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Name"/>
+                        </f:facet>
+                        <h:commandLink action="#{ownerController.showOwner(owner.id)}">
+                            <h:outputText value="#{owner.firstName}"/>&nbsp;
+                            <h:outputText value="#{owner.lastName}"/>
+                        </h:commandLink>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Address"/>
+                        </f:facet>
+                        <h:outputText value="#{owner.address}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="City"/>
+                        </f:facet>
+                        <h:outputText value="#{owner.city}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Telephone"/>
+                        </f:facet>
+                        <h:outputText value="#{owner.telephone}"/>
+                    </h:column>
+                </h:dataTable>
+
+                <i class="icon-plus-sign" /><h:commandLink action="#{ownerController.getNewOwnerForm}">Add New Owner</h:commandLink>
+            </h:form>
+
+        </ui:define>
+
+    </ui:composition>
+
+</h:body>
+</html>

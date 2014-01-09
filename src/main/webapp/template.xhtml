@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
+
+<h:head>
+    <title>Petclinic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link href="webjars/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="webjars/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</h:head>
+<h:body>
+<div class="container">
+
+    <h2><h:outputText value="Petclinic - A Java EE 7 Version of Spring Petclinic"/></h2>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li><a href="./"><i class="icon-home"></i> Home</a></li>
+                <li><a href="findOwners.xhtml"><i class="icon-search"></i> Find owners</a></li>
+                <li><a href="vets.xhtml"><i class="icon-search"></i> Veterinarians</a></li>
+                <li><a href="specialties.xhtml"><i class="icon-th-list"></i> Specialties</a></li>
+                <li><a href="petTypes.xhtml"><i class="icon-th-list"></i> Pet Types</a></li>
+                <li><a href="#" title="not available yet. Work in progress!!"><i class="icon-question-sign"></i> Help</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <ui:insert name="content">Main Content</ui:insert>
+    <br/>
+    &copy; 2014 Thomas W&ouml;hlke
+</div>
+</h:body>
+</html>
