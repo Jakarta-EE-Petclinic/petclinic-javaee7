@@ -87,9 +87,7 @@ public class VetController implements Serializable {
     }
 
     public List<Vet> getVets(){
-        if(this.vets == null) {
-            this.vets = vetDao.getAll();
-        }
+        this.vets = vetDao.getAll();
         return this.vets;
     }
 
