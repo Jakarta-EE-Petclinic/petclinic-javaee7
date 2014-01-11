@@ -27,7 +27,7 @@ public class PetTypeDaoImpl implements PetTypeDao {
 
     @Override
     public List<PetType> getAll() {
-        TypedQuery<PetType> q = entityManager.createQuery("select pt from PetType pt",PetType.class);
+        TypedQuery<PetType> q = entityManager.createQuery("select pt from PetType pt order by pt.name",PetType.class);
         List<PetType> list =  q.getResultList();
         return list;
     }

@@ -29,7 +29,7 @@ public class VetDaoImpl implements VetDao {
 
     @Override
     public List<Vet> getAll(){
-        TypedQuery<Vet> q = entityManager.createQuery("select v from Vet v", Vet.class);
+        TypedQuery<Vet> q = entityManager.createQuery("select v from Vet v order by v.lastName,v.firstName", Vet.class);
         List<Vet> list =  q.getResultList();
         return list;
     }

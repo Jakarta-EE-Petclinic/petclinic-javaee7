@@ -26,7 +26,7 @@ public class SpecialtyDaoImpl implements SpecialtyDao {
 
     @Override
     public List<Specialty> getAll() {
-        TypedQuery<Specialty> q = entityManager.createQuery("select s from Specialty s",Specialty.class);
+        TypedQuery<Specialty> q = entityManager.createQuery("select s from Specialty s order by s.name",Specialty.class);
         List<Specialty> list =  q.getResultList();
         return list;
     }

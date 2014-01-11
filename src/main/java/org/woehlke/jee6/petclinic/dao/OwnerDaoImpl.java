@@ -30,7 +30,7 @@ public class OwnerDaoImpl implements OwnerDao {
 
     @Override
     public List<Owner> getAll() {
-        TypedQuery<Owner> q = entityManager.createQuery("select o from Owner o", Owner.class);
+        TypedQuery<Owner> q = entityManager.createQuery("select o from Owner o order by o.lastName,o.firstName", Owner.class);
         List<Owner> list =  q.getResultList();
         return list;
     }
