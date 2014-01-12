@@ -11,12 +11,13 @@
 	<name>javaee7-petclinic</name>
 
 	<properties>
-		<jboss.version>7.1.1.Final</jboss.version>
+		<jboss.version>8.0.0.CR1</jboss.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.scm.version>1.8.1</maven.scm.version>
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
 		<!-- Web dependencies -->
 		<webjars-bootstrap.version>2.3.2</webjars-bootstrap.version>
+        <richfaces.version>5.0.0.Alpha2</richfaces.version>
 	</properties>
 
 	<prerequisites>
@@ -46,14 +47,14 @@
 			<dependency>
 				<groupId>org.richfaces</groupId>
 				<artifactId>richfaces-bom</artifactId>
-				<version>4.3.4.Final</version>
+				<version>${richfaces.version}</version>
 				<scope>import</scope>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>org.wildfly</groupId>
 				<artifactId>wildfly-parent</artifactId>
-				<version>8.0.0.CR1</version>
+				<version>${jboss.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -76,13 +77,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.richfaces.ui</groupId>
-			<artifactId>richfaces-components-ui</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.richfaces.core</groupId>
-			<artifactId>richfaces-core-impl</artifactId>
+			<groupId>org.richfaces</groupId>
+			<artifactId>richfaces</artifactId>
+            <version>${richfaces.version}</version>
 		</dependency>
 
 		<dependency>
@@ -93,8 +90,8 @@
 
 		<dependency>
 			<groupId>org.jboss.spec.javax.faces</groupId>
-			<artifactId>jboss-jsf-api_2.1_spec</artifactId>
-			<scope>provided</scope>
+			<artifactId>jboss-jsf-api_2.2_spec</artifactId>
+            <version>2.2.4</version>
 		</dependency>
 
 		<dependency>

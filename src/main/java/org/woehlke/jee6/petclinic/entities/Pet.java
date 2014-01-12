@@ -3,8 +3,10 @@ package org.woehlke.jee6.petclinic.entities;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 import org.hibernate.search.annotations.Field;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.*;
 
 /**
@@ -22,18 +24,22 @@ public class Pet {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotEmpty
     @Field
     @Column(name = "name")
     private String name;
 
+    @NotNull
     @Column(name = "birth_date")
     @Temporal( TemporalType.DATE )
     private Date birthDate;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "type_id")
     private PetType type;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private Owner owner;
@@ -71,6 +77,7 @@ public class Pet {
     }
 
     public PetType getType() {
+
         return type;
     }
 
