@@ -40,7 +40,7 @@ public class Deployments {
                 .addAsResource("messages_en.properties")
                 .addAsLibraries(deps)
                 .addAsWebInfResource(
-                        new StringAsset("<faces-config version=\"2.0\"/>"),
+                        new StringAsset("<faces-config version=\"2.2\"/>"),
                         "faces-config.xml");
         } catch (Exception e) {
             e.printStackTrace();
@@ -63,7 +63,7 @@ public class Deployments {
                 .addAsResource("messages_en.properties")
                 .addAsLibraries(deps)
                 .addAsWebInfResource(
-                        new StringAsset("<faces-config version=\"2.0\"/>"),
+                        new StringAsset("<faces-config version=\"2.2\"/>"),
                         "faces-config.xml");
     }
 
@@ -85,7 +85,7 @@ public class Deployments {
                 .addAsResource("messages_en.properties")
                 .addAsLibraries(deps)
                 .addAsWebInfResource(
-                        new StringAsset("<faces-config version=\"2.0\"/>"),
+                        new StringAsset("<faces-config version=\"2.2\"/>"),
                         "faces-config.xml");
     }
 
@@ -108,7 +108,7 @@ public class Deployments {
                 .addAsResource("messages_en.properties")
                 .addAsLibraries(deps)
                 .addAsWebInfResource(
-                                new StringAsset("<faces-config version=\"2.0\"/>"),
+                                new StringAsset("<faces-config version=\"2.2\"/>"),
                                 "faces-config.xml");
         } catch (Exception e) {
             e.printStackTrace();
