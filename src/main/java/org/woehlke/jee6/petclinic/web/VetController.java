@@ -25,12 +25,7 @@ import java.util.List;
 @SessionScoped
 public class VetController implements Serializable {
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	@EJB
+    @EJB
     private VetDao vetDao;
 
     @EJB
@@ -74,7 +69,7 @@ public class VetController implements Serializable {
         this.vet = new Vet();
         this.specialties = specialtyDao.getAll();
         this.selectedSpecialties = new ArrayList<Specialty>();
-        return "newVet.xhtml";
+        return "newVet.jsf";
     }
 
     public String saveNewVet(){
@@ -83,18 +78,20 @@ public class VetController implements Serializable {
         }
         vetDao.addNew(this.vet);
         this.vets = vetDao.getAll();
-        return "vets.xhtml";
+        return "vets.jsf";
     }
 
     public List<Vet> getVets(){
-        this.vets = vetDao.getAll();
+        if(this.vets == null) {
+            this.vets = vetDao.getAll();
+        }
         return this.vets;
     }
 
     public String getEditForm(long id){
         this.vet = vetDao.findById(id);
         selectedSpecialties = vet.getSpecialties();
-        return "editVet.xhtml";
+        return "editVet.jsf";
     }
 
     public String saveEditedVet(){
@@ -104,7 +101,7 @@ public class VetController implements Serializable {
         }
         vetDao.update(this.vet);
         this.vets = vetDao.getAll();
-        return "vets.xhtml";
+        return "vets.jsf";
     }
 
     public String deleteVet(long id){
@@ -113,7 +110,7 @@ public class VetController implements Serializable {
         vetDao.update(this.vet);
         vetDao.delete(id);
         this.vets = vetDao.getAll();
-        return "vets.xhtml";
+        return "vets.jsf";
     }
 
     public String getSearchterm() {
@@ -134,6 +131,6 @@ public class VetController implements Serializable {
                 this.vets = vetDao.getAll();
             }
         }
-        return "vets.xhtml";
+        return "vets.jsf";
     }
 }

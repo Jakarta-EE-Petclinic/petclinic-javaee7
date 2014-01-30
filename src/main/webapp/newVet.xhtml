@@ -1,38 +1,36 @@
-<?xml version='1.0' encoding='UTF-8' ?>
 <ui:composition template="./template.xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:f="http://xmlns.jcp.org/jsf/core"
-                xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
-                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:rich="http://richfaces.org">
 
         <ui:define name="content">
-            <h2>Add new Veterinarian</h2>
-            <h:form acceptcharset="UTF-8">
+            <h2 id="addNewVeterinarian">#{msg.addNewVeterinarian}</h2>
+            <h:form id="addNewVeterinarianForm">
                 <h:panelGroup>
                     <h:messages id="messages" layout="block" errorStyle="color: red"/>
                 </h:panelGroup>
 
                 <h:panelGrid id="grid" columns="2">
-                    <h:outputLabel value="firstName:" for="firstName"/>
+                    <h:outputLabel value="#{msg.firstName}" for="firstName"/>
                     <h:inputText id="firstName"
                                  value="#{vetController.vet.firstName}"/>
-                    <h:outputLabel value="lastName:" for="lastName"/>
+                    <h:outputLabel value="#{msg.lastName}" for="lastName"/>
                     <h:inputText id="lastName"
                                  value="#{vetController.vet.lastName}"/>
                 </h:panelGrid>
 
                 <rich:pickList value="#{vetController.selectedSpecialties}"
-                               sourceCaption="Available specialties"
-                               targetCaption="Selected specialties"
+                               sourceCaption="#{msg.availableSpecialties}"
+                               targetCaption="#{msg.selectedSpecialties}"
                                listWidth="165px" listHeight="100px" orderable="true">
                     <f:selectItems value="#{vetController.specialties}" var="specialty"
                                    itemValue="#{specialty}" itemLabel="#{specialty.name}" />
                     <f:converter converterId="SpecialtyConverter" />
                 </rich:pickList>
 
-                <h:commandButton id="save" value="Save"
+                <h:commandButton id="save" value="#{msg.save}"
                                  action="#{vetController.saveNewVet}" styleClass="btn"/>
             </h:form>
         </ui:define>

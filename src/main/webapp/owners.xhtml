@@ -1,50 +1,48 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<ui:composition template="./template.xhtml"
+    <ui:composition template="./template.xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:f="http://xmlns.jcp.org/jsf/core"
-                xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
-                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:rich="http://richfaces.org">
 
         <ui:define name="content">
-            <h2>Owners</h2>
-            <h:form>
+            <h2 id="owners">#{msg.owners}</h2>
+            <h:form id="ownersForm">
                 <h:panelGrid id="grid" columns="2" style="vertical-align: middle">
                     <h:inputText value="#{ownerController.searchterm}" />
-                    <h:commandButton action="#{ownerController.search}" value="Search" styleClass="btn"/>
+                    <h:commandButton action="#{ownerController.search}" value="#{msg.search}" styleClass="btn"/>
                 </h:panelGrid>
 
-                <h:dataTable value="#{ownerController.ownerList}" var="owner" styleClass="table table-striped table-hover">
+                <h:dataTable id="ownersTable" value="#{ownerController.ownerList}" var="owner" styleClass="table table-striped table-hover">
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Name"/>
+                            <h:outputText value="#{msg.name}"/>
                         </f:facet>
-                        <h:commandLink action="#{ownerController.showOwner(owner.id)}">
-                            <h:outputText value="#{owner.firstName}"/>&#160;<h:outputText value="#{owner.lastName}"/>
+                        <h:commandLink id="showOwner" action="#{ownerController.showOwner(owner.id)}">
+                            <h:outputText id="firstName" value="#{owner.firstName}"/>&#160;<h:outputText id="lastName" value="#{owner.lastName}"/>
                         </h:commandLink>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Address"/>
+                            <h:outputText value="#{msg.address}"/>
                         </f:facet>
-                        <h:outputText value="#{owner.address}"/>
+                        <h:outputText id="address" value="#{owner.address}"/>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="City"/>
+                            <h:outputText value="#{msg.city}"/>
                         </f:facet>
-                        <h:outputText value="#{owner.city}"/>
+                        <h:outputText id="city" value="#{owner.city}"/>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Telephone"/>
+                            <h:outputText value="#{msg.telephone}"/>
                         </f:facet>
-                        <h:outputText value="#{owner.telephone}"/>
+                        <h:outputText id="telephone" value="#{owner.telephone}"/>
                     </h:column>
                 </h:dataTable>
 
-                <i class="icon-plus-sign" /><h:commandLink action="#{ownerController.getNewOwnerForm}">Add New Owner</h:commandLink>
+                <i class="icon-plus-sign" /><h:commandLink id="getNewOwnerForm" action="#{ownerController.getNewOwnerForm}">#{msg.addNewOwner}</h:commandLink>
             </h:form>
 
         </ui:define>

@@ -18,6 +18,7 @@
 		<!-- Web dependencies -->
 		<webjars-bootstrap.version>2.3.2</webjars-bootstrap.version>
         <richfaces.version>5.0.0.Alpha2</richfaces.version>
+        <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
 	</properties>
 
 	<prerequisites>
@@ -306,6 +307,14 @@
 					<generateReports>true</generateReports>
 				</configuration>
 			</plugin>
+
+            <!-- The JBoss AS plugin deploys your war to a local JBoss AS container -->
+            <!-- To use, run: mvn wildfly:deploy -->
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.0.0.Beta1</version>
+            </plugin>
 		</plugins>
 	</build>
 

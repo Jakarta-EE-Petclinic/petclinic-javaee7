@@ -1,24 +1,22 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<ui:composition template="./template.xhtml"
+    <ui:composition template="./template.xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:f="http://xmlns.jcp.org/jsf/core"
-                xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
-                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:rich="http://richfaces.org">
 
         <ui:define name="content">
-            <h2>Add new Pet Type</h2>
-            <h:form>
+            <h2 id="addNewPetType">#{msg.addNewPetType}</h2>
+            <h:form id="addNewPetTypeForm">
                 <h:panelGroup>
                     <h:messages id="messages" layout="block" errorStyle="color: red"/>
                 </h:panelGroup>
                 <h:panelGrid id="grid" columns="2">
-                    <h:outputLabel value="Name:" for="name"/>
+                    <h:outputLabel value="#{msg.name}" for="name"/>
                     <h:inputText id="name"
                                  value="#{petTypeController.petType.name}"/>
                 </h:panelGrid>
-                <h:commandButton id="save" value="Save"
+                <h:commandButton id="save" value="#{msg.save}"
                                  action="#{petTypeController.saveNewPetType}"/>
             </h:form>
         </ui:define>

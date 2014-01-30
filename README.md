@@ -17,9 +17,7 @@ build and run
 
 git clone https://github.com/phasenraum2010/javaee7-petclinic.git
 
-build project with: mvn clean install
-
-copy war to deployment directory of jboss: cp -f target/javaee7-petclinic-1.0-SNAPSHOT.war /Users/tw/srv/wildfly-8.0.0.CR1/standalone/deployments/
+build project with: mvn clean install wildfly:deploy
 
 open url in browser: http://localhost:8080/javaee7-petclinic-1.0-SNAPSHOT/
 

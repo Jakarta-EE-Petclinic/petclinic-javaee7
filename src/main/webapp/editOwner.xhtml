@@ -1,38 +1,36 @@
-<?xml version='1.0' encoding='UTF-8' ?>
 <ui:composition template="./template.xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:f="http://xmlns.jcp.org/jsf/core"
-                xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
-                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:rich="http://richfaces.org">
 
         <ui:define name="content">
-            <h2>Edit Owner</h2>
-            <h:form>
+            <h2 id="editOwner">#{msg.editOwner}</h2>
+            <h:form id="editOwnerForm">
                 <h:panelGroup>
                     <h:messages id="messages" layout="block" errorStyle="color: red"/>
                 </h:panelGroup>
 
                 <h:panelGrid id="grid" columns="2">
-                    <h:outputLabel value="firstName:" for="firstName"/>
+                    <h:outputLabel value="#{msg.firstName}" for="firstName"/>
                     <h:inputText id="firstName"
                                  value="#{ownerController.owner.firstName}"/>
-                    <h:outputLabel value="lastName:" for="lastName"/>
+                    <h:outputLabel value="#{msg.lastName}" for="lastName"/>
                     <h:inputText id="lastName"
                                  value="#{ownerController.owner.lastName}"/>
-                    <h:outputLabel value="address:" for="address"/>
+                    <h:outputLabel value="#{msg.address}" for="address"/>
                     <h:inputText id="address"
                                  value="#{ownerController.owner.address}"/>
-                    <h:outputLabel value="city:" for="city"/>
+                    <h:outputLabel value="#{msg.city}" for="city"/>
                     <h:inputText id="city"
                                  value="#{ownerController.owner.city}"/>
-                    <h:outputLabel value="telephone:" for="telephone"/>
+                    <h:outputLabel value="#{msg.telephone}" for="telephone"/>
                     <h:inputText id="telephone"
                                  value="#{ownerController.owner.telephone}"/>
                 </h:panelGrid>
 
-                <h:commandButton id="save" value="Save"
+                <h:commandButton id="save" value="#{msg.save}"
                                  action="#{ownerController.saveEditedOwner}" styleClass="btn"/>
             </h:form>
         </ui:define>

@@ -1,36 +1,34 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<ui:composition template="./template.xhtml"
+    <ui:composition template="./template.xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:f="http://xmlns.jcp.org/jsf/core"
-                xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
-                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:rich="http://richfaces.org">
 
         <ui:define name="content">
-            <h2>Specialties</h2>
-            <h:form acceptcharset="UTF-8">
-                <h:dataTable value="#{specialtyController.specialties}" var="specialty" styleClass="table table-striped table-hover">
+            <h2 id="specialties">#{msg.specialties}</h2>
+            <h:form id="specialtiesForm">
+                <h:dataTable id="specialtiesTable" value="#{specialtyController.specialties}" var="specialty" styleClass="table table-striped table-hover">
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Name"/>
+                            <h:outputText value="#{msg.name}"/>
                         </f:facet>
-                        <h:outputText value="#{specialty.name}"/>
+                        <h:outputText id="name" value="#{specialty.name}"/>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Edit"/>
+                            <h:outputText value="#{msg.edit}"/>
                         </f:facet>
-                        <h:commandLink action="#{specialtyController.getEditForm(specialty.id)}"><i class="icon-edit"/></h:commandLink>
+                        <h:commandLink id="edit" action="#{specialtyController.getEditForm(specialty.id)}"><i class="icon-edit"/></h:commandLink>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Delete"/>
+                            <h:outputText value="#{msg.delete}"/>
                         </f:facet>
-                        <h:commandLink action="#{specialtyController.delete(specialty.id)}"><i class="icon-trash"/></h:commandLink>
+                        <h:commandLink id="delete" action="#{specialtyController.delete(specialty.id)}"><i class="icon-trash"/></h:commandLink>
                     </h:column>
                 </h:dataTable>
-                <i class="icon-plus-sign" /><h:commandLink action="#{specialtyController.getNewSpecialtyForm}">Add New Specialty</h:commandLink>
+                <i class="icon-plus-sign" /><h:commandLink id="addNewSpecialty" action="#{specialtyController.getNewSpecialtyForm}">#{msg.addNewSpecialty}</h:commandLink>
             </h:form>
         </ui:define>
 

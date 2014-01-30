@@ -1,41 +1,40 @@
-<?xml version='1.0' encoding='UTF-8' ?>
 <ui:composition template="./template.xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:f="http://xmlns.jcp.org/jsf/core"
-                xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
-                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:rich="http://richfaces.org">
 
         <ui:define name="content">
-            <h2>Edit Pet</h2>
-            <h:form>
+            <h2 id="editPet">#{msg.editPet}</h2>
+            <h:form id="editPetForm">
 
                 <h:panelGroup>
                     <h:messages id="messages" layout="block" errorStyle="color: red"/>
                 </h:panelGroup>
 
                 <h:panelGrid id="grid" columns="2" styleClass="table table-striped">
-                    <h:outputLabel value="Owner: " for="firstName"/>
+                    <h:outputLabel value="#{msg.owner} " for="firstName"/>
                     <h:panelGroup>
                         <h:outputText id="firstName"
-                                      value="#{ownerController.owner.firstName}" />&#160;<h:outputText id="lastName"
+                                      value="#{ownerController.owner.firstName}" />&#160;
+                        <h:outputText id="lastName"
                                       value="#{ownerController.owner.lastName}"/>
                     </h:panelGroup>
-                    <h:outputLabel value="Name: " for="petName"/>
+                    <h:outputLabel value="#{msg.name}" for="petName"/>
                     <h:inputText id="petName"
                                  value="#{ownerController.pet.name}"/>
-                    <h:outputLabel value="Birth Date: " for="petBirthDate"/>
+                    <h:outputLabel value="#{msg.birthdate}" for="petBirthDate"/>
                     <h:panelGroup>
                         <rich:calendar id="petBirthDate" locale="de/DE"
                                        value="#{ownerController.pet.birthDate}"/>
                     </h:panelGroup>
-                    <h:outputLabel value="Type: " for="petType"/>
+                    <h:outputLabel value="#{msg.petType}" for="petType"/>
                     <h:selectOneListbox id="petType" value="#{ownerController.petTypeId}">
                         <f:selectItems value="#{ownerController.allPetTypes}"
                                        var="petType" itemLabel="#{petType.name}" itemValue="#{petType.id}" />
                     </h:selectOneListbox>
-                    <h:commandButton id="add" value="Save" style="float: left"
+                    <h:commandButton id="save" value="#{msg.save}" style="float: left"
                                      action="#{ownerController.saveEditedPet}" styleClass="btn"/>
 
                 </h:panelGrid>

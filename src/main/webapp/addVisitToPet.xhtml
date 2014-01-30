@@ -1,30 +1,29 @@
-<?xml version='1.0' encoding='UTF-8' ?>
 <ui:composition template="./template.xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:f="http://xmlns.jcp.org/jsf/core"
-                xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
-                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:rich="http://richfaces.org">
 
         <ui:define name="content">
-            <h2>New Visit</h2>
-            <h:form>
-                <h4>Pet</h4>
+            <h2 id="">#{msg.addVisit}</h2>
+            <h:form id="addVisitForm">
+                <h4>#{msg.pet}</h4>
                 <h:panelGrid id="grid" columns="4" styleClass="table table-striped">
 
-                    <h:outputText value="Name" />
-                    <h:outputText value="Birth Date" />
-                    <h:outputText value="Type" />
-                    <h:outputText value="Owner" />
+                    <h:outputText value="#{msg.name}" />
+                    <h:outputText value="#{msg.birthdate}" />
+                    <h:outputText value="#{msg.petType}" />
+                    <h:outputText value="#{msg.owner}" />
 
-                    <h:outputText value="#{ownerController.pet.name}" />
-                    <h:outputText value="#{ownerController.pet.birthDate}">
-                        <f:convertDateTime type="date" dateStyle="short"/>
+                    <h:outputText id="petName" value="#{ownerController.pet.name}" />
+                    <h:outputText id="petBirthDate" value="#{ownerController.pet.birthDate}">
+                        <f:convertDateTime type="date" dateStyle="medium"/>
                     </h:outputText>
-                    <h:outputText value="#{ownerController.pet.type.name}" />
+                    <h:outputText id="petType" value="#{ownerController.pet.type.name}" />
                     <h:panelGroup>
-                        <h:outputText value="#{ownerController.pet.owner.firstName}" />&#160;<h:outputText value="#{ownerController.pet.owner.lastName}" />
+                        <h:outputText id="ownerFirstName" value="#{ownerController.pet.owner.firstName}" />&#160;
+                        <h:outputText id="ownerLastName" value="#{ownerController.pet.owner.lastName}" />
                     </h:panelGroup>
                 </h:panelGrid>
 
@@ -33,29 +32,29 @@
                 </h:panelGroup>
 
                 <h:panelGrid id="grid2" columns="2" >
-                    <h:outputLabel value="Date" for="visitDate" />
+                    <h:outputLabel value="#{msg.date}" for="visitDate" />
                     <rich:calendar id="visitDate" locale="de/DE"
                                    value="#{ownerController.visit.date}"/>
-                    <h:outputLabel value="Description" for="visitDescription" />
+                    <h:outputLabel value="#{msg.description}" for="visitDescription" />
                     <h:inputText id="visitDescription" value="#{ownerController.visit.description}" />
-                    <h:commandButton action="#{ownerController.saveVisit}" value="Add Visit" />
+                    <h:commandButton id="save" action="#{ownerController.saveVisit}" value="#{msg.save}" />
                 </h:panelGrid>
 
-                <h4>Previous Visits</h4>
-                <h:dataTable value="#{ownerController.pet.visits}" var="petsVisit" styleClass="table table-striped">
+                <h4>#{msg.previousVisits}</h4>
+                <h:dataTable id="previousVisitsTable" value="#{ownerController.pet.visits}" var="petsVisit" styleClass="table table-striped">
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Date"/>
+                            <h:outputText value="#{msg.date}"/>
                         </f:facet>
-                        <h:outputText value="#{petsVisit.date}">
-                            <f:convertDateTime type="date" dateStyle="short"/>
+                        <h:outputText id="date" value="#{petsVisit.date}">
+                            <f:convertDateTime type="date" dateStyle="medium"/>
                         </h:outputText>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Description"/>
+                            <h:outputText value="#{msg.description}"/>
                         </f:facet>
-                        <h:outputText value="#{petsVisit.description}"/>
+                        <h:outputText id="description" value="#{petsVisit.description}"/>
                     </h:column>
                 </h:dataTable>
 

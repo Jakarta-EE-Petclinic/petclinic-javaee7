@@ -23,15 +23,12 @@ import java.util.List;
 @SessionScoped
 public class SpecialtyController implements Serializable {
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	@EJB
+    @EJB
     private SpecialtyDao specialtyDao;
 
     private Specialty specialty;
+
+    private FacesContext facesContext;
 
     public Specialty getSpecialty() {
         return specialty;
@@ -47,22 +44,22 @@ public class SpecialtyController implements Serializable {
 
     public String getNewSpecialtyForm(){
         specialty = new Specialty();
-        return "newSpecialty.xhtml";
+        return "newSpecialty.jsf";
     }
 
     public String saveNewSpecialty(){
         specialtyDao.addNew(this.specialty);
-        return "specialties.xhtml";
+        return "specialties.jsf";
     }
 
     public String getEditForm(long id){
         this.specialty = specialtyDao.findById(id);
-        return "editSpecialty.xhtml";
+        return "editSpecialty.jsf";
     }
 
     public String saveEditedSpecialty(){
         specialtyDao.update(this.specialty);
-        return "specialties.xhtml";
+        return "specialties.jsf";
     }
 
     public String delete(long id){
@@ -72,6 +69,6 @@ public class SpecialtyController implements Serializable {
             FacesContext ctx = FacesContext.getCurrentInstance();
             ctx.addMessage(null, new FacesMessage("cannot delete, object still in use"));
         }
-        return "specialties.xhtml";
+        return "specialties.jsf";
     }
 }

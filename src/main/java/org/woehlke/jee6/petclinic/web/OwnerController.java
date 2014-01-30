@@ -26,12 +26,7 @@ import java.util.List;
 @SessionScoped
 public class OwnerController implements Serializable {
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	@EJB
+    @EJB
     private OwnerDao ownerDao;
 
     @EJB
@@ -113,44 +108,44 @@ public class OwnerController implements Serializable {
                 this.ownerList = ownerDao.getAll();
             }
         }
-        return "owners.xhtml";
+        return "owners.jsf";
     }
 
     public String getNewOwnerForm(){
         this.owner = new Owner();
-        return "newOwner.xhtml";
+        return "newOwner.jsf";
     }
 
     public String saveNewOwner(){
         ownerDao.addNew(this.owner);
         this.ownerList = ownerDao.getAll();
-        return "owners.xhtml";
+        return "owners.jsf";
     }
 
     public String showOwner(long id){
         this.owner = ownerDao.findById(id);
-        return "showOwner.xhtml";
+        return "showOwner.jsf";
     }
 
     public String getEditForm(){
-        return "editOwner.xhtml";
+        return "editOwner.jsf";
     }
 
     public String saveEditedOwner(){
         ownerDao.update(this.owner);
         this.ownerList = ownerDao.getAll();
-        return "showOwner.xhtml";
+        return "showOwner.jsf";
     }
 
     public String delete(long id){
         ownerDao.delete(id);
         this.ownerList = ownerDao.getAll();
-        return "owners.xhtml";
+        return "owners.jsf";
     }
 
     public String getAddNewPetForm(){
         this.pet = new Pet();
-        return "addNewPet.xhtml";
+        return "addNewPet.jsf";
     }
 
     public List<PetType> getAllPetTypes(){
@@ -163,13 +158,13 @@ public class OwnerController implements Serializable {
         this.owner.addPet(this.pet);
         petDao.addNew(this.pet);
         ownerDao.update(this.owner);
-        return "showOwner.xhtml";
+        return "showOwner.jsf";
     }
 
     public String editPetForm(long petId){
         this.pet = petDao.findById(petId);
         this.petTypeId = this.pet.getType().getId();
-        return "editPet.xhtml";
+        return "editPet.jsf";
     }
 
     public String saveEditedPet(){
@@ -178,14 +173,14 @@ public class OwnerController implements Serializable {
         petDao.update(this.pet);
         long ownerId = this.owner.getId();
         this.owner = this.ownerDao.findById(ownerId);
-        return "showOwner.xhtml";
+        return "showOwner.jsf";
     }
 
     public String addVisitToPetForm(long petId){
         this.pet = petDao.findById(petId);
         this.petTypeId = this.pet.getType().getId();
         this.visit = new Visit();
-        return "addVisitToPet.xhtml";
+        return "addVisitToPet.jsf";
     }
 
     public String saveVisit(){
@@ -195,7 +190,7 @@ public class OwnerController implements Serializable {
         petDao.update(this.pet);
         long ownerId = this.owner.getId();
         this.owner = this.ownerDao.findById(ownerId);
-        return "showOwner.xhtml";
+        return "showOwner.jsf";
     }
 
 }

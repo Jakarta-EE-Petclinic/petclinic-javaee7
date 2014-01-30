@@ -23,12 +23,7 @@ import java.util.List;
 @SessionScoped
 public class PetTypeController implements Serializable {
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	@EJB
+    @EJB
     private PetTypeDao petTypeDao;
 
     private PetType petType;
@@ -47,22 +42,22 @@ public class PetTypeController implements Serializable {
 
     public String getNewPetTypeForm(){
         petType = new PetType();
-        return "newPetType.xhtml";
+        return "newPetType.jsf";
     }
 
     public String saveNewPetType(){
         petTypeDao.addNew(this.petType);
-        return "petTypes.xhtml";
+        return "petTypes.jsf";
     }
 
     public String getEditForm(long id){
         this.petType = petTypeDao.findById(id);
-        return "editPetType.xhtml";
+        return "editPetType.jsf";
     }
 
     public String saveEditedPetType(){
         petTypeDao.update(this.petType);
-        return "petTypes.xhtml";
+        return "petTypes.jsf";
     }
 
     public String delete(long id){
@@ -72,6 +67,6 @@ public class PetTypeController implements Serializable {
             FacesContext ctx = FacesContext.getCurrentInstance();
             ctx.addMessage(null, new FacesMessage("cannot delete, object still in use"));
         }
-        return "petTypes.xhtml";
+        return "petTypes.jsf";
     }
 }

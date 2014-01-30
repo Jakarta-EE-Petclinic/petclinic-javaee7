@@ -1,73 +1,72 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<ui:composition template="./template.xhtml"
+    <ui:composition template="./template.xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:f="http://xmlns.jcp.org/jsf/core"
-                xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
-                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:rich="http://richfaces.org">
 
         <ui:define name="content">
-            <h:form>
-                <h2>Owner</h2>
+            <h:form id="showOwnerForm">
+                <h2 id="showOwner">#{msg.owner}</h2>
                 <h:panelGrid id="grid" columns="2" styleClass="table table-striped">
-                    <h:outputLabel value="Name: " for="firstName"/>
+                    <h:outputLabel value="#{msg.name}" for="firstName"/>
                     <h:panelGroup>
                         <h:outputText id="firstName"
-                                      value="#{ownerController.owner.firstName}" />&#160;<h:outputText id="lastName"
+                                      value="#{ownerController.owner.firstName}" />&#160;
+                        <h:outputText id="lastName"
                                      value="#{ownerController.owner.lastName}"/>
                     </h:panelGroup>
-                    <h:outputLabel value="address: " for="address"/>
+                    <h:outputLabel value="#{msg.address} " for="address"/>
                     <h:outputText id="address"
                                  value="#{ownerController.owner.address}"/>
-                    <h:outputLabel value="city: " for="city"/>
+                    <h:outputLabel value="#{msg.city}" for="city"/>
                     <h:outputText id="city"
                                  value="#{ownerController.owner.city}"/>
-                    <h:outputLabel value="telephone: " for="telephone"/>
+                    <h:outputLabel value="#{msg.telephone}" for="telephone"/>
                     <h:outputText id="telephone"
                                  value="#{ownerController.owner.telephone}"/>
 
-                    <h:commandButton id="edit" value="Edit Owner" style="float: left"
+                    <h:commandButton id="edit" value="#{msg.editOwner}" style="float: left"
                                      action="#{ownerController.getEditForm()}" styleClass="btn"/>
 
-                    <h:commandButton id="addPet" value="add New Pet" style="float: right"
+                    <h:commandButton id="addPet" value="#{msg.addNewPet}" style="float: right"
                                      action="#{ownerController.getAddNewPetForm()}" styleClass="btn"/>
                 </h:panelGrid>
-                <h2>Pets and Visits</h2>
-                <h:dataTable value="#{ownerController.owner.pets}" var="ownersPet" styleClass="table">
+                <h2>#{msg.petsAndVisits}</h2>
+                <h:dataTable id="petsAndVisitsTable" value="#{ownerController.owner.pets}" var="ownersPet" styleClass="table">
                     <h:column>
                         <dl class="dl-horizontal" style="float: left">
-                            <dt><h:outputText value="Name: "/></dt>
-                            <dd><h:outputText value="#{ownersPet.name}"/></dd>
-                            <dt><h:outputText value="Birthdate: " /></dt>
-                            <dd><h:outputText value="#{ownersPet.birthDate}">
-                                <f:convertDateTime type="date" dateStyle="short"/>
+                            <dt><h:outputText value="#{msg.name}"/></dt>
+                            <dd><h:outputText id="petsName" value="#{ownersPet.name}"/></dd>
+                            <dt><h:outputText value="#{msg.birthdate}" /></dt>
+                            <dd><h:outputText id="petsBirthDate" value="#{ownersPet.birthDate}">
+                                <f:convertDateTime type="date" dateStyle="medium"/>
                             </h:outputText></dd>
-                            <dt><h:outputText value="Type: "/></dt>
-                            <dd><h:outputText value="#{ownersPet.type.name}"/></dd>
+                            <dt><h:outputText value="#{msg.petType}"/></dt>
+                            <dd><h:outputText id="petsType" value="#{ownersPet.type.name}"/></dd>
                         </dl>
                     </h:column>
                     <h:column>
-                    <h:dataTable value="#{ownersPet.visits}" var="visit"
+                    <h:dataTable id="visitsTable" value="#{ownersPet.visits}" var="visit"
                                  styleClass="table-condensed table" style="float: right">
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="Date"/>
+                                <h:outputText value="#{msg.date}"/>
                             </f:facet>
-                            <h:outputText value="#{visit.date}">
-                                <f:convertDateTime type="date" dateStyle="short"/>
+                            <h:outputText id="date" value="#{visit.date}">
+                                <f:convertDateTime type="date" dateStyle="medium"/>
                             </h:outputText>
                             <f:facet name="footer">
-                                <h:commandLink action="#{ownerController.editPetForm(ownersPet.id)}" >Edit Pet</h:commandLink>
+                                <h:commandLink id="editPet" action="#{ownerController.editPetForm(ownersPet.id)}" >#{msg.editPet}</h:commandLink>
                             </f:facet>
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="Description"/>
+                                <h:outputText value="#{msg.description}"/>
                             </f:facet>
-                            <h:outputText value="#{visit.description}"/>
+                            <h:outputText id="description" value="#{visit.description}"/>
                             <f:facet name="footer">
-                                <h:commandLink action="#{ownerController.addVisitToPetForm(ownersPet.id)}" >Add Visit</h:commandLink>
+                                <h:commandLink id="addVisit" action="#{ownerController.addVisitToPetForm(ownersPet.id)}" >#{msg.addVisit}</h:commandLink>
                             </f:facet>
                         </h:column>
                     </h:dataTable>
