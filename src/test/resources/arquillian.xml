@@ -11,10 +11,12 @@
         <property name="instantiationTimeoutInSeconds">120</property>
     </extension>
 
+    <!--
     <container qualifier="wildfly-managed" default="true">
         <configuration>
             <property name="jbossHome">target/wildfly-8.0.0.CR1</property>
         </configuration>
     </container>
+    -->
 
 </arquillian>
