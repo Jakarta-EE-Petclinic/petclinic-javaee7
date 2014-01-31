@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * Created by tw on 11.01.14.
  */
-@WebFilter("/*")
+@WebFilter(filterName="CharacterEncodingFilter",urlPatterns = {"/*"})
 public class CharacterEncodingFilter implements Filter {
 
     @Override
