@@ -969,7 +969,7 @@
                 <configuration>
                     <linksource>true</linksource>
                     <maxmemory>1024m</maxmemory>
-                    <source>1.6</source>
+                    <source>1.7</source>
                 </configuration>
             </plugin>
             <plugin>
@@ -1004,7 +1004,7 @@
                 <version>3.0.1</version>
                 <configuration>
                     <minimumTokens>100</minimumTokens>
-                    <targetJdk>1.6</targetJdk>
+                    <targetJdk>1.7</targetJdk>
                     <excludeRoots>
                         <excludeRoot>target</excludeRoot>
                     </excludeRoots>

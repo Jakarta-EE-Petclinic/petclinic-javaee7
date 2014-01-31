@@ -4,6 +4,8 @@ JavaEE7 Petclinic
 
     Github: {{https://github.com/phasenraum2010/javaee7-petclinic}}
 
+    OpenShift: {{http://wildfly8-javaee7petclinic.rhcloud.com/}}
+
 * Motivation
 
     Some experimental Work with JSF and Java EE 7. Comparison between JEE7 and Spring Frameworks.
@@ -14,11 +16,13 @@ JavaEE7 Petclinic
 
 * Runtime
 
-    Runs on JBoss Wildfly 8.0.0.CR1
+    Runs on JBoss Wildfly 8.0.0.CR1  and on Glassfish 4.0
 
 * Runtime Dependencies
 
     Wildfly 8.0.0.CR1 - Java EE 7 TCK Passed.
+
+    Glassfish 4.0 - Java EE 7 Reference Implementation
 
 * Domain Class Modell
 
@@ -29,6 +33,10 @@ JavaEE7 Petclinic
 [images/UseCases.jpg] Figure Uses Cases Vet
 
 [images/UseCasesOwner.jpg] Figure Uses Cases Owner
+
+* Page Flow
+
+[images/Pageflow.jpg] Figure Pageflow
 
 * Screens
 
@@ -56,13 +64,59 @@ JavaEE7 Petclinic
 
     ./standalone.sh
 
-** build and run
+
+** install Glassfish 4
+
+    I installed Netbeans 7.4 with Glassfish 4.0 from {{https://netbeans.org/downloads/}}
+
+    starting on Mac OSX:
+
+    cd /Applications/NetBeans/glassfish-4.0/bin/
+
+    ./asadmin start-database
+
+    ./asadmin start-domain
+
+    For Starting the JavaDB Database with jdk1.7.0_51 refer to: {{http://thomas-woehlke.blogspot.de/2014/01/start-glassfish4-javadb-running-jdk17051.html}}
+
+* Functional Tests with Selenium2 Webdriver, Arquillian Drone and Graphene
+
+    Tested on Wildfly and GlassFish using the Arquillian ecosystem.
+
+    Only one profile can be active at a given time otherwise there will be dependency conflicts.
+
+** mvn clean install -Pwildfly-managed
+
+    This profile  will install a Wildfly server and start up the server.
+    Useful for CI servers.
+
+** mvn clean install -Pwildfly-remote
+
+    This profile requires you to start up a Wildfly server outside of the build.
+    Useful for development to avoid the server start up cost per sample.
+
+** mvn clean install -Pglassfish-remote
+
+    This profile requires you to start up a GlassFish 4 server outside of the build.
+    Each sample will then reuse this instance to run the tests.
+    Useful for development to avoid the server start up cost per test.
+
+
+** mvn clean install -Pglassfish-managed
+
+    This profile  will install a Glassfish 4 server and start up the server.
+    Useful for development, but has the downside of server startup per Test.
+    You have to start a JavaDB (Derby) Server outside of the build before running the Test.
+
+    When developing and runing them from IDE, remember to activate the profile before running the test.
+
+    To learn more about Arquillian please refer to the Arquillian Guides: {{http://arquillian.org/guides/}}
+
+* build and run
 
 	git clone https://github.com/phasenraum2010/javaee7-petclinic.git
 
-    build project with: mvn clean install
-
-    copy war to deployment directory of jboss: cp -f target/javaee7-petclinic-1.0-SNAPSHOT.war /Users/tw/srv/wildfly-8.0.0.CR1/standalone/deployments/
+    build project with: mvn clean install wildfly:deploy
 
     open url in browser: {{http://localhost:8080/javaee7-petclinic-1.0-SNAPSHOT/}}
 
