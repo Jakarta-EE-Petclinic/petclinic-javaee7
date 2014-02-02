@@ -19,6 +19,6 @@ public class HelloPage {
     private WebDriver driver;
 
     public void assertTitle(){
-        Assert.assertEquals("Petclinic",driver.getTitle());
+        Assert.assertEquals("Java EE 7 Petclinic",driver.getTitle());
     }
 }
