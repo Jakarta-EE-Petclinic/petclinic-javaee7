@@ -11,10 +11,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
-import org.woehlke.jee6.petclinic.web.pages.EditVetPage;
-import org.woehlke.jee6.petclinic.web.pages.HelloPage;
-import org.woehlke.jee6.petclinic.web.pages.NewVetPage;
-import org.woehlke.jee6.petclinic.web.pages.VetsPage;
+import org.woehlke.jee6.petclinic.web.pages.*;
 
 import java.net.URL;
 import java.util.logging.Logger;
@@ -56,6 +53,12 @@ public class Test02Vet {
     @Page
     private EditVetPage editVetPage;
 
+    @Page
+    private SpecialtiesPage specialtiesPage;
+
+    @Page
+    private NewSpecialtiesPage newSpecialtiesPage;
+
     @Test
     @InSequence(1)
     @RunAsClient
@@ -78,7 +81,6 @@ public class Test02Vet {
     @RunAsClient
     public void testNewVetPage() {
         goTo(VetsPage.class);
-        vetsPage.assertPageIsLoaded();
         vetsPage.assertPageIsLoaded();
         vetsPage.clickAddNewVet();
         newVetPage.assertPageIsLoaded();
@@ -109,5 +111,37 @@ public class Test02Vet {
         vetsPage.clickDeleteVet();
         vetsPage.assertPageIsLoaded();
         vetsPage.assertDeletedContentNotFound();
+    }
+
+    @Test
+    @InSequence(6)
+    @RunAsClient
+    public void testNewVetPageWithSpecialties() {
+        goTo(SpecialtiesPage.class);
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.addNewContent("dentist");
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.addNewContent("anesthetist");
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.addNewContent("radiology");
+        goTo(VetsPage.class);
+        vetsPage.assertPageIsLoaded();
+        vetsPage.clickAddNewVet();
+        newVetPage.assertPageIsLoaded();
+        newVetPage.addNewContentWithAllSpecialties("Thomas", "Woehlke");
+        vetsPage.assertPageIsLoaded();
+        vetsPage.assertContentFoundWithSpecialties("Thomas", "Woehlke", "anesthetist dentist radiology");
+    }
+
+    @Test
+    @InSequence(7)
+    @RunAsClient
+    public void testEditVetPageWithSpecialties() {
+        goTo(VetsPage.class);
+        vetsPage.clickEditVet();
+        editVetPage.assertPageIsLoaded();
+        editVetPage.editContentWithNoneSpecialties("Henry", "Jones");
+        vetsPage.assertPageIsLoaded();
+        vetsPage.assertContentFoundWithSpecialties("Henry", "Jones", "none");
     }
 }

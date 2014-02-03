@@ -21,11 +21,11 @@
                                  value="#{vetController.vet.lastName}"/>
                 </h:panelGrid>
 
-                <rich:pickList value="#{vetController.selectedSpecialties}"
+                <rich:pickList id="selectedSpecialtiesPickList" value="#{vetController.selectedSpecialties}"
                                sourceCaption="#{msg.availableSpecialties}"
                                targetCaption="#{msg.selectedSpecialties}"
                                listWidth="165px" listHeight="100px" orderable="true">
-                    <f:selectItems value="#{vetController.specialties}" var="specialty"
+                    <f:selectItems id="specialtiesItems" value="#{vetController.specialties}" var="specialty"
                                    itemValue="#{specialty}" itemLabel="#{specialty.name}" />
                     <f:converter converterId="SpecialtyConverter" />
                 </rich:pickList>

@@ -3,6 +3,7 @@ package org.woehlke.jee6.petclinic.web.pages;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.richfaces.fragment.pickList.RichFacesPickList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,6 +23,9 @@ public class EditVetPage {
     @FindBy(id="editVeterinarianForm:lastName")
     private WebElement lastName;
 
+    @FindBy(id="editVeterinarianForm:selectedSpecialtiesPickList")
+    private RichFacesPickList pickList;
+
     @FindBy(id="editVeterinarianForm:save")
     private WebElement save;
 
@@ -35,5 +39,15 @@ public class EditVetPage {
         this.lastName.clear();
         this.lastName.sendKeys(lastName);
         save.click();
+    }
+
+    public void editContentWithNoneSpecialties(String firstName,String lastName) {
+        this.firstName.clear();
+        this.firstName.sendKeys(firstName);
+        this.lastName.clear();
+        this.lastName.sendKeys(lastName);
+        this.pickList.removeAll();
+        save.click();
+
     }
 }

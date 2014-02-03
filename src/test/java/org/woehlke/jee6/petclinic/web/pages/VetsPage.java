@@ -28,6 +28,9 @@ public class VetsPage {
     @FindBy(id="veterinariansForm:veterinariansTable:0:lastName")
     private WebElement lastNameInTable;
 
+    @FindBy(id="veterinariansForm:veterinariansTable:0:specialtiesAsString")
+    private WebElement specialtiesAsStringInTable;
+
     @FindBy(id="veterinariansForm:veterinariansTable:0:edit")
     private WebElement editInTable;
 
@@ -75,5 +78,11 @@ public class VetsPage {
             isDeletedLastName = true;
         }
         Assert.assertTrue(isDeletedLastName);
+    }
+
+    public void assertContentFoundWithSpecialties(String firstName, String lastName, String specialties) {
+        Assert.assertEquals(firstName,firstNameInTable.getText());
+        Assert.assertEquals(lastName,lastNameInTable.getText());
+        Assert.assertEquals(specialties,specialtiesAsStringInTable.getText());
     }
 }
