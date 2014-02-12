@@ -1,7 +1,5 @@
 package org.woehlke.jee6.petclinic.entities;
 
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 import org.hibernate.search.annotations.Field;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -45,7 +43,6 @@ public class Pet {
     private Owner owner;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet", fetch = FetchType.EAGER)
-    @Fetch(value = FetchMode.SUBSELECT)
     private List<Visit> visits = new ArrayList<Visit>();
 
     public void addVisit(Visit visit) {
