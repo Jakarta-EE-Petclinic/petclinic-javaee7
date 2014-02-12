@@ -9,3 +9,5 @@ derby.log
 sun-appserv-samples
 org.woehlke.jee6.petclinic.entities.Owner
 org.woehlke.jee6.petclinic.entities.Vet
+org.woehlke.javaee7.petclinic.entities.Owner
+org.woehlke.javaee7.petclinic.entities.Vet
