@@ -787,7 +787,7 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <environmentVariables>
-                                <JBOSS_HOME>${project.build.directory}/wildfly-8.0.0.CR1</JBOSS_HOME>
+                                <JBOSS_HOME>${project.build.directory}/wildfly-${jboss.version}</JBOSS_HOME>
                             </environmentVariables>
                         </configuration>
                         <version>2.16</version>
