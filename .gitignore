@@ -7,3 +7,5 @@ target/
 bin
 derby.log
 sun-appserv-samples
+org.woehlke.jee6.petclinic.entities.Owner
+org.woehlke.jee6.petclinic.entities.Vet
