@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.woehlke.javaee7</groupId>
     <artifactId>javaee7-petclinic</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <url>http://www.thomas-woehlke.de/p/javaee7-petclinic</url>
 
@@ -19,7 +18,7 @@
         <webjars-bootstrap.version>2.3.2</webjars-bootstrap.version>
         <richfaces.version>5.0.0.Alpha3</richfaces.version>
         <version.arquillian.core>1.1.2.Final</version.arquillian.core>
-        <version.arquillian.drone>1.2.3.Final</version.arquillian.drone>
+        <version.arquillian.drone>1.2.4.Final</version.arquillian.drone>
         <version.shrinkwrap_shrinkwrap>1.1.2</version.shrinkwrap_shrinkwrap>
         <version.shrinkwrap_descriptors>2.0.0-alpha-3</version.shrinkwrap_descriptors>
         <version.shrinkwrap_resolver>2.0.0</version.shrinkwrap_resolver>
@@ -336,7 +335,8 @@
         <url>https://github.com/phasenraum2010/javaee7-petclinic.git</url>
         <connection>scm:git:https://github.com/phasenraum2010/javaee7-petclinic.git</connection>
         <developerConnection>scm:git:https://github.com/phasenraum2010/javaee7-petclinic.git</developerConnection>
-    </scm>
+      <tag>HEAD</tag>
+  </scm>
     <issueManagement>
         <url>https://github.com/phasenraum2010/javaee7-petclinic/issues</url>
         <system>GitHub Issues</system>
