@@ -6,9 +6,9 @@ Running on OpenShift: http://wildfly8-javaee7petclinic.rhcloud.com/
 
 ## install JBoss Wildfly ##
 
-install JBoss Wildfly 8.0.0.CR1 from http://wildfly.org/downloads/ to e.g. /Users/tw/srv/wildfly-8.0.0.CR1/
+install JBoss Wildfly 8.0.0.Final from http://wildfly.org/downloads/ to e.g. /Users/tw/srv/wildfly-8.0.0.Final/
 
-start JBoss by: cd /Users/tw/srv/wildfly-8.0.0.CR1/bin ; ./standalone.sh
+start JBoss by: cd /Users/tw/srv/wildfly-8.0.0.Final/bin ; ./standalone.sh
 
 ## install Glassfish 4 ##
 
@@ -59,7 +59,7 @@ git clone https://github.com/phasenraum2010/javaee7-petclinic.git
 
 build project with: ``mvn clean install wildfly:deploy``
 
-open url in browser: http://localhost:8080/javaee7-petclinic-1.0-SNAPSHOT/
+open url in browser: http://localhost:8080/javaee7-petclinic-1.1-SNAPSHOT/
 
 ## First Steps ##
 
