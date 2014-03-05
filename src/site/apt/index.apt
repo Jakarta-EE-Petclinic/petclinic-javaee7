@@ -16,11 +16,11 @@ JavaEE7 Petclinic
 
 * Runtime
 
-    Runs on JBoss Wildfly 8.0.0.CR1  and on Glassfish 4.0
+    Runs on JBoss Wildfly 8.0.0.Final and on Glassfish 4.0
 
 * Runtime Dependencies
 
-    Wildfly 8.0.0.CR1 - Java EE 7 TCK Passed.
+    Wildfly 8.0.0.Final - Java EE 7 TCK Passed.
 
     Glassfish 4.0 - Java EE 7 Reference Implementation
 
@@ -56,11 +56,11 @@ JavaEE7 Petclinic
 
 ** install JBoss Wildfly
 
-    install JBoss Wildfly 8.0.0.CR1 from {{http://wildfly.org/downloads/}} to e.g. /Users/tw/srv/wildfly-8.0.0.CR1/
+    install JBoss Wildfly 8.0.0.Final from {{http://wildfly.org/downloads/}} to e.g. /Users/tw/srv/wildfly-8.0.0.Final/
 
     start JBoss by:
 
-    cd /Users/tw/srv/wildfly-8.0.0.CR1/bin
+    cd /Users/tw/srv/wildfly-8.0.0.Final/bin
 
     ./standalone.sh
 
