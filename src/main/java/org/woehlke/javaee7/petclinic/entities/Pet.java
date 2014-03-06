@@ -43,7 +43,7 @@ public class Pet {
     private Owner owner;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet", fetch = FetchType.EAGER)
-    private List<Visit> visits = new ArrayList<Visit>();
+    private Set<Visit> visits = new HashSet<Visit>();
 
     public void addVisit(Visit visit) {
         visits.add(visit);
@@ -90,11 +90,11 @@ public class Pet {
         this.owner = owner;
     }
 
-    public List<Visit> getVisits() {
+    public Set<Visit> getVisits() {
         return visits;
     }
 
-    public void setVisits(List<Visit> visits) {
+    public void setVisits(Set<Visit> visits) {
         this.visits = visits;
     }
 

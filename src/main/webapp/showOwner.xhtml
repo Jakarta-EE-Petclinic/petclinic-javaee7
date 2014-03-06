@@ -47,29 +47,29 @@
                         </dl>
                     </h:column>
                     <h:column>
-                    <h:dataTable id="visitsTable" value="#{ownersPet.visits}" var="visit"
-                                 styleClass="table-condensed table" style="float: right">
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="#{msg.date}"/>
-                            </f:facet>
-                            <h:outputText id="date" value="#{visit.date}">
-                                <f:convertDateTime type="date" dateStyle="medium"/>
-                            </h:outputText>
-                            <f:facet name="footer">
-                                <h:commandLink id="editPet" action="#{ownerController.editPetForm(ownersPet.id)}" >#{msg.editPet}</h:commandLink>
-                            </f:facet>
-                        </h:column>
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="#{msg.description}"/>
-                            </f:facet>
-                            <h:outputText id="description" value="#{visit.description}"/>
-                            <f:facet name="footer">
-                                <h:commandLink id="addVisit" action="#{ownerController.addVisitToPetForm(ownersPet.id)}" >#{msg.addVisit}</h:commandLink>
-                            </f:facet>
-                        </h:column>
-                    </h:dataTable>
+                        <h:dataTable id="visitsTable" value="#{ownersPet.visits}" var="visit"
+                                     styleClass="table-condensed table" style="float: right">
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="#{msg.date}"/>
+                                </f:facet>
+                                <h:outputText id="date" value="#{visit.date}">
+                                    <f:convertDateTime type="date" dateStyle="medium"/>
+                                </h:outputText>
+                                <f:facet name="footer">
+                                    <h:commandLink id="editPet" action="#{ownerController.editPetForm(ownersPet.id)}" >#{msg.editPet}</h:commandLink>
+                                </f:facet>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="#{msg.description}"/>
+                                </f:facet>
+                                <h:outputText id="description" value="#{visit.description}"/>
+                                <f:facet name="footer">
+                                    <h:commandLink id="addVisit" action="#{ownerController.addVisitToPetForm(ownersPet.id)}" >#{msg.addVisit}</h:commandLink>
+                                </f:facet>
+                            </h:column>
+                        </h:dataTable>
                     </h:column>
                 </h:dataTable>
             </h:form>

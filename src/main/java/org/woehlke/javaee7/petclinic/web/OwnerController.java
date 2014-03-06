@@ -14,6 +14,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,6 +26,8 @@ import java.util.List;
 @ManagedBean
 @SessionScoped
 public class OwnerController implements Serializable {
+
+    private static Logger log = Logger.getLogger(OwnerController.class.getName());
 
     @EJB
     private OwnerDao ownerDao;
@@ -187,9 +190,12 @@ public class OwnerController implements Serializable {
         visitDao.addNew(this.visit);
         this.visit.setPet(this.pet);
         this.pet.addVisit(this.visit);
-        petDao.update(this.pet);
+        log.info(this.pet.toString());
+        this.petDao.update(this.pet);
+        this.ownerDao.update(this.owner);
         long ownerId = this.owner.getId();
         this.owner = this.ownerDao.findById(ownerId);
+        log.info(this.owner.toString());
         return "showOwner.jsf";
     }
 

@@ -20,7 +20,9 @@ import javax.persistence.GeneratedValue;
 import javax.validation.constraints.Digits;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -65,18 +67,11 @@ public class Owner {
 
     @IndexedEmbedded
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner",fetch = FetchType.EAGER)
-    private List<Pet> pets = new ArrayList<Pet>();
+    private Set<Pet> pets = new HashSet<Pet>();
 
     public void addPet(Pet pet){
         pets.add(pet);
         pet.setOwner(this);
-    }
-
-    public void addPets(List<Pet> pets){
-        for(Pet pet:pets){
-            pet.setOwner(this);
-        }
-        this.pets.addAll(pets);
     }
 
     public Long getId() {
@@ -127,11 +122,11 @@ public class Owner {
         this.telephone = telephone;
     }
 
-    public List<Pet> getPets() {
+    public Set<Pet> getPets() {
         return pets;
     }
 
-    public void setPets(List<Pet> pets) {
+    public void setPets(Set<Pet> pets) {
         this.pets = pets;
     }
 
