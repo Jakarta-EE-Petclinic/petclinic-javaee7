@@ -3,6 +3,7 @@ package org.woehlke.javaee7.petclinic.entities;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
@@ -23,6 +24,7 @@ public class Visit {
     /**
      * Holds value of property date.
      */
+    @NotNull
     @Column(name = "visit_date")
     @Temporal( TemporalType.DATE )
     private Date date;

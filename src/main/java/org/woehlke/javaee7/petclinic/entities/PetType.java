@@ -1,5 +1,7 @@
 package org.woehlke.javaee7.petclinic.entities;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
 
 /**
@@ -17,6 +19,7 @@ public class PetType {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotEmpty
     @Column(name = "name")
     private String name;
 
