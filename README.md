@@ -59,7 +59,7 @@ git clone https://github.com/phasenraum2010/javaee7-petclinic.git
 
 build project with: ``mvn clean install wildfly:deploy``
 
-open url in browser: http://localhost:8080/javaee7-petclinic-1.1-SNAPSHOT/
+open url in browser: http://localhost:8080/javaee7-petclinic-1.3-SNAPSHOT/
 
 ## First Steps ##
 
