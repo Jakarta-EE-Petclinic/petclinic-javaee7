@@ -3,7 +3,7 @@
 
     <groupId>org.woehlke.javaee7</groupId>
     <artifactId>javaee7-petclinic</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
     <packaging>war</packaging>
     <url>http://www.thomas-woehlke.de/p/javaee7-petclinic</url>
 
@@ -15,7 +15,7 @@
         <maven.scm.version>1.8.1</maven.scm.version>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <!-- Web dependencies -->
-        <webjars-bootstrap.version>2.3.2</webjars-bootstrap.version>
+        <webjars-bootstrap.version>3.1.1</webjars-bootstrap.version>
         <richfaces.version>5.0.0.Alpha3</richfaces.version>
         <version.arquillian.core>1.1.2.Final</version.arquillian.core>
         <version.arquillian.drone>1.2.4.Final</version.arquillian.drone>

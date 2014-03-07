@@ -9,11 +9,11 @@
             <h2 id="findOwners">#{msg.findOwners}</h2>
             <h:form id="findOwnersForm">
                 <h:panelGrid id="grid" columns="2" style="vertical-align: middle">
-                    <h:inputText value="#{ownerController.searchterm}" />
+                    <h:inputText styleClass="form-control" value="#{ownerController.searchterm}" />
                     <h:commandButton id="search" action="#{ownerController.search}" value="#{msg.findOwners}" styleClass="btn"/>
                 </h:panelGrid>
 
-                <i class="icon-plus-sign" /><h:commandLink id="getNewOwnerForm" action="#{ownerController.getNewOwnerForm}">#{msg.addNewOwner}</h:commandLink>
+                <span class="glyphicon glyphicon-plus-sign" /><h:commandLink id="getNewOwnerForm" action="#{ownerController.getNewOwnerForm}">#{msg.addNewOwner}</h:commandLink>
             </h:form>
 
         </ui:define>

@@ -22,8 +22,8 @@
                                       value="#{ownerController.owner.lastName}"/>
                     </h:panelGroup>
                     <h:outputLabel value="#{msg.name}" for="petName"/>
-                    <h:inputText id="petName"
-                                  value="#{ownerController.pet.name}"/>
+                    <h:inputText id="petName" styleClass="form-control"
+                                 value="#{ownerController.pet.name}"/>
                     <h:outputLabel value="#{msg.birthdate}" for="petBirthDate"/>
                     <h:panelGroup>
                     <rich:calendar id="petBirthDate" locale="de/DE"

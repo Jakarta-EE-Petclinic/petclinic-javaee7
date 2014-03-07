@@ -19,16 +19,16 @@
                         <f:facet name="header">
                             <h:outputText value="#{msg.edit}"/>
                         </f:facet>
-                        <h:commandLink id="edit" action="#{specialtyController.getEditForm(specialty.id)}"><i class="icon-edit"/></h:commandLink>
+                        <h:commandLink id="edit" action="#{specialtyController.getEditForm(specialty.id)}"><span class="glyphicon glyphicon-edit"/></h:commandLink>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg.delete}"/>
                         </f:facet>
-                        <h:commandLink id="delete" action="#{specialtyController.delete(specialty.id)}"><i class="icon-trash"/></h:commandLink>
+                        <h:commandLink id="delete" action="#{specialtyController.delete(specialty.id)}"><span class="glyphicon glyphicon-trash"/></h:commandLink>
                     </h:column>
                 </h:dataTable>
-                <i class="icon-plus-sign" /><h:commandLink id="addNewSpecialty" action="#{specialtyController.getNewSpecialtyForm}">#{msg.addNewSpecialty}</h:commandLink>
+                <span class="glyphicon glyphicon-plus-sign" /><h:commandLink id="addNewSpecialty" action="#{specialtyController.getNewSpecialtyForm}">#{msg.addNewSpecialty}</h:commandLink>
             </h:form>
         </ui:define>
 

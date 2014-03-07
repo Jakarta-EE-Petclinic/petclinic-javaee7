@@ -13,7 +13,7 @@
                 </h:panelGroup>
                 <h:panelGrid id="grid" columns="2">
                     <h:outputLabel value="#{msg.name}" for="name"/>
-                    <h:inputText id="name"
+                    <h:inputText id="name" styleClass="form-control"
                                  value="#{petTypeController.petType.name}"/>
                 </h:panelGrid>
                 <h:commandButton id="save" value="#{msg.save}"

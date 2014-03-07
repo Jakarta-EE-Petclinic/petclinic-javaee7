@@ -36,7 +36,8 @@
                     <rich:calendar id="visitDate" locale="de/DE"
                                    value="#{ownerController.visit.date}"/>
                     <h:outputLabel value="#{msg.description}" for="visitDescription" />
-                    <h:inputText id="visitDescription" value="#{ownerController.visit.description}" />
+                    <h:inputText id="visitDescription" styleClass="form-control"
+                                 value="#{ownerController.visit.description}" />
                     <h:commandButton id="save" action="#{ownerController.saveVisit}" value="#{msg.save}" />
                 </h:panelGrid>
 

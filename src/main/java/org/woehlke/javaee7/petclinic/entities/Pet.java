@@ -16,7 +16,7 @@ import java.util.*;
  */
 @Entity
 @Table(name = "pets")
-public class Pet {
+public class Pet implements Comparable<Pet> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -90,8 +90,13 @@ public class Pet {
         this.owner = owner;
     }
 
-    public Set<Visit> getVisits() {
-        return visits;
+    public List<Visit> getVisits() {
+        List<Visit> list = new ArrayList<>();
+        for(Visit visit:visits){
+            list.add(visit);
+        }
+        Collections.sort(list);
+        return list;
     }
 
     public void setVisits(Set<Visit> visits) {
@@ -131,5 +136,10 @@ public class Pet {
                 ", type=" + type +
                 ", visits=" + visits +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Pet o) {
+        return name.compareTo(o.getName());
     }
 }

@@ -181,8 +181,8 @@ public class Test04Owner {
         newPetPage.setContent("Tomcat", birthDate1, "cat");
         showOwnerPage.clickAddNewPet();
         newPetPage.setContent("Bully", birthDate2, "dog");
-        showOwnerPage.assertFirstPetContent("Tomcat", birthDate1, "cat");
-        showOwnerPage.assertSecondPetContent("Bully", birthDate2, "dog");
+        showOwnerPage.assertFirstPetContent("Bully", birthDate2, "dog");
+        showOwnerPage.assertSecondPetContent("Tomcat", birthDate1, "cat");
     }
 
     @Test

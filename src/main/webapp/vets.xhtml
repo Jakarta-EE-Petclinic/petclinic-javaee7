@@ -8,7 +8,8 @@
             <h2 id="veterinarians">#{msg.veterinarians}</h2>
             <h:form id="veterinariansForm">
                 <h:panelGrid id="grid" columns="2" style="vertical-align: middle">
-                    <h:inputText value="#{vetController.searchterm}"/>
+                    <h:inputText styleClass="form-control"
+                            value="#{vetController.searchterm}"/>
                     <h:commandButton action="#{vetController.search}" value="Search" styleClass="btn"/>
                 </h:panelGrid>
                 <h:dataTable id="veterinariansTable" value="#{vetController.vets}" var="vet" styleClass="table table-striped table-hover">
@@ -34,22 +35,22 @@
                         <f:facet name="header">
                             <h:outputText value="#{msg.edit}"/>
                         </f:facet>
-                        <h:commandLink id="edit" action="#{vetController.getEditForm(vet.id)}"><i
-                                class="icon-edit"/></h:commandLink>
+                        <h:commandLink id="edit" action="#{vetController.getEditForm(vet.id)}"><span
+                                class="glyphicon glyphicon-edit"/></h:commandLink>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg.delete}"/>
                         </f:facet>
-                        <h:commandLink id="delete" action="#{vetController.deleteVet(vet.id)}"><i
-                                class="icon-trash"/></h:commandLink>
+                        <h:commandLink id="delete" action="#{vetController.deleteVet(vet.id)}"><span
+                                class="glyphicon glyphicon-trash"/></h:commandLink>
                     </h:column>
                 </h:dataTable>
-                <i class="icon-plus-sign"/><h:commandLink id="getNewVetForm"
+                <span class="glyphicon glyphicon-plus-sign"/><h:commandLink id="getNewVetForm"
                     action="#{vetController.getNewVetForm}">#{msg.addNewVeterinarian}</h:commandLink><br/>
                 <br/>
-                <i class="icon-circle-arrow-right"/><h:outputLink value="./rest/vets/xml">#{msg.showXml}</h:outputLink>
-                <i class="icon-circle-arrow-right"/><h:outputLink
+                <span class="glyphicon glyphicon-circle-arrow-right"/><h:outputLink value="./rest/vets/xml">#{msg.showXml}</h:outputLink>
+                <span class="glyphicon glyphicon-circle-arrow-right"/><h:outputLink
                     value="./rest/vets/feed">#{msg.showAtom}</h:outputLink>
             </h:form>
         </ui:define>
