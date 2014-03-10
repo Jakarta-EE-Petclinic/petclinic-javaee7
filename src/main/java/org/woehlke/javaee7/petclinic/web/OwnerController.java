@@ -8,6 +8,7 @@ import org.woehlke.javaee7.petclinic.entities.Owner;
 import org.woehlke.javaee7.petclinic.entities.Pet;
 import org.woehlke.javaee7.petclinic.entities.PetType;
 import org.woehlke.javaee7.petclinic.entities.Visit;
+import org.woehlke.javaee7.petclinic.services.OwnerService;
 
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
@@ -40,6 +41,9 @@ public class OwnerController implements Serializable {
 
     @EJB
     private VisitDao visitDao;
+
+    @EJB
+    private OwnerService ownerService;
 
     private String searchterm;
 
@@ -187,15 +191,13 @@ public class OwnerController implements Serializable {
     }
 
     public String saveVisit(){
-        visitDao.addNew(this.visit);
         this.visit.setPet(this.pet);
         this.pet.addVisit(this.visit);
-        log.info(this.pet.toString());
-        this.petDao.update(this.pet);
-        this.ownerDao.update(this.owner);
+        ownerService.addNewVisit(this.visit);
+        log.info("owner1: " + this.owner.toString());
         long ownerId = this.owner.getId();
         this.owner = this.ownerDao.findById(ownerId);
-        log.info(this.owner.toString());
+        log.info("owner2: "+this.owner.toString());
         return "showOwner.jsf";
     }
 

@@ -38,7 +38,7 @@ public class Pet implements Comparable<Pet> {
     private PetType type;
 
     @NotNull
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "owner_id")
     private Owner owner;
 

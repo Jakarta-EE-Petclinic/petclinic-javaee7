@@ -27,4 +27,9 @@ public class VisitDaoImpl implements VisitDao {
         log.info("addNewVisit: "+visit.toString());
         entityManager.persist(visit);
     }
+
+    @Override
+    public void update(Visit visit) {
+        visit= entityManager.merge(visit);
+    }
 }

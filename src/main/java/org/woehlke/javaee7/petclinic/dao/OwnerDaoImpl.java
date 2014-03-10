@@ -55,7 +55,7 @@ public class OwnerDaoImpl implements OwnerDao {
     @Override
     public void update(Owner owner) {
         log.info("updateOwner: "+owner.toString());
-        entityManager.merge(owner);
+        owner=entityManager.merge(owner);
     }
 
     @Override

@@ -12,4 +12,6 @@ import org.woehlke.javaee7.petclinic.entities.Visit;
 public interface VisitDao {
 
     void addNew(Visit visit);
+
+    void update(Visit visit);
 }

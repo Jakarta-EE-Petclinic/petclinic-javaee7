@@ -9,6 +9,8 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.jboss.shrinkwrap.resolver.api.maven.Maven;
 import org.woehlke.javaee7.petclinic.dao.*;
 import org.woehlke.javaee7.petclinic.entities.*;
+import org.woehlke.javaee7.petclinic.services.OwnerService;
+import org.woehlke.javaee7.petclinic.services.OwnerServiceImpl;
 
 import java.io.File;
 
@@ -95,6 +97,7 @@ public class Deployments {
         try {
                 war = ShrinkWrap.create(WebArchive.class, "owner.war")
                 .addClasses(OwnerController.class, PetTypeController.class, LanguageBean.class,
+                        OwnerService.class, OwnerServiceImpl.class,
                         OwnerDao.class, OwnerDaoImpl.class, PetDao.class, PetDaoImpl.class,
                         VisitDao.class, VisitDaoImpl.class,
                         PetTypeDao.class, PetTypeDaoImpl.class,

@@ -37,6 +37,6 @@ public class PetDaoImpl implements PetDao {
     @Override
     public void update(Pet pet) {
         log.info("updatePet: "+pet.toString());
-        entityManager.merge(pet);
+        pet=entityManager.merge(pet);
     }
 }

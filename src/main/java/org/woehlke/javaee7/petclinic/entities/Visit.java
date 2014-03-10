@@ -21,25 +21,16 @@ public class Visit implements Comparable<Visit> {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    /**
-     * Holds value of property date.
-     */
     @NotNull
     @Column(name = "visit_date")
     @Temporal( TemporalType.DATE )
     private Date date;
 
-    /**
-     * Holds value of property description.
-     */
     @NotEmpty
     @Column(name = "description")
     private String description;
 
-    /**
-     * Holds value of property pet.
-     */
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "pet_id")
     private Pet pet;
 
