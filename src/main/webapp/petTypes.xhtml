@@ -8,26 +8,26 @@
         <ui:define name="content">
             <h2 id="petTypes">#{msg.petTypes}</h2>
             <h:form id="petTypesForm">
-                <h:dataTable id="petTypesTable" value="#{petTypeController.petTypes}" var="petType" styleClass="table table-striped table-hover">
-                    <h:column>
+                <rich:dataTable id="petTypesTable" value="#{petTypeController.petTypes}" var="petType" styleClass="table table-striped table-hover">
+                    <rich:column sortBy="#{petType.name}" sortOrder="#{petTypeController.petTypeSortOrder}">
                         <f:facet name="header">
-                            <h:outputText value="#{msg.name}"/>
+                            <rich:commandLink value="#{msg.name}" render="petTypesTable" action="#{petTypeController.switchSortOrder}" />
                         </f:facet>
                         <h:outputText id="name" value="#{petType.name}"/>
-                    </h:column>
-                    <h:column>
+                    </rich:column>
+                    <rich:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg.edit}"/>
                         </f:facet>
                         <h:commandLink id="edit" action="#{petTypeController.getEditForm(petType.id)}"><span class="glyphicon glyphicon-edit"/></h:commandLink>
-                    </h:column>
-                    <h:column>
+                    </rich:column>
+                    <rich:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg.delete}"/>
                         </f:facet>
                         <h:commandLink id="delete" action="#{petTypeController.delete(petType.id)}"><span class="glyphicon glyphicon-trash"/></h:commandLink>
-                    </h:column>
-                </h:dataTable>
+                    </rich:column>
+                </rich:dataTable>
                 <span class="glyphicon glyphicon-plus-sign" /><h:commandLink id="getNewPetTypeForm" action="#{petTypeController.getNewPetTypeForm}"><h:outputText value="#{msg.addNewPetType}"/></h:commandLink>
             </h:form>
         </ui:define>

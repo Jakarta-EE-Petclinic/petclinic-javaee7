@@ -1,5 +1,6 @@
 package org.woehlke.javaee7.petclinic.web;
 
+import org.richfaces.model.SortOrder;
 import org.woehlke.javaee7.petclinic.dao.PetTypeDao;
 import org.woehlke.javaee7.petclinic.entities.PetType;
 
@@ -27,6 +28,24 @@ public class PetTypeController implements Serializable {
     private PetTypeDao petTypeDao;
 
     private PetType petType;
+
+    private SortOrder petTypeSortOrder = SortOrder.ascending;
+
+    public SortOrder getPetTypeSortOrder() {
+        return petTypeSortOrder;
+    }
+
+    public void setPetTypeSortOrder(SortOrder petTypeSortOrder) {
+        this.petTypeSortOrder = petTypeSortOrder;
+    }
+
+    public void switchSortOrder(){
+        if(petTypeSortOrder == SortOrder.ascending){
+            petTypeSortOrder = SortOrder.descending;
+        } else {
+            petTypeSortOrder = SortOrder.ascending;
+        }
+    }
 
     public PetType getPetType() {
         return petType;

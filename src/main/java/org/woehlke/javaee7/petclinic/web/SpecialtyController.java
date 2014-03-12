@@ -1,5 +1,6 @@
 package org.woehlke.javaee7.petclinic.web;
 
+import org.richfaces.model.SortOrder;
 import org.woehlke.javaee7.petclinic.dao.SpecialtyDao;
 import org.woehlke.javaee7.petclinic.entities.Specialty;
 
@@ -29,6 +30,7 @@ public class SpecialtyController implements Serializable {
     private Specialty specialty;
 
     private FacesContext facesContext;
+    private SortOrder specialtySortOrder=SortOrder.ascending;
 
     public Specialty getSpecialty() {
         return specialty;
@@ -70,5 +72,21 @@ public class SpecialtyController implements Serializable {
             ctx.addMessage(null, new FacesMessage("cannot delete, object still in use"));
         }
         return "specialties.jsf";
+    }
+
+    public SortOrder getSpecialtySortOrder() {
+        return specialtySortOrder;
+    }
+
+    public void setSpecialtySortOrder(SortOrder specialtySortOrder) {
+        this.specialtySortOrder = specialtySortOrder;
+    }
+
+    public void switchSortOrder(){
+        if(specialtySortOrder==SortOrder.ascending){
+            specialtySortOrder=SortOrder.descending;
+        } else {
+            specialtySortOrder=SortOrder.ascending;
+        }
     }
 }
