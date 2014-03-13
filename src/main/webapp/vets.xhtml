@@ -12,40 +12,40 @@
                             value="#{vetController.searchterm}"/>
                     <h:commandButton action="#{vetController.search}" value="Search" styleClass="btn"/>
                 </h:panelGrid>
-                <h:dataTable id="veterinariansTable" value="#{vetController.vets}" var="vet" styleClass="table table-striped table-hover">
-                    <h:column>
+                <rich:dataTable id="veterinariansTable" value="#{vetController.vets}" var="vet" styleClass="table table-striped table-hover">
+                    <rich:column sortBy="#{vet.firstName}" sortOrder="#{vetSortingBean.sortOrderFirstName}">
                         <f:facet name="header">
-                            <h:outputText value="#{msg.firstName}"/>
+                            <rich:commandLink value="#{msg.firstName}" render="veterinariansTable" action="#{vetSortingBean.setSortOrderToFirstName}" />
                         </f:facet>
                         <h:outputText id="firstName" value="#{vet.firstName}"/>
-                    </h:column>
-                    <h:column>
+                    </rich:column>
+                    <rich:column sortBy="#{vet.lastName}" sortOrder="#{vetSortingBean.sortOrderLastName}">
                         <f:facet name="header">
-                            <h:outputText value="#{msg.lastName}"/>
+                            <rich:commandLink value="#{msg.lastName}" render="veterinariansTable" action="#{vetSortingBean.setSortOrderToLastName}" />
                         </f:facet>
                         <h:outputText id="lastName" value="#{vet.lastName}"/>
-                    </h:column>
-                    <h:column>
+                    </rich:column>
+                    <rich:column sortBy="#{vet.specialtiesAsString}" sortOrder="#{vetSortingBean.sortOrderSpecialties}">
                         <f:facet name="header">
-                            <h:outputText value="#{msg.specialties}"/>
+                            <rich:commandLink value="#{msg.specialties}" render="veterinariansTable" action="#{vetSortingBean.setSortOrderToSpecialties}" />
                         </f:facet>
                         <h:outputText id="specialtiesAsString" value="#{vet.specialtiesAsString}"/>
-                    </h:column>
-                    <h:column>
+                    </rich:column>
+                    <rich:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg.edit}"/>
                         </f:facet>
                         <h:commandLink id="edit" action="#{vetController.getEditForm(vet.id)}"><span
                                 class="glyphicon glyphicon-edit"/></h:commandLink>
-                    </h:column>
-                    <h:column>
+                    </rich:column>
+                    <rich:column>
                         <f:facet name="header">
                             <h:outputText value="#{msg.delete}"/>
                         </f:facet>
                         <h:commandLink id="delete" action="#{vetController.deleteVet(vet.id)}"><span
                                 class="glyphicon glyphicon-trash"/></h:commandLink>
-                    </h:column>
-                </h:dataTable>
+                    </rich:column>
+                </rich:dataTable>
                 <span class="glyphicon glyphicon-plus-sign"/><h:commandLink id="getNewVetForm"
                     action="#{vetController.getNewVetForm}">#{msg.addNewVeterinarian}</h:commandLink><br/>
                 <br/>

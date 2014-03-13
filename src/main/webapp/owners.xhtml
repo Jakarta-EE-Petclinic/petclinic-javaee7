@@ -13,34 +13,34 @@
                     <h:commandButton action="#{ownerController.search}" value="#{msg.search}" styleClass="btn"/>
                 </h:panelGrid>
 
-                <h:dataTable id="ownersTable" value="#{ownerController.ownerList}" var="owner" styleClass="table table-striped table-hover">
-                    <h:column>
+                <rich:dataTable id="ownersTable" value="#{ownerController.ownerList}" var="owner" styleClass="table table-striped table-hover">
+                    <rich:column sortBy="#{owner.firstName}" sortOrder="#{ownerSortingBean.sortOrderName}">
                         <f:facet name="header">
-                            <h:outputText value="#{msg.name}"/>
+                            <rich:commandLink value="#{msg.name}" render="ownersTable" action="#{ownerSortingBean.setSortOrderToName}" />
                         </f:facet>
                         <h:commandLink id="showOwner" action="#{ownerController.showOwner(owner.id)}">
                             <h:outputText id="firstName" value="#{owner.firstName}"/>&#160;<h:outputText id="lastName" value="#{owner.lastName}"/>
                         </h:commandLink>
-                    </h:column>
-                    <h:column>
+                    </rich:column>
+                    <rich:column sortBy="#{owner.address}" sortOrder="#{ownerSortingBean.sortOrderAddress}">
                         <f:facet name="header">
-                            <h:outputText value="#{msg.address}"/>
+                            <rich:commandLink value="#{msg.address}" render="ownersTable" action="#{ownerSortingBean.setSortOrderToAddress}" />
                         </f:facet>
                         <h:outputText id="address" value="#{owner.address}"/>
-                    </h:column>
-                    <h:column>
+                    </rich:column>
+                    <rich:column sortBy="#{owner.city}" sortOrder="#{ownerSortingBean.sortOrderCity}">
                         <f:facet name="header">
-                            <h:outputText value="#{msg.city}"/>
+                            <rich:commandLink value="#{msg.city}" render="ownersTable" action="#{ownerSortingBean.setSortOrderToCity}" />
                         </f:facet>
                         <h:outputText id="city" value="#{owner.city}"/>
-                    </h:column>
-                    <h:column>
+                    </rich:column>
+                    <rich:column sortBy="#{owner.telephone}" sortOrder="#{ownerSortingBean.sortOrderTelephone}">
                         <f:facet name="header">
-                            <h:outputText value="#{msg.telephone}"/>
+                            <rich:commandLink value="#{msg.telephone}" render="ownersTable" action="#{ownerSortingBean.setSortOrderToTelephone}" />
                         </f:facet>
                         <h:outputText id="telephone" value="#{owner.telephone}"/>
-                    </h:column>
-                </h:dataTable>
+                    </rich:column>
+                </rich:dataTable>
 
                 <span class="glyphicon glyphicon-plus-sign" /><h:commandLink id="getNewOwnerForm" action="#{ownerController.getNewOwnerForm}">#{msg.addNewOwner}</h:commandLink>
             </h:form>

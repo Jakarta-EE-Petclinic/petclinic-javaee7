@@ -1,5 +1,6 @@
 package org.woehlke.javaee7.petclinic.web;
 
+import org.richfaces.model.SortOrder;
 import org.woehlke.javaee7.petclinic.dao.SpecialtyDao;
 import org.woehlke.javaee7.petclinic.dao.VetDao;
 import org.woehlke.javaee7.petclinic.entities.Specialty;
@@ -65,15 +66,15 @@ public class VetController implements Serializable {
         this.vet = vet;
     }
 
-    public String getNewVetForm(){
+    public String getNewVetForm() {
         this.vet = new Vet();
         this.specialties = specialtyDao.getAll();
         this.selectedSpecialties = new ArrayList<Specialty>();
         return "newVet.jsf";
     }
 
-    public String saveNewVet(){
-        for(Specialty specialty:selectedSpecialties){
+    public String saveNewVet() {
+        for (Specialty specialty : selectedSpecialties) {
             this.vet.addSpecialty(specialty);
         }
         vetDao.addNew(this.vet);
@@ -81,22 +82,22 @@ public class VetController implements Serializable {
         return "vets.jsf";
     }
 
-    public List<Vet> getVets(){
-        if(this.vets == null) {
+    public List<Vet> getVets() {
+        if (this.vets == null) {
             this.vets = vetDao.getAll();
         }
         return this.vets;
     }
 
-    public String getEditForm(long id){
+    public String getEditForm(long id) {
         this.vet = vetDao.findById(id);
         selectedSpecialties = vet.getSpecialties();
         return "editVet.jsf";
     }
 
-    public String saveEditedVet(){
+    public String saveEditedVet() {
         this.vet.removeSpecialties();
-        for(Specialty specialty:selectedSpecialties){
+        for (Specialty specialty : selectedSpecialties) {
             this.vet.addSpecialty(specialty);
         }
         vetDao.update(this.vet);
@@ -104,7 +105,7 @@ public class VetController implements Serializable {
         return "vets.jsf";
     }
 
-    public String deleteVet(long id){
+    public String deleteVet(long id) {
         this.vet = vetDao.findById(id);
         this.vet.removeSpecialties();
         vetDao.update(this.vet);
@@ -121,13 +122,13 @@ public class VetController implements Serializable {
         this.searchterm = searchterm;
     }
 
-    public String search(){
-        if (searchterm==null||searchterm.isEmpty()) {
+    public String search() {
+        if (searchterm == null || searchterm.isEmpty()) {
             this.vets = vetDao.getAll();
         } else {
             try {
                 this.vets = vetDao.search(searchterm);
-            } catch (Exception e){
+            } catch (Exception e) {
                 this.vets = vetDao.getAll();
             }
         }
