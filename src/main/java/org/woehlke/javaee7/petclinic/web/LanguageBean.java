@@ -63,4 +63,13 @@ public class LanguageBean implements Serializable {
         }
     }
 
+    public String getMsgCantDeleteSpecialty() {
+        String msg = "";
+        if(localeCode.equals(Locale.ENGLISH.toString())){
+            msg = "cannot delete, Specialty still in use";
+        } else if(localeCode.equals(Locale.GERMAN.toString())){
+            msg = "löschen nicht möglich, Fachrichtung wird noch ausgeübt";
+        }
+        return msg;
+    }
 }

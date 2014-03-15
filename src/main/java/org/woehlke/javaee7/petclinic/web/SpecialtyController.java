@@ -8,10 +8,13 @@ import javax.ejb.EJB;
 import javax.ejb.EJBTransactionRolledbackException;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * Created with IntelliJ IDEA.
@@ -29,8 +32,10 @@ public class SpecialtyController implements Serializable {
 
     private Specialty specialty;
 
-    private FacesContext facesContext;
     private SortOrder specialtySortOrder=SortOrder.ascending;
+
+    @ManagedProperty(value = "#{language}")
+    private LanguageBean languageBean;
 
     public Specialty getSpecialty() {
         return specialty;
@@ -38,6 +43,14 @@ public class SpecialtyController implements Serializable {
 
     public void setSpecialty(Specialty specialty) {
         this.specialty = specialty;
+    }
+
+    public LanguageBean getLanguageBean() {
+        return languageBean;
+    }
+
+    public void setLanguageBean(LanguageBean languageBean) {
+        this.languageBean = languageBean;
     }
 
     public List<Specialty> getSpecialties(){
@@ -69,7 +82,7 @@ public class SpecialtyController implements Serializable {
             specialtyDao.delete(id);
         } catch (EJBTransactionRolledbackException e) {
             FacesContext ctx = FacesContext.getCurrentInstance();
-            ctx.addMessage(null, new FacesMessage("cannot delete, object still in use"));
+            ctx.addMessage(null, new FacesMessage(languageBean.getMsgCantDeleteSpecialty()));
         }
         return "specialties.jsf";
     }
