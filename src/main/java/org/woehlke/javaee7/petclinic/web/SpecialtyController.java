@@ -5,7 +5,7 @@ import org.woehlke.javaee7.petclinic.dao.SpecialtyDao;
 import org.woehlke.javaee7.petclinic.entities.Specialty;
 
 import javax.ejb.EJB;
-import javax.ejb.EJBTransactionRolledbackException;
+import javax.ejb.EJBException;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -13,8 +13,6 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import java.io.Serializable;
 import java.util.List;
-import java.util.Locale;
-import java.util.ResourceBundle;
 
 /**
  * Created with IntelliJ IDEA.
@@ -80,7 +78,7 @@ public class SpecialtyController implements Serializable {
     public String delete(long id){
         try {
             specialtyDao.delete(id);
-        } catch (EJBTransactionRolledbackException e) {
+        } catch (EJBException e) {
             FacesContext ctx = FacesContext.getCurrentInstance();
             ctx.addMessage(null, new FacesMessage(languageBean.getMsgCantDeleteSpecialty()));
         }
