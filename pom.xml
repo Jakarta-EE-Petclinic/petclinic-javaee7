@@ -16,7 +16,7 @@
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <!-- Web dependencies -->
         <webjars-bootstrap.version>3.1.1</webjars-bootstrap.version>
-        <richfaces.version>5.0.0.Alpha3</richfaces.version>
+        <richfaces.version>5.0.0-SNAPSHOT</richfaces.version>
         <version.arquillian.core>1.1.3.Final</version.arquillian.core>
         <version.arquillian.drone>1.3.0.Final</version.arquillian.drone>
         <version.shrinkwrap_shrinkwrap>1.2.1</version.shrinkwrap_shrinkwrap>
@@ -161,6 +161,14 @@
             <artifactId>richfaces</artifactId>
             <version>${richfaces.version}</version>
         </dependency>
+
+	<!--
+        <dependency>
+            <groupId>org.richfaces</groupId>
+            <artifactId>richfaces-components-ui</artifactId>
+            <version>${richfaces.version}</version>
+        </dependency>
+	-->
 
         <dependency>
             <groupId>org.richfaces</groupId>
