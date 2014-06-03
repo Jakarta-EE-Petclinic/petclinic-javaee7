@@ -10,7 +10,7 @@
     <name>javaee7-petclinic</name>
 
     <properties>
-        <jboss.version>8.0.0.Final</jboss.version>
+        <jboss.version>8.1.0.Final</jboss.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.scm.version>1.8.1</maven.scm.version>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -366,7 +366,7 @@
                 <updatePolicy>never</updatePolicy>
             </releases>
             <snapshots>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
             </snapshots>
         </repository>
