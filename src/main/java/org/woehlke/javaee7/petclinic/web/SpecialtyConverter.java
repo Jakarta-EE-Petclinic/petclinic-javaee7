@@ -18,10 +18,10 @@ import javax.faces.convert.FacesConverter;
 @FacesConverter("SpecialtyConverter")
 public class SpecialtyConverter  implements Converter {
 
-    private SpecialtyParser specialtyParser;
+    private VetController vetController;
 
     public Object getAsObject(FacesContext facesContext, UIComponent component, String s) {
-        for (Specialty specialty : getCapitalsParser(facesContext).getSpecialtyList()) {
+        for (Specialty specialty : getCapitalsParser(facesContext).getSpecialties()) {
             if (specialty.getName().equals(s)) {
                 return specialty;
             }
@@ -34,12 +34,12 @@ public class SpecialtyConverter  implements Converter {
         return ((Specialty) o).getName();
     }
 
-    private SpecialtyParser getCapitalsParser(FacesContext facesContext) {
-        if (specialtyParser == null) {
+    private VetController getCapitalsParser(FacesContext facesContext) {
+        if (vetController == null) {
             ELContext elContext = facesContext.getELContext();
-            specialtyParser = (SpecialtyParser) elContext.getELResolver().getValue(elContext, null, "specialtyParser");
+            vetController = (VetController) elContext.getELResolver().getValue(elContext, null, "vetController");
         }
-        return specialtyParser;
+        return vetController;
     }
 
 

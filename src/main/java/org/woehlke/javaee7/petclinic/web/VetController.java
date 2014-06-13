@@ -38,11 +38,11 @@ public class VetController implements Serializable {
 
     private List<Vet> vets;
 
-    @ManagedProperty(value = "#{specialtyParser.specialtyList}")
     private List<Specialty> specialties;
     private List<Specialty> selectedSpecialties;
 
     public List<Specialty> getSpecialties() {
+        specialties = specialtyDao.getAll();
         return specialties;
     }
 

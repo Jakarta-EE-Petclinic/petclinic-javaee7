@@ -74,7 +74,7 @@ public class Deployments {
         return ShrinkWrap.create(WebArchive.class, "vet.war")
                 .addClasses(
                         SpecialtyController.class, VetController.class, LanguageBean.class,
-                        SpecialtyConverter.class,SpecialtyParser.class,
+                        SpecialtyConverter.class,
                         SpecialtyDao.class, SpecialtyDaoImpl.class,
                         VetDao.class, VetDaoImpl.class,
                         Owner.class, Pet.class, PetType.class,
