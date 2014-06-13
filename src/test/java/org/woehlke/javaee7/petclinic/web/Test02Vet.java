@@ -144,4 +144,27 @@ public class Test02Vet {
         vetsPage.assertPageIsLoaded();
         vetsPage.assertContentFoundWithSpecialties("Henry", "Jones", "none");
     }
+
+    /**
+     * Test for #24 new specialties not visible in veterinarians editmode
+     */
+    @Test
+    @InSequence(8)
+    @RunAsClient
+    public void testEditVetPageWithNewSpecialties(){
+        goTo(VetsPage.class);
+        vetsPage.assertPageIsLoaded();
+        goTo(SpecialtiesPage.class);
+        specialtiesPage.assertPageIsLoaded();
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.assertPageIsLoaded();
+        newSpecialtiesPage.addNewContent("hero");
+        goTo(VetsPage.class);
+        vetsPage.assertPageIsLoaded();
+        vetsPage.clickEditVet();
+        editVetPage.assertPageIsLoaded();
+        editVetPage.editContentWithAllSpecialties("Thomas", "Woehlke");
+        vetsPage.assertPageIsLoaded();
+        vetsPage.assertContentFoundWithSpecialties("Thomas", "Woehlke", "anesthetist dentist hero radiology");
+    }
 }

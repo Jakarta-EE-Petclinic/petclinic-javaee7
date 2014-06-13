@@ -48,6 +48,14 @@ public class EditVetPage {
         this.lastName.sendKeys(lastName);
         this.pickList.removeAll();
         save.click();
+    }
 
+    public void editContentWithAllSpecialties(String firstName,String lastName) {
+        this.firstName.clear();
+        this.firstName.sendKeys(firstName);
+        this.lastName.clear();
+        this.lastName.sendKeys(lastName);
+        this.pickList.addAll();
+        save.click();
     }
 }
