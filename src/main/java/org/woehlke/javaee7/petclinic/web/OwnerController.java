@@ -56,6 +56,7 @@ public class OwnerController implements Serializable {
     private long petTypeId;
 
     private Visit visit;
+    private int scrollerPage;
 
     public Visit getVisit() {
         return visit;
@@ -201,4 +202,11 @@ public class OwnerController implements Serializable {
         return "showOwner.jsf";
     }
 
+    public void setScrollerPage(int scrollerPage) {
+        this.scrollerPage = scrollerPage;
+    }
+
+    public int getScrollerPage() {
+        return scrollerPage;
+    }
 }

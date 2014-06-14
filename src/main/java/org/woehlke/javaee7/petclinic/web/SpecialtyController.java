@@ -35,6 +35,8 @@ public class SpecialtyController implements Serializable {
     @ManagedProperty(value = "#{language}")
     private LanguageBean languageBean;
 
+    private int scrollerPage;
+
     public Specialty getSpecialty() {
         return specialty;
     }
@@ -99,5 +101,13 @@ public class SpecialtyController implements Serializable {
         } else {
             specialtySortOrder=SortOrder.ascending;
         }
+    }
+
+    public void setScrollerPage(int scrollerPage) {
+        this.scrollerPage = scrollerPage;
+    }
+
+    public int getScrollerPage() {
+        return scrollerPage;
     }
 }

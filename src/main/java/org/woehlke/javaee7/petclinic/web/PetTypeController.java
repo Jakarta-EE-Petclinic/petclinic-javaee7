@@ -30,6 +30,7 @@ public class PetTypeController implements Serializable {
     private PetType petType;
 
     private SortOrder petTypeSortOrder = SortOrder.ascending;
+    private int scrollerPage;
 
     public SortOrder getPetTypeSortOrder() {
         return petTypeSortOrder;
@@ -87,5 +88,13 @@ public class PetTypeController implements Serializable {
             ctx.addMessage(null, new FacesMessage("cannot delete, object still in use"));
         }
         return "petTypes.jsf";
+    }
+
+    public void setScrollerPage(int scrollerPage) {
+        this.scrollerPage = scrollerPage;
+    }
+
+    public int getScrollerPage() {
+        return scrollerPage;
     }
 }

@@ -550,7 +550,7 @@
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
-                <version>1.0.0.Beta1</version>
+                <version>1.0.2.Final</version>
             </plugin>
         </plugins>
     </build>
@@ -856,10 +856,11 @@
                 <version>2.10</version>
             </plugin>
 
+            <!--
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
-                <version>2.5.3</version>
+                <version>2.5.4</version>
                 <configuration>
                     <onlyAnalyze>org.woehlke.*</onlyAnalyze>
                     <omitVisitors>FindDeadLocalStores</omitVisitors>
@@ -869,6 +870,7 @@
                     <threshold>Low</threshold>
                 </configuration>
             </plugin>
+            -->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

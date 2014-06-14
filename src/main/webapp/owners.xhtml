@@ -13,7 +13,7 @@
                     <h:commandButton action="#{ownerController.search}" value="#{msg.search}" styleClass="btn"/>
                 </h:panelGrid>
 
-                <rich:dataTable id="ownersTable" value="#{ownerController.ownerList}" var="owner" styleClass="table table-striped table-hover">
+                <rich:dataTable id="ownersTable" rows="5" value="#{ownerController.ownerList}" var="owner" styleClass="table table-striped table-hover">
                     <rich:column sortBy="#{owner.firstName}" sortOrder="#{ownerSortingBean.sortOrderName}">
                         <f:facet name="header">
                             <rich:commandLink value="#{msg.name}" render="ownersTable" action="#{ownerSortingBean.setSortOrderToName}" />
@@ -41,7 +41,11 @@
                         <h:outputText id="telephone" value="#{owner.telephone}"/>
                     </rich:column>
                 </rich:dataTable>
+                <rich:dataScroller for="ownersTable"
+                                   page="#{ownerController.scrollerPage}"
+                                   id="scroller"/><br/>
 
+                <br/>
                 <span class="glyphicon glyphicon-plus-sign" /><h:commandLink id="getNewOwnerForm" action="#{ownerController.getNewOwnerForm}">#{msg.addNewOwner}</h:commandLink>
             </h:form>
 

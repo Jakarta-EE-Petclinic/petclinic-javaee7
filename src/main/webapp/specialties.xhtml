@@ -11,7 +11,7 @@
                 <h:panelGroup>
                     <h:messages id="messages" layout="block" errorStyle="color: red"/>
                 </h:panelGroup>
-                <rich:dataTable id="specialtiesTable" value="#{specialtyController.specialties}" var="specialty" styleClass="table table-striped table-hover">
+                <rich:dataTable id="specialtiesTable" rows="5" value="#{specialtyController.specialties}" var="specialty" styleClass="table table-striped table-hover">
                     <rich:column sortBy="#{specialty.name}" sortOrder="#{specialtyController.specialtySortOrder}">
                         <f:facet name="header">
                             <rich:commandLink value="#{msg.name}" render="specialtiesTable" action="#{specialtyController.switchSortOrder}" />
@@ -31,6 +31,10 @@
                         <h:commandLink id="delete" action="#{specialtyController.delete(specialty.id)}"><span class="glyphicon glyphicon-trash"/></h:commandLink>
                     </rich:column>
                 </rich:dataTable>
+                <rich:dataScroller for="specialtiesTable"
+                                   page="#{specialtyController.scrollerPage}"
+                                   id="scroller"/><br/>
+                <br/>
                 <span class="glyphicon glyphicon-plus-sign" /><h:commandLink id="addNewSpecialty" action="#{specialtyController.getNewSpecialtyForm}">#{msg.addNewSpecialty}</h:commandLink>
             </h:form>
         </ui:define>

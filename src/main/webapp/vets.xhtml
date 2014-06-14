@@ -12,7 +12,7 @@
                             value="#{vetController.searchterm}"/>
                     <h:commandButton action="#{vetController.search}" value="Search" styleClass="btn"/>
                 </h:panelGrid>
-                <rich:dataTable id="veterinariansTable" value="#{vetController.vets}" var="vet" styleClass="table table-striped table-hover">
+                <rich:dataTable id="veterinariansTable" rows="5" value="#{vetController.vets}" var="vet" styleClass="table table-striped table-hover">
                     <rich:column sortBy="#{vet.firstName}" sortOrder="#{vetSortingBean.sortOrderFirstName}">
                         <f:facet name="header">
                             <rich:commandLink value="#{msg.firstName}" render="veterinariansTable" action="#{vetSortingBean.setSortOrderToFirstName}" />
@@ -46,6 +46,10 @@
                                 class="glyphicon glyphicon-trash"/></h:commandLink>
                     </rich:column>
                 </rich:dataTable>
+                <rich:dataScroller for="veterinariansTable"
+                                   page="#{vetController.scrollerPage}"
+                                   id="scroller"/><br/>
+                <br/>
                 <span class="glyphicon glyphicon-plus-sign"/><h:commandLink id="getNewVetForm"
                     action="#{vetController.getNewVetForm}">#{msg.addNewVeterinarian}</h:commandLink><br/>
                 <br/>

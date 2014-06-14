@@ -41,6 +41,8 @@ public class VetController implements Serializable {
     private List<Specialty> specialties;
     private List<Specialty> selectedSpecialties;
 
+    private int scrollerPage = 1;
+
     public List<Specialty> getSpecialties() {
         specialties = specialtyDao.getAll();
         return specialties;
@@ -133,5 +135,13 @@ public class VetController implements Serializable {
             }
         }
         return "vets.jsf";
+    }
+
+    public int getScrollerPage() {
+        return scrollerPage;
+    }
+
+    public void setScrollerPage(int scrollerPage) {
+        this.scrollerPage = scrollerPage;
     }
 }

@@ -8,7 +8,7 @@
         <ui:define name="content">
             <h2 id="petTypes">#{msg.petTypes}</h2>
             <h:form id="petTypesForm">
-                <rich:dataTable id="petTypesTable" value="#{petTypeController.petTypes}" var="petType" styleClass="table table-striped table-hover">
+                <rich:dataTable id="petTypesTable"  rows="5" value="#{petTypeController.petTypes}" var="petType" styleClass="table table-striped table-hover">
                     <rich:column sortBy="#{petType.name}" sortOrder="#{petTypeController.petTypeSortOrder}">
                         <f:facet name="header">
                             <rich:commandLink value="#{msg.name}" render="petTypesTable" action="#{petTypeController.switchSortOrder}" />
@@ -28,6 +28,10 @@
                         <h:commandLink id="delete" action="#{petTypeController.delete(petType.id)}"><span class="glyphicon glyphicon-trash"/></h:commandLink>
                     </rich:column>
                 </rich:dataTable>
+                <rich:dataScroller for="petTypesTable"
+                                   page="#{petTypeController.scrollerPage}"
+                                   id="scroller"/><br/>
+                <br/>
                 <span class="glyphicon glyphicon-plus-sign" /><h:commandLink id="getNewPetTypeForm" action="#{petTypeController.getNewPetTypeForm}"><h:outputText value="#{msg.addNewPetType}"/></h:commandLink>
             </h:form>
         </ui:define>
