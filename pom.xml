@@ -17,11 +17,13 @@
         <!-- Web dependencies -->
         <webjars-bootstrap.version>3.1.1</webjars-bootstrap.version>
         <richfaces.version>5.0.0-SNAPSHOT</richfaces.version>
-        <version.arquillian.core>1.1.3.Final</version.arquillian.core>
+        <version.arquillian.core>1.1.4.Final</version.arquillian.core>
         <version.arquillian.drone>1.3.0.Final</version.arquillian.drone>
+        <version.graphene.webdriver>2.0.3.Final</version.graphene.webdriver>
         <version.shrinkwrap_shrinkwrap>1.2.1</version.shrinkwrap_shrinkwrap>
         <version.shrinkwrap_descriptors>2.0.0-alpha-5</version.shrinkwrap_descriptors>
         <version.shrinkwrap_resolver>2.0.2</version.shrinkwrap_resolver>
+        <version.selenium>2.43.1</version.selenium>
     </properties>
 
     <prerequisites>
@@ -82,7 +84,7 @@
             <dependency>
                 <groupId>org.jboss.arquillian.selenium</groupId>
                 <artifactId>selenium-bom</artifactId>
-                <version>2.39.0</version>
+                <version>${version.selenium}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -289,7 +291,7 @@
         <dependency>
             <groupId>org.jboss.arquillian.graphene</groupId>
             <artifactId>graphene-webdriver</artifactId>
-            <version>2.0.2.Final</version>
+            <version>${version.graphene.webdriver}</version>
             <type>pom</type>
             <scope>test</scope>
         </dependency>
@@ -319,14 +321,83 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
-            <version>4.2.5</version>
+            <version>4.3.2</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.3.5</version>
         </dependency>
 
         <dependency>
             <groupId>xml-apis</groupId>
             <artifactId>xml-apis</artifactId>
             <version>1.4.01</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>${version.selenium}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${version.selenium}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>${version.selenium}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>${version.selenium}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>${version.selenium}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-htmlunit-driver</artifactId>
+            <version>${version.selenium}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-ie-driver</artifactId>
+            <version>${version.selenium}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>${version.selenium}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+            <version>${version.selenium}</version>
             <scope>test</scope>
         </dependency>
 
@@ -369,6 +440,10 @@
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
             </snapshots>
+        </repository>
+        <repository>
+            <id>maven-central</id>
+            <url>http://repo1.maven.org/maven2/</url>
         </repository>
     </repositories>
 
