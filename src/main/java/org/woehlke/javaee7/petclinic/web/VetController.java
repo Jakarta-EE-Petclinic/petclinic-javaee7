@@ -1,6 +1,5 @@
 package org.woehlke.javaee7.petclinic.web;
 
-import org.richfaces.model.SortOrder;
 import org.woehlke.javaee7.petclinic.dao.SpecialtyDao;
 import org.woehlke.javaee7.petclinic.dao.VetDao;
 import org.woehlke.javaee7.petclinic.entities.Specialty;
@@ -9,7 +8,6 @@ import org.woehlke.javaee7.petclinic.entities.Vet;
 
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -3,7 +3,8 @@
                 xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:f="http://java.sun.com/jsf/core"
                 xmlns:ui="http://java.sun.com/jsf/facelets"
-                xmlns:rich="http://richfaces.org">
+                xmlns:a4j="http://richfaces.org/a4j"
+                xmlns:rich="http://richfaces.org/rich">
 
         <ui:define name="content">
             <h2 id="petTypes">#{msg.petTypes}</h2>
@@ -11,7 +12,7 @@
                 <rich:dataTable id="petTypesTable"  rows="5" value="#{petTypeController.petTypes}" var="petType" styleClass="table table-striped table-hover">
                     <rich:column sortBy="#{petType.name}" sortOrder="#{petTypeController.petTypeSortOrder}">
                         <f:facet name="header">
-                            <rich:commandLink value="#{msg.name}" render="petTypesTable" action="#{petTypeController.switchSortOrder}" />
+                            <a4j:commandLink value="#{msg.name}" render="petTypesTable" action="#{petTypeController.switchSortOrder}" />
                         </f:facet>
                         <h:outputText id="name" value="#{petType.name}"/>
                     </rich:column>

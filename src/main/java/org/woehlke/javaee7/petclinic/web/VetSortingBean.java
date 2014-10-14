@@ -1,6 +1,8 @@
 package org.woehlke.javaee7.petclinic.web;
 
-import org.richfaces.model.SortOrder;
+
+
+import org.richfaces.component.SortOrder;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;

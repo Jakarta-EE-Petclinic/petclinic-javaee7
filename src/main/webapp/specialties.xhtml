@@ -3,7 +3,8 @@
                 xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:f="http://java.sun.com/jsf/core"
                 xmlns:ui="http://java.sun.com/jsf/facelets"
-                xmlns:rich="http://richfaces.org">
+                xmlns:a4j="http://richfaces.org/a4j"
+                xmlns:rich="http://richfaces.org/rich">
 
         <ui:define name="content">
             <h2 id="specialties">#{msg.specialties}</h2>
@@ -14,7 +15,7 @@
                 <rich:dataTable id="specialtiesTable" rows="5" value="#{specialtyController.specialties}" var="specialty" styleClass="table table-striped table-hover">
                     <rich:column sortBy="#{specialty.name}" sortOrder="#{specialtyController.specialtySortOrder}">
                         <f:facet name="header">
-                            <rich:commandLink value="#{msg.name}" render="specialtiesTable" action="#{specialtyController.switchSortOrder}" />
+                            <a4j:commandLink value="#{msg.name}" render="specialtiesTable" action="#{specialtyController.switchSortOrder}" />
                         </f:facet>
                         <h:outputText id="name" value="#{specialty.name}"/>
                     </rich:column>

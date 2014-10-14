@@ -1,6 +1,7 @@
 package org.woehlke.javaee7.petclinic.web;
 
-import org.richfaces.model.SortOrder;
+
+import org.richfaces.component.SortOrder;
 import org.woehlke.javaee7.petclinic.dao.SpecialtyDao;
 import org.woehlke.javaee7.petclinic.entities.Specialty;
 
