@@ -34,7 +34,7 @@
 
                 <h:panelGrid id="grid2" columns="2" >
                     <h:outputLabel value="#{msg.date}" for="visitDate" />
-                    <rich:calendar id="visitDate" locale="de/DE"
+                    <rich:calendar id="visitDate" locale="#{language.localeCode}"
                                    value="#{ownerController.visit.date}"/>
                     <h:outputLabel value="#{msg.description}" for="visitDescription" />
                     <h:inputText id="visitDescription" styleClass="form-control"

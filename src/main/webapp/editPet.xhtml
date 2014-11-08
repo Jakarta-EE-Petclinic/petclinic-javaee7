@@ -27,7 +27,7 @@
                                  value="#{ownerController.pet.name}"/>
                     <h:outputLabel value="#{msg.birthdate}" for="petBirthDate"/>
                     <h:panelGroup>
-                        <rich:calendar id="petBirthDate" locale="de/DE"
+                        <rich:calendar id="petBirthDate" locale="#{language.localeCode}"
                                        value="#{ownerController.pet.birthDate}"/>
                     </h:panelGroup>
                     <h:outputLabel value="#{msg.petType}" for="petType"/>
