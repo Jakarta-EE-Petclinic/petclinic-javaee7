@@ -1,5 +1,6 @@
 package org.woehlke.javaee7.petclinic.web.pages;
 
+import org.jboss.arquillian.graphene.Graphene;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,11 +39,12 @@ public class OwnersPage {
     private WebElement showOwner;
 
     public void assertPageIsLoaded() {
+        Graphene.waitModel().until().element(owners).is().visible();
         Assert.assertTrue(owners.isDisplayed());
     }
 
     public void clickNewOwner() {
-        getNewOwnerForm.click();
+        Graphene.guardHttp(getNewOwnerForm).click();
     }
 
     public void assertNewContentFound(String firstName,
@@ -59,6 +61,6 @@ public class OwnersPage {
     }
 
     public void clickShowOwner() {
-        showOwner.click();
+        Graphene.guardHttp(showOwner).click();
     }
 }

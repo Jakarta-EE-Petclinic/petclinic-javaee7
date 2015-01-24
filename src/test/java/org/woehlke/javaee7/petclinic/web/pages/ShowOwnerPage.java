@@ -1,5 +1,6 @@
 package org.woehlke.javaee7.petclinic.web.pages;
 
+import org.jboss.arquillian.graphene.Graphene;
 import org.joda.time.DateTime;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
@@ -73,11 +74,12 @@ public class ShowOwnerPage {
     private WebElement firstPetsFirstVisitDescription;
 
     public void assertPageIsLoaded() {
+        Graphene.waitModel().until().element(showOwnerForm).is().visible();
         Assert.assertTrue(showOwnerForm.isDisplayed());
     }
 
     public void clickEditOwner() {
-        edit.click();
+        Graphene.guardHttp(edit).click();
     }
 
     public void assertContent(String firstName,
@@ -93,11 +95,11 @@ public class ShowOwnerPage {
     }
 
     public void clickAddNewPet() {
-        addPet.click();
+        Graphene.guardHttp(addPet).click();
     }
 
     public void clickEditFirstPet() {
-        editFirstPet.click();
+        Graphene.guardHttp(editFirstPet).click();
     }
 
     public void assertFirstPetContent(String petsName, Date birthDate, String petType) {
@@ -117,7 +119,7 @@ public class ShowOwnerPage {
     }
 
     public void addVisitToFirstPet() {
-        newVisitForFirstPet.click();
+        Graphene.guardHttp(newVisitForFirstPet).click();
     }
 
     public void assertFirstVisitToFirstPet(Date visitDate, String description) {

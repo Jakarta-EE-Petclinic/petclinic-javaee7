@@ -1,5 +1,6 @@
 package org.woehlke.javaee7.petclinic.web.pages;
 
+import org.jboss.arquillian.graphene.Graphene;
 import org.joda.time.DateTime;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -35,12 +36,13 @@ public class NewPetPage {
     private WebElement add;
 
     public void assertPageIsLoaded() {
+        Graphene.waitModel().until().element(addNewPetForm).is().visible();
         Assert.assertTrue(addNewPetForm.isDisplayed());
     }
 
     public void setContent(String petName, Date petBirthDate, String petType){
         this.petName.sendKeys(petName);
-        DateTime dateTime = new  DateTime(petBirthDate.getTime());
+        DateTime dateTime = new DateTime(petBirthDate.getTime());
         this.petBirthDate.setDate(dateTime);
         List<WebElement> options = this.petType.findElements(By.tagName("option"));
         for(WebElement option: options){
@@ -49,6 +51,6 @@ public class NewPetPage {
                 break;
             }
         }
-        add.click();
+        Graphene.guardHttp(add).click();
     }
 }

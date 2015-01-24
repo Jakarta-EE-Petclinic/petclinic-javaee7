@@ -1,5 +1,6 @@
 package org.woehlke.javaee7.petclinic.web.pages;
 
+import org.jboss.arquillian.graphene.Graphene;
 import org.jboss.arquillian.graphene.page.Location;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
@@ -25,14 +26,15 @@ public class FindOwnersPage {
     private WebElement getNewOwnerForm;
 
     public void assertPageIsLoaded() {
+        Graphene.waitModel().until().element(findOwners).is().visible();
         Assert.assertTrue(findOwners.isDisplayed());
     }
 
     public void clickSearch() {
-        search.click();
+        Graphene.guardHttp(search).click();
     }
 
     public void clickNewOwner() {
-        getNewOwnerForm.click();
+        Graphene.guardHttp(getNewOwnerForm).click();
     }
 }

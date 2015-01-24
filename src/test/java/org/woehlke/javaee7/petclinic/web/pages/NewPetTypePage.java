@@ -1,5 +1,6 @@
 package org.woehlke.javaee7.petclinic.web.pages;
 
+import org.jboss.arquillian.graphene.Graphene;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,12 +24,13 @@ public class NewPetTypePage {
     private WebElement save;
 
     public void assertPageIsLoaded() {
+        Graphene.waitModel().until().element(addNewPetType).is().visible();
         Assert.assertTrue(addNewPetType.isDisplayed());
     }
 
     public void addNewContent(String content) {
         name.clear();
         name.sendKeys(content);
-        save.click();
+        Graphene.guardHttp(save).click();
     }
 }
