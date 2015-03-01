@@ -23,7 +23,7 @@
         <version.shrinkwrap_shrinkwrap>1.2.1</version.shrinkwrap_shrinkwrap>
         <version.shrinkwrap_descriptors>2.0.0-alpha-5</version.shrinkwrap_descriptors>
         <version.shrinkwrap_resolver>2.0.2</version.shrinkwrap_resolver>
-        <version.selenium>2.43.1</version.selenium>
+        <version.selenium>2.45.0</version.selenium>
     </properties>
 
     <prerequisites>
