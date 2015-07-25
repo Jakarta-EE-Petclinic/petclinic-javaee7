@@ -1,5 +1,6 @@
 package org.woehlke.javaee7.petclinic.web.pages;
 
+import org.jboss.arquillian.graphene.Graphene;
 import org.joda.time.DateTime;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
@@ -64,8 +65,9 @@ public class NewVisitPage {
 
     public void setNewContent(Date visitDate, String description) {
         DateTime dateTime = new  DateTime(visitDate.getTime());
-        this.visitDate.setDate(dateTime);
+        Graphene.waitModel().until().element(addVisitForm).is().visible();
         this.visitDescription.sendKeys(description);
-        save.click();
+        this.visitDate.setDate(dateTime);
+        Graphene.guardHttp(save).click();
     }
 }
