@@ -23,6 +23,9 @@ public class PetTypesPage {
     @FindBy(id="petTypesForm:getNewPetTypeForm")
     private WebElement getNewPetTypeForm;
 
+    @FindBy(id="petTypesForm:petTypesTable:5:name")
+    private WebElement name5InTable;
+
     @FindBy(id="petTypesForm:petTypesTable:0:name")
     private WebElement nameInTable;
 
@@ -31,6 +34,15 @@ public class PetTypesPage {
 
     @FindBy(id="petTypesForm:petTypesTable:0:delete")
     private WebElement deleteInTable;
+
+    @FindBy(id="petTypesForm:scroller_ds_next")
+    private WebElement scrollerNext;
+
+    @FindBy(id="petTypesForm:scroller_ds_prev")
+    private WebElement scrollerPrev;
+
+    @FindBy(id="petTypesForm:petTypesTable:colNameSort")
+    private WebElement colNameSort;
 
     public void assertPageIsLoaded() {
         Graphene.waitModel().until().element(petTypes).is().visible();
@@ -65,5 +77,44 @@ public class PetTypesPage {
             isDeleted = true;
         }
         Assert.assertTrue(isDeleted);
+    }
+
+    public void assertPagerNextIsLoaded(){
+        Graphene.waitModel().until().element(scrollerNext).is().visible();
+        Assert.assertTrue(scrollerNext.isDisplayed());
+    }
+
+    public void assertPagerPrevIsLoaded(){
+        Graphene.waitModel().until().element(scrollerPrev).is().visible();
+        Assert.assertTrue(scrollerPrev.isDisplayed());
+    }
+
+    public void clickPagerNext() {
+        scrollerNext.click();
+    }
+
+
+    public void clickPagerPrev() {
+        scrollerPrev.click();
+    }
+
+    public void assertSorterIsLoaded(){
+        Graphene.waitModel().until().element(colNameSort).is().visible();
+        Assert.assertTrue(colNameSort.isDisplayed());
+    }
+
+    public void assertOrder() {
+        Graphene.waitModel().until().element(nameInTable).is().visible();
+        Assert.assertTrue(nameInTable.getText().compareTo("pet01")==0);
+    }
+
+    public void clickSorter() {
+        Graphene.waitModel().until().element(colNameSort).is().visible();
+        colNameSort.click();
+    }
+
+    public void assertReverseOrder() {
+        Graphene.waitModel().until().element(name5InTable).is().visible();
+        Assert.assertTrue(name5InTable.getText().compareTo("pet06")==0);
     }
 }

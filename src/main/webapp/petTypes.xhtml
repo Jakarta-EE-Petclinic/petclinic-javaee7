@@ -10,9 +10,9 @@
             <h2 id="petTypes">#{msg.petTypes}</h2>
             <h:form id="petTypesForm">
                 <rich:dataTable id="petTypesTable"  rows="5" value="#{petTypeController.petTypes}" var="petType" styleClass="table table-striped table-hover">
-                    <rich:column sortBy="#{petType.name}" sortOrder="#{petTypeController.petTypeSortOrder}">
+                    <rich:column id="colName" sortBy="#{petType.name}" sortOrder="#{petTypeController.petTypeSortOrder}">
                         <f:facet name="header">
-                            <a4j:commandLink value="#{msg.name}" render="petTypesTable" action="#{petTypeController.switchSortOrder}" />
+                            <a4j:commandLink id="colNameSort" value="#{msg.name}" render="petTypesTable" action="#{petTypeController.switchSortOrder}" />
                         </f:facet>
                         <h:outputText id="name" value="#{petType.name}"/>
                     </rich:column>

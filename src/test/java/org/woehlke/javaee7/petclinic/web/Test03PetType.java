@@ -111,4 +111,63 @@ public class Test03PetType {
         petTypesPage.assertPageIsLoaded();
         petTypesPage.assertDeletedContentNotFound();
     }
+
+    @Test
+    @InSequence(6)
+    @RunAsClient
+    public void testFillNewPetTypes() {
+        goTo(PetTypesPage.class);
+        petTypesPage.assertPageIsLoaded();
+        petTypesPage.clickAddNewPetType();
+        newPetTypePage.assertPageIsLoaded();
+        newPetTypePage.addNewContent("pet01");
+        petTypesPage.assertPageIsLoaded();
+        petTypesPage.assertNewContentFound("pet01");
+        petTypesPage.clickAddNewPetType();
+        newPetTypePage.assertPageIsLoaded();
+        newPetTypePage.addNewContent("pet02");
+        petTypesPage.assertPageIsLoaded();
+        petTypesPage.clickAddNewPetType();
+        newPetTypePage.assertPageIsLoaded();
+        newPetTypePage.addNewContent("pet03");
+        petTypesPage.assertPageIsLoaded();
+        petTypesPage.clickAddNewPetType();
+        newPetTypePage.assertPageIsLoaded();
+        newPetTypePage.addNewContent("pet04");
+        petTypesPage.assertPageIsLoaded();
+        petTypesPage.clickAddNewPetType();
+        newPetTypePage.assertPageIsLoaded();
+        newPetTypePage.addNewContent("pet05");
+        petTypesPage.assertPageIsLoaded();
+        petTypesPage.clickAddNewPetType();
+        newPetTypePage.assertPageIsLoaded();
+        newPetTypePage.addNewContent("pet06");
+        petTypesPage.assertPageIsLoaded();
+    }
+
+
+
+    @Test
+    @InSequence(7)
+    @RunAsClient
+    public void testPetTypesPager() {
+        petTypesPage.assertPagerNextIsLoaded();
+        petTypesPage.clickPagerNext();
+        petTypesPage.assertPagerPrevIsLoaded();
+        petTypesPage.clickPagerPrev();
+        petTypesPage.assertPagerNextIsLoaded();
+    }
+
+    @Test
+    @InSequence(8)
+    @RunAsClient
+    public void testPetTypesSorter() {
+        petTypesPage.assertSorterIsLoaded();
+        petTypesPage.assertOrder();
+        petTypesPage.clickSorter();
+        petTypesPage.assertReverseOrder();
+        petTypesPage.assertSorterIsLoaded();
+        petTypesPage.clickSorter();
+        petTypesPage.assertOrder();
+    }
 }
