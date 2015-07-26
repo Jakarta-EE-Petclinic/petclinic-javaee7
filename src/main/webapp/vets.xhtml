@@ -14,15 +14,15 @@
                     <h:commandButton action="#{vetController.search}" value="Search" styleClass="btn"/>
                 </h:panelGrid>
                 <rich:dataTable id="veterinariansTable" rows="5" value="#{vetController.vets}" var="vet" styleClass="table table-striped table-hover">
-                    <rich:column sortBy="#{vet.firstName}" sortOrder="#{vetSortingBean.sortOrderFirstName}">
+                    <rich:column id="colSurname" sortBy="#{vet.firstName}" sortOrder="#{vetSortingBean.sortOrderFirstName}">
                         <f:facet name="header">
-                            <a4j:commandLink value="#{msg.firstName}" render="veterinariansTable" action="#{vetSortingBean.setSortOrderToFirstName}" />
+                            <a4j:commandLink id="colSurnameSort" value="#{msg.firstName}" render="veterinariansTable" action="#{vetSortingBean.setSortOrderToFirstName}" />
                         </f:facet>
                         <h:outputText id="firstName" value="#{vet.firstName}"/>
                     </rich:column>
-                    <rich:column sortBy="#{vet.lastName}" sortOrder="#{vetSortingBean.sortOrderLastName}">
+                    <rich:column id="colLastname" sortBy="#{vet.lastName}" sortOrder="#{vetSortingBean.sortOrderLastName}">
                         <f:facet name="header">
-                            <a4j:commandLink value="#{msg.lastName}" render="veterinariansTable" action="#{vetSortingBean.setSortOrderToLastName}" />
+                            <a4j:commandLink id="colLastnameSort" value="#{msg.lastName}" render="veterinariansTable" action="#{vetSortingBean.setSortOrderToLastName}" />
                         </f:facet>
                         <h:outputText id="lastName" value="#{vet.lastName}"/>
                     </rich:column>

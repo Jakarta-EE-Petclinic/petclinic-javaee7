@@ -86,7 +86,7 @@ public class Test02Vet {
         newVetPage.assertPageIsLoaded();
         newVetPage.addNewContent("Thomas","Woehlke");
         vetsPage.assertPageIsLoaded();
-        vetsPage.assertNewContentFound("Thomas","Woehlke");
+        vetsPage.assertNewContentFound("Thomas", "Woehlke");
     }
 
     @Test
@@ -97,9 +97,9 @@ public class Test02Vet {
         vetsPage.assertPageIsLoaded();
         vetsPage.clickEditVet();
         editVetPage.assertPageIsLoaded();
-        editVetPage.editContent("Willy","Wacker");
+        editVetPage.editContent("Willy", "Wacker");
         vetsPage.assertPageIsLoaded();
-        vetsPage.assertEditedContentFound("Willy","Wacker");
+        vetsPage.assertEditedContentFound("Willy", "Wacker");
     }
 
     @Test
@@ -167,4 +167,69 @@ public class Test02Vet {
         vetsPage.assertPageIsLoaded();
         vetsPage.assertContentFoundWithSpecialties("Thomas", "Woehlke", "anesthetist dentist hero radiology");
     }
+
+    @Test
+    @InSequence(9)
+    @RunAsClient
+    public void testFillNewVetsPage() {
+        goTo(VetsPage.class);
+        vetsPage.assertPageIsLoaded();
+        vetsPage.clickDeleteVet();
+        vetsPage.assertPageIsLoaded();
+        vetsPage.clickAddNewVet();
+        newVetPage.assertPageIsLoaded();
+        newVetPage.addNewContent("Vorname01", "Nachname06");
+        vetsPage.clickAddNewVet();
+        newVetPage.assertPageIsLoaded();
+        newVetPage.addNewContent("Vorname02", "Nachname05");
+        vetsPage.clickAddNewVet();
+        newVetPage.assertPageIsLoaded();
+        newVetPage.addNewContent("Vorname03", "Nachname04");
+        vetsPage.clickAddNewVet();
+        newVetPage.assertPageIsLoaded();
+        newVetPage.addNewContent("Vorname04", "Nachname03");
+        vetsPage.clickAddNewVet();
+        newVetPage.assertPageIsLoaded();
+        newVetPage.addNewContent("Vorname05", "Nachname02");
+        vetsPage.clickAddNewVet();
+        newVetPage.assertPageIsLoaded();
+        newVetPage.addNewContent("Vorname06", "Nachname01");
+        vetsPage.assertPageIsLoaded();
+    }
+
+    @Test
+    @InSequence(10)
+    @RunAsClient
+    public void testVetsPager() {
+        vetsPage.assertPagerNextIsLoaded();
+        vetsPage.clickPagerNext();
+        vetsPage.assertPagerPrevIsLoaded();
+        vetsPage.clickPagerPrev();
+        vetsPage.assertPagerNextIsLoaded();
+    }
+
+    @Test
+    @InSequence(11)
+    @RunAsClient
+    public void testVetsSorterFirstname() {
+        vetsPage.assertSorterIsLoaded();
+        vetsPage.assertOrder();
+        vetsPage.clickSorterFirstname();
+        vetsPage.assertFirstnameOrder();
+        vetsPage.clickSorterFirstname();
+        vetsPage.assertFirstnameReverseOrder();
+    }
+
+
+
+    @Test
+    @InSequence(12)
+    @RunAsClient
+    public void testVetsSorterLastname() {
+        vetsPage.clickSorterLastname();
+        vetsPage.assertLastnameOrder();
+        vetsPage.clickSorterLastname();
+        vetsPage.assertLastnameReverseOrder();
+    }
+
 }

@@ -15,12 +15,14 @@ import java.io.Serializable;
 @SessionScoped
 public class VetSortingBean implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     private SortOrder sortOrderFirstName = SortOrder.unsorted;
     private SortOrder sortOrderLastName = SortOrder.unsorted;
     private SortOrder sortOrderSpecialties = SortOrder.unsorted;
 
     public void setSortOrderToFirstName() {
-        if (sortOrderFirstName == SortOrder.ascending) {
+        if (SortOrder.ascending == sortOrderFirstName) {
             sortOrderFirstName = SortOrder.descending;
         } else {
             sortOrderFirstName = SortOrder.ascending;
@@ -31,7 +33,7 @@ public class VetSortingBean implements Serializable {
 
     public void setSortOrderToLastName() {
         sortOrderFirstName = SortOrder.unsorted;
-        if (sortOrderLastName == SortOrder.ascending) {
+        if (SortOrder.ascending==sortOrderLastName) {
             sortOrderLastName = SortOrder.descending;
         } else {
             sortOrderLastName = SortOrder.ascending;
@@ -42,7 +44,7 @@ public class VetSortingBean implements Serializable {
     public void setSortOrderToSpecialties() {
         sortOrderFirstName = SortOrder.unsorted;
         sortOrderLastName = SortOrder.unsorted;
-        if (sortOrderSpecialties == SortOrder.ascending) {
+        if (SortOrder.ascending==sortOrderSpecialties) {
             sortOrderSpecialties = SortOrder.descending;
         } else {
             sortOrderSpecialties = SortOrder.ascending;

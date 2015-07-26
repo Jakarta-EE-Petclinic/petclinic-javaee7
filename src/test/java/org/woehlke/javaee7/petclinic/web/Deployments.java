@@ -78,7 +78,8 @@ public class Deployments {
                         SpecialtyDao.class, SpecialtyDaoImpl.class,
                         VetDao.class, VetDaoImpl.class,
                         Owner.class, Pet.class, PetType.class,
-                        Specialty.class, Vet.class, Visit.class)
+                        Specialty.class, Vet.class, Visit.class,
+                        VetSortingBean.class)
                 .merge(ShrinkWrap.create(GenericArchive.class).as(ExplodedImporter.class)
                         .importDirectory(WEBAPP_SRC).as(GenericArchive.class),
                         "/", Filters.include(".*\\.xhtml$|.*\\.html$"))

@@ -1,5 +1,6 @@
 package org.woehlke.javaee7.petclinic.web.pages;
 
+import org.jboss.arquillian.graphene.Graphene;
 import org.jboss.arquillian.graphene.page.Location;
 import org.junit.Assert;
 import org.openqa.selenium.NoSuchElementException;
@@ -22,6 +23,12 @@ public class VetsPage {
     @FindBy(id="veterinariansForm:getNewVetForm")
     private WebElement getNewVetForm;
 
+    @FindBy(id="veterinariansForm:veterinariansTable:5:firstName")
+    private WebElement firstName5InTable;
+
+    @FindBy(id="veterinariansForm:veterinariansTable:5:lastName")
+    private WebElement lastName5InTable;
+
     @FindBy(id="veterinariansForm:veterinariansTable:0:firstName")
     private WebElement firstNameInTable;
 
@@ -37,6 +44,18 @@ public class VetsPage {
     @FindBy(id="veterinariansForm:veterinariansTable:0:delete")
     private WebElement deleteInTable;
 
+    @FindBy(id="veterinariansForm:scroller_ds_next")
+    private WebElement scrollerNext;
+
+    @FindBy(id="veterinariansForm:scroller_ds_prev")
+    private WebElement scrollerPrev;
+
+    @FindBy(id="veterinariansForm:veterinariansTable:colSurnameSort")
+    private WebElement colSurnameSort;
+
+    @FindBy(id="veterinariansForm:veterinariansTable:colLastnameSort")
+    private WebElement colLastnameSort;
+
     public void assertPageIsLoaded() {
         Assert.assertTrue(veterinarians.isDisplayed());
     }
@@ -47,7 +66,7 @@ public class VetsPage {
 
     public void assertNewContentFound(String firstName, String lastName) {
         Assert.assertEquals(firstName,firstNameInTable.getText());
-        Assert.assertEquals(lastName,lastNameInTable.getText());
+        Assert.assertEquals(lastName, lastNameInTable.getText());
     }
 
     public void clickEditVet() {
@@ -56,7 +75,7 @@ public class VetsPage {
 
     public void assertEditedContentFound(String firstName, String lastName) {
         Assert.assertEquals(firstName,firstNameInTable.getText());
-        Assert.assertEquals(lastName,lastNameInTable.getText());
+        Assert.assertEquals(lastName, lastNameInTable.getText());
     }
 
     public void clickDeleteVet() {
@@ -81,8 +100,79 @@ public class VetsPage {
     }
 
     public void assertContentFoundWithSpecialties(String firstName, String lastName, String specialties) {
-        Assert.assertEquals(firstName,firstNameInTable.getText());
-        Assert.assertEquals(lastName,lastNameInTable.getText());
-        Assert.assertEquals(specialties,specialtiesAsStringInTable.getText());
+        Assert.assertEquals(firstName, firstNameInTable.getText());
+        Assert.assertEquals(lastName, lastNameInTable.getText());
+        Assert.assertEquals(specialties, specialtiesAsStringInTable.getText());
+    }
+
+    public void assertPagerNextIsLoaded(){
+        Graphene.waitModel().until().element(scrollerNext).is().visible();
+        Assert.assertTrue(scrollerNext.isDisplayed());
+    }
+
+    public void assertPagerPrevIsLoaded(){
+        Graphene.waitModel().until().element(scrollerPrev).is().visible();
+        Assert.assertTrue(scrollerPrev.isDisplayed());
+    }
+
+    public void clickPagerNext() {
+        scrollerNext.click();
+    }
+
+
+    public void clickPagerPrev() {
+        scrollerPrev.click();
+    }
+
+    public void assertSorterIsLoaded(){
+        Graphene.waitModel().until().element(colSurnameSort).is().visible();
+        Graphene.waitModel().until().element(colLastnameSort).is().visible();
+        Assert.assertTrue(colSurnameSort.isDisplayed());
+        Assert.assertTrue(colLastnameSort.isDisplayed());
+    }
+
+    public void assertOrder() {
+        Graphene.waitModel().until().element(firstNameInTable).is().visible();
+        Graphene.waitModel().until().element(lastNameInTable).is().visible();
+        Assert.assertTrue(firstNameInTable.getText().compareTo("Vorname06") == 0);
+        Assert.assertTrue(lastNameInTable.getText().compareTo("Nachname01") == 0);
+    }
+
+    public void clickSorterFirstname() {
+        Graphene.waitModel().until().element(colSurnameSort).is().visible();
+        Graphene.guardAjax(colSurnameSort).click();
+    }
+
+    public void assertFirstnameOrder() {
+        Graphene.waitModel().until().element(firstName5InTable).is().visible();
+        Graphene.waitModel().until().element(lastName5InTable).is().visible();
+        Assert.assertTrue(firstName5InTable.getText().compareTo("Vorname01") == 0);
+        Assert.assertTrue(lastName5InTable.getText().compareTo("Nachname06") == 0);
+    }
+
+    public void assertFirstnameReverseOrder() {
+        Graphene.waitModel().until().element(firstNameInTable).is().visible();
+        Graphene.waitModel().until().element(lastNameInTable).is().visible();
+        Assert.assertTrue(firstNameInTable.getText().compareTo("Vorname06") == 0);
+        Assert.assertTrue(lastNameInTable.getText().compareTo("Nachname01") == 0);
+    }
+
+    public void clickSorterLastname() {
+        Graphene.waitModel().until().element(colLastnameSort).is().visible();
+        Graphene.guardAjax(colLastnameSort).click();
+    }
+
+    public void assertLastnameOrder() {
+        Graphene.waitModel().until().element(firstNameInTable).is().visible();
+        Graphene.waitModel().until().element(lastNameInTable).is().visible();
+        Assert.assertTrue(firstNameInTable.getText().compareTo("Vorname06") == 0);
+        Assert.assertTrue(lastNameInTable.getText().compareTo("Nachname01") == 0);
+    }
+
+    public void assertLastnameReverseOrder() {
+        Graphene.waitModel().until().element(firstName5InTable).is().visible();
+        Graphene.waitModel().until().element(lastName5InTable).is().visible();
+        Assert.assertTrue(firstName5InTable.getText().compareTo("Vorname01") == 0);
+        Assert.assertTrue(lastName5InTable.getText().compareTo("Nachname06") == 0);
     }
 }
