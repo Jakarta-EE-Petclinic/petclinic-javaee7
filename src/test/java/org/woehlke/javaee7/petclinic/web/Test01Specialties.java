@@ -113,5 +113,60 @@ public class Test01Specialties {
         specialtiesPage.assertDeletedContentNotFound();
     }
 
+    @Test
+    @InSequence(6)
+    @RunAsClient
+    public void testFillSpecialtyPager() {
+        goTo(SpecialtiesPage.class);
+        specialtiesPage.assertPageIsLoaded();
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.assertPageIsLoaded();
+        newSpecialtiesPage.addNewContent("specialty01");
+        specialtiesPage.assertPageIsLoaded();
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.assertPageIsLoaded();
+        newSpecialtiesPage.addNewContent("specialty02");
+        specialtiesPage.assertPageIsLoaded();
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.assertPageIsLoaded();
+        newSpecialtiesPage.addNewContent("specialty03");
+        specialtiesPage.assertPageIsLoaded();
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.assertPageIsLoaded();
+        newSpecialtiesPage.addNewContent("specialty04");
+        specialtiesPage.assertPageIsLoaded();
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.assertPageIsLoaded();
+        newSpecialtiesPage.addNewContent("specialty05");
+        specialtiesPage.assertPageIsLoaded();
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.assertPageIsLoaded();
+        newSpecialtiesPage.addNewContent("specialty06");
+        specialtiesPage.assertPageIsLoaded();
+    }
+
+    @Test
+    @InSequence(7)
+    @RunAsClient
+    public void testSpecialtyPager() {
+        specialtiesPage.assertPagerNextIsLoaded();
+        specialtiesPage.clickPagerNext();
+        specialtiesPage.assertPagerPrevIsLoaded();
+        specialtiesPage.clickPagerPrev();
+        specialtiesPage.assertPagerNextIsLoaded();
+    }
+
+    @Test
+    @InSequence(8)
+    @RunAsClient
+    public void testSpecialtySorter() {
+        specialtiesPage.assertSorterIsLoaded();
+        specialtiesPage.assertOrder();
+        specialtiesPage.clickSorter();
+        specialtiesPage.assertReverseOrder();
+        specialtiesPage.assertSorterIsLoaded();
+        specialtiesPage.clickSorter();
+        specialtiesPage.assertOrder();
+    }
 
 }

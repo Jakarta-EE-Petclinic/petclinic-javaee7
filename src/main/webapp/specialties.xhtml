@@ -13,19 +13,19 @@
                     <h:messages id="messages" layout="block" errorStyle="color: red"/>
                 </h:panelGroup>
                 <rich:dataTable id="specialtiesTable" rows="5" value="#{specialtyController.specialties}" var="specialty" styleClass="table table-striped table-hover">
-                    <rich:column sortBy="#{specialty.name}" sortOrder="#{specialtyController.specialtySortOrder}">
+                    <rich:column id="colName" sortBy="#{specialty.name}" sortOrder="#{specialtyController.specialtySortOrder}">
                         <f:facet name="header">
-                            <a4j:commandLink value="#{msg.name}" render="specialtiesTable" action="#{specialtyController.switchSortOrder}" />
+                            <a4j:commandLink id="colNameSort" value="#{msg.name}" render="specialtiesTable" action="#{specialtyController.switchSortOrder}" />
                         </f:facet>
                         <h:outputText id="name" value="#{specialty.name}"/>
                     </rich:column>
-                    <rich:column>
+                    <rich:column id="colEdit">
                         <f:facet name="header">
                             <h:outputText value="#{msg.edit}"/>
                         </f:facet>
                         <h:commandLink id="edit" action="#{specialtyController.getEditForm(specialty.id)}"><span class="glyphicon glyphicon-edit"/></h:commandLink>
                     </rich:column>
-                    <rich:column>
+                    <rich:column id="colDelete">
                         <f:facet name="header">
                             <h:outputText value="#{msg.delete}"/>
                         </f:facet>
