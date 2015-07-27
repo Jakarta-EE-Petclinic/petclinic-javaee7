@@ -26,9 +26,9 @@
                         </f:facet>
                         <h:outputText id="lastName" value="#{vet.lastName}"/>
                     </rich:column>
-                    <rich:column sortBy="#{vet.specialtiesAsString}" sortOrder="#{vetSortingBean.sortOrderSpecialties}">
+                    <rich:column id="colSpecialty" sortBy="#{vet.specialtiesAsString}" sortOrder="#{vetSortingBean.sortOrderSpecialties}">
                         <f:facet name="header">
-                            <a4j:commandLink value="#{msg.specialties}" render="veterinariansTable" action="#{vetSortingBean.setSortOrderToSpecialties}" />
+                            <a4j:commandLink id="colSpecialtySort" value="#{msg.specialties}" render="veterinariansTable" action="#{vetSortingBean.setSortOrderToSpecialties}" />
                         </f:facet>
                         <h:outputText id="specialtiesAsString" value="#{vet.specialtiesAsString}"/>
                     </rich:column>

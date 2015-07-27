@@ -171,6 +171,25 @@ public class Test02Vet {
     @Test
     @InSequence(9)
     @RunAsClient
+    public void testFillNewVetPageWithSpecialties() {
+        goTo(SpecialtiesPage.class);
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.addNewContent("s01");
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.addNewContent("s02");
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.addNewContent("s03");
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.addNewContent("s04");
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.addNewContent("s05");
+        specialtiesPage.clickAddNewSpecialty();
+        newSpecialtiesPage.addNewContent("s06");
+    }
+
+    @Test
+    @InSequence(10)
+    @RunAsClient
     public void testFillNewVetsPage() {
         goTo(VetsPage.class);
         vetsPage.assertPageIsLoaded();
@@ -178,27 +197,27 @@ public class Test02Vet {
         vetsPage.assertPageIsLoaded();
         vetsPage.clickAddNewVet();
         newVetPage.assertPageIsLoaded();
-        newVetPage.addNewContent("Vorname01", "Nachname06");
+        newVetPage.addNewContentWithOneSpecialty("Vorname01", "Nachname06","s03");
         vetsPage.clickAddNewVet();
         newVetPage.assertPageIsLoaded();
-        newVetPage.addNewContent("Vorname02", "Nachname05");
+        newVetPage.addNewContentWithOneSpecialty("Vorname02", "Nachname05","s02");
         vetsPage.clickAddNewVet();
         newVetPage.assertPageIsLoaded();
-        newVetPage.addNewContent("Vorname03", "Nachname04");
+        newVetPage.addNewContentWithOneSpecialty("Vorname03", "Nachname04", "s01");
         vetsPage.clickAddNewVet();
         newVetPage.assertPageIsLoaded();
-        newVetPage.addNewContent("Vorname04", "Nachname03");
+        newVetPage.addNewContentWithOneSpecialty("Vorname04", "Nachname03", "s06");
         vetsPage.clickAddNewVet();
         newVetPage.assertPageIsLoaded();
-        newVetPage.addNewContent("Vorname05", "Nachname02");
+        newVetPage.addNewContentWithOneSpecialty("Vorname05", "Nachname02", "s05");
         vetsPage.clickAddNewVet();
         newVetPage.assertPageIsLoaded();
-        newVetPage.addNewContent("Vorname06", "Nachname01");
+        newVetPage.addNewContentWithOneSpecialty("Vorname06", "Nachname01", "s04");
         vetsPage.assertPageIsLoaded();
     }
 
     @Test
-    @InSequence(10)
+    @InSequence(11)
     @RunAsClient
     public void testVetsPager() {
         vetsPage.assertPagerNextIsLoaded();
@@ -209,7 +228,7 @@ public class Test02Vet {
     }
 
     @Test
-    @InSequence(11)
+    @InSequence(12)
     @RunAsClient
     public void testVetsSorterFirstname() {
         vetsPage.assertSorterIsLoaded();
@@ -220,16 +239,24 @@ public class Test02Vet {
         vetsPage.assertFirstnameReverseOrder();
     }
 
-
-
     @Test
-    @InSequence(12)
+    @InSequence(13)
     @RunAsClient
     public void testVetsSorterLastname() {
         vetsPage.clickSorterLastname();
         vetsPage.assertLastnameOrder();
         vetsPage.clickSorterLastname();
         vetsPage.assertLastnameReverseOrder();
+    }
+
+    @Test
+    @InSequence(14)
+    @RunAsClient
+    public void testVetsSorterSpecialty() {
+        vetsPage.clickSorterSpecialty();
+        vetsPage.assertSpecialtyOrder();
+        vetsPage.clickSorterSpecialty();
+        vetsPage.assertSpecialtyReverseOrder();
     }
 
 }

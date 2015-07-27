@@ -38,6 +38,12 @@ public class VetsPage {
     @FindBy(id="veterinariansForm:veterinariansTable:0:specialtiesAsString")
     private WebElement specialtiesAsStringInTable;
 
+    @FindBy(id="veterinariansForm:veterinariansTable:2:specialtiesAsString")
+    private WebElement specialtiesAsString2InTable;
+
+    @FindBy(id="veterinariansForm:veterinariansTable:3:specialtiesAsString")
+    private WebElement specialtiesAsString3InTable;
+
     @FindBy(id="veterinariansForm:veterinariansTable:0:edit")
     private WebElement editInTable;
 
@@ -55,6 +61,9 @@ public class VetsPage {
 
     @FindBy(id="veterinariansForm:veterinariansTable:colLastnameSort")
     private WebElement colLastnameSort;
+
+    @FindBy(id="veterinariansForm:veterinariansTable:colSpecialtySort")
+    private WebElement colSpecialtySort;
 
     public void assertPageIsLoaded() {
         Assert.assertTrue(veterinarians.isDisplayed());
@@ -174,5 +183,20 @@ public class VetsPage {
         Graphene.waitModel().until().element(lastName5InTable).is().visible();
         Assert.assertTrue(firstName5InTable.getText().compareTo("Vorname01") == 0);
         Assert.assertTrue(lastName5InTable.getText().compareTo("Nachname06") == 0);
+    }
+
+    public void assertSpecialtyOrder() {
+        Graphene.waitModel().until().element(specialtiesAsString3InTable).is().visible();
+        Assert.assertTrue(specialtiesAsString3InTable.getText().compareTo("s01") == 0);
+    }
+
+    public void assertSpecialtyReverseOrder() {
+        Graphene.waitModel().until().element(specialtiesAsString2InTable).is().visible();
+        Assert.assertTrue(specialtiesAsString2InTable.getText().compareTo("s06") == 0);
+    }
+
+    public void clickSorterSpecialty() {
+        Graphene.waitModel().until().element(colSpecialtySort).is().visible();
+        Graphene.guardAjax(colSpecialtySort).click();
     }
 }

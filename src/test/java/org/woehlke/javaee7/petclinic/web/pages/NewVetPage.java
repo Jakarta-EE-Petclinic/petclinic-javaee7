@@ -49,4 +49,13 @@ public class NewVetPage {
         this.pickList.addAll();
         save.click();
     }
+
+    public void addNewContentWithOneSpecialty(String firstName, String lastName, String specialty) {
+        this.firstName.clear();
+        this.firstName.sendKeys(firstName);
+        this.lastName.clear();
+        this.lastName.sendKeys(lastName);
+        this.pickList.add(specialty);
+        save.click();
+    }
 }
