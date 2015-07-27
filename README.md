@@ -6,21 +6,21 @@ Running on OpenShift: http://wildfly8-javaee7petclinic.rhcloud.com/
 
 ## install JBoss Wildfly ##
 
-install JBoss Wildfly 8.2.1.Final from http://wildfly.org/downloads/ to e.g. /Users/tw/srv/wildfly-8.0.0.Final/
+install JBoss Wildfly 8.2.1.Final from http://wildfly.org/downloads/ to e.g. /Users/tw/srv/wildfly-8.2.1.Final/
 
 start JBoss by: cd /Users/tw/srv/wildfly-8.2.1.Final/bin ; ./standalone.sh
 
 ## install Glassfish 4 ##
 
-I installed Netbeans 7.4 with Glassfish 4.0 from https://netbeans.org/downloads/
+I installed Netbeans 8.0.2 with Glassfish 4.1 from https://netbeans.org/downloads/
 
 starting on Mac OSX:
 
-cd /Applications/NetBeans/glassfish-4.0/bin/
+cd /Applications/NetBeans/glassfish-4.1/bin/
 
-./asadmin start-database
+sudo ./asadmin start-database
 
-./asadmin start-domain
+sudo ./asadmin start-domain
 
 For Starting the JavaDB Database with jdk1.7.0_51 refer to: http://thomas-woehlke.blogspot.de/2014/01/start-glassfish4-javadb-running-jdk17051.html
 
