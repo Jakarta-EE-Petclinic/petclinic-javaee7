@@ -33,7 +33,8 @@ public class Deployments {
                 .addClasses(SpecialtyController.class, LanguageBean.class,
                         SpecialtyDao.class, SpecialtyDaoImpl.class,
                         Owner.class, Pet.class, PetType.class,
-                        Specialty.class, Vet.class, Visit.class)
+                        Specialty.class, Vet.class, Visit.class,
+                        net.sourceforge.cobertura.coveragedata.LightClassmapListener.class)
                 .merge(ShrinkWrap.create(GenericArchive.class).as(ExplodedImporter.class)
                         .importDirectory(WEBAPP_SRC).as(GenericArchive.class),
                         "/", Filters.include(".*\\.xhtml$|.*\\.html$"))
@@ -56,7 +57,8 @@ public class Deployments {
                 .addClasses(PetTypeController.class, LanguageBean.class,
                         PetTypeDao.class, PetTypeDaoImpl.class,
                         Owner.class, Pet.class, PetType.class,
-                        Specialty.class, Vet.class, Visit.class)
+                        Specialty.class, Vet.class, Visit.class,
+                        net.sourceforge.cobertura.coveragedata.LightClassmapListener.class)
                 .merge(ShrinkWrap.create(GenericArchive.class).as(ExplodedImporter.class)
                         .importDirectory(WEBAPP_SRC).as(GenericArchive.class),
                         "/", Filters.include(".*\\.xhtml$|.*\\.html$"))
@@ -79,7 +81,8 @@ public class Deployments {
                         VetDao.class, VetDaoImpl.class,
                         Owner.class, Pet.class, PetType.class,
                         Specialty.class, Vet.class, Visit.class,
-                        VetSortingBean.class)
+                        VetSortingBean.class,
+                        net.sourceforge.cobertura.coveragedata.LightClassmapListener.class)
                 .merge(ShrinkWrap.create(GenericArchive.class).as(ExplodedImporter.class)
                         .importDirectory(WEBAPP_SRC).as(GenericArchive.class),
                         "/", Filters.include(".*\\.xhtml$|.*\\.html$"))
@@ -103,7 +106,8 @@ public class Deployments {
                         VisitDao.class, VisitDaoImpl.class,
                         PetTypeDao.class, PetTypeDaoImpl.class,
                         Owner.class, Pet.class, PetType.class,
-                        Specialty.class, Vet.class, Visit.class)
+                        Specialty.class, Vet.class, Visit.class,
+                        net.sourceforge.cobertura.coveragedata.LightClassmapListener.class)
                 .merge(ShrinkWrap.create(GenericArchive.class).as(ExplodedImporter.class)
                         .importDirectory(WEBAPP_SRC).as(GenericArchive.class),
                         "/", Filters.include(".*\\.xhtml$"))
