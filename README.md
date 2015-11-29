@@ -2,7 +2,7 @@
 
 JSF with Java EE 7 Version of Spring Petclinic
 
-Running on OpenShift: http://wildfly8-javaee7petclinic.rhcloud.com/
+Running on OpenShift: http://jbosswildfly-javaee7petclinic.rhcloud.com/
 
 ## install JBoss Wildfly ##
 
@@ -60,6 +60,12 @@ git clone https://github.com/phasenraum2010/javaee7-petclinic.git
 build project with: ``mvn clean install wildfly:deploy``
 
 open url in browser: http://localhost:8080/javaee7-petclinic-1.3-SNAPSHOT/
+
+## openshift ##
+
+The OpenShift `jbossas` cartridge documentation can be found at:
+
+https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-jbossas/README.md
 
 ## First Steps ##
 

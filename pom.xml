@@ -1,22 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.woehlke.javaee7</groupId>
+    <groupId>org.woehlke</groupId>
     <artifactId>javaee7-petclinic</artifactId>
-    <version>1.3-SNAPSHOT</version>
     <packaging>war</packaging>
-    <url>http://www.thomas-woehlke.de/p/javaee7-petclinic</url>
-
+    <version>1.0</version>
     <name>javaee7-petclinic</name>
 
+    <url>http://www.thomas-woehlke.de/p/javaee7-petclinic</url>
+
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <jboss.version>8.2.1.Final</jboss.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.scm.version>1.9.4</maven.scm.version>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <!-- Web dependencies -->
         <webjars-bootstrap.version>3.0.3</webjars-bootstrap.version>
-        <richfaces.version>4.5.10.Final</richfaces.version>
+        <richfaces.version>4.5.11.Final</richfaces.version>
         <version.arquillian.core>1.1.4.Final</version.arquillian.core>
         <version.arquillian.drone>1.3.0.Final</version.arquillian.drone>
         <version.graphene.webdriver>2.1.0.Alpha2</version.graphene.webdriver>
@@ -922,6 +925,42 @@
                 </plugins>
             </build>
 
+        </profile>
+
+        <profile>
+            <!-- When built in OpenShift the 'openshift' profile will be used when invoking mvn. -->
+            <!-- Use this profile for any OpenShift specific customization your app will need. -->
+            <!-- By default that is to put the resulting archive into the 'deployments' folder. -->
+            <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
+            <id>openshift</id>
+            <build>
+                <finalName>wildfly8</finalName>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <version>2.10</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.16</version>
+                        <configuration>
+                            <skipTests>true</skipTests>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>2.3</version>
+                        <configuration>
+                            <failOnMissingWebXml>false</failOnMissingWebXml>
+                            <outputDirectory>deployments</outputDirectory>
+                            <warName>ROOT</warName>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
 
     </profiles>
