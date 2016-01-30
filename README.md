@@ -2,7 +2,7 @@
 
 JSF with Java EE 7 Version of Spring Petclinic
 
-Running on OpenShift: http://jbosswildfly-javaee7petclinic.rhcloud.com/
+Running on OpenShift: http://javaee7petclinic-port80guru.rhcloud.com/
 
 ## install JBoss Wildfly ##
 
