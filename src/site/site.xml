@@ -4,14 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0
     http://maven.apache.org/xsd/decoration-1.0.0.xsd">
     <skin>
-        <groupId>org.apache.maven.skins</groupId>
-        <artifactId>maven-classic-skin</artifactId>
-        <version>1.1</version>
+        <groupId>lt.velykis.maven.skins</groupId>
+        <artifactId>reflow-maven-skin</artifactId>
+        <version>1.1.1</version>
     </skin>
+    <!-- http://andriusvelykis.github.io/reflow-maven-skin/skin/ -->
     <bannerLeft>
-        <name>JEE6 Petclinic</name>
+        <name>Java EE 7 Petclinic</name>
         <src>/images/phasenraum_logo.gif</src>
-        <href>http://www.thomas-woehlke.de/p/jee6-petclinic/</href>
+        <href>http://www.thomas-woehlke.de/p/javaee7-petclinic/</href>
     </bannerLeft>
     <body>
         <menu ref="parent"/>
@@ -23,4 +24,43 @@
         <logo name="Maven" href="http://maven.apache.org/"
               img="http://maven.apache.org/images/logos/maven-feather.png"/>
     </poweredBy>
+    <custom>
+        <reflowSkin>
+            <theme>bootswatch-spacelab</theme>
+            <highlightJs>true</highlightJs>
+            <brand>
+                <name>Java EE 7 Petclinic</name>
+                <href>https://github.com/phasenraum2010/javaee7-petclinic</href>
+            </brand>
+            <slogan>The Java EE 7 Migration of Spring Petclinic</slogan>
+            <titleTemplate>%2$s | %1$s</titleTemplate>
+            <toc>top</toc>
+            <topNav>Download|reports</topNav>
+            <bottomNav>
+                <column>Main|Download</column>
+                <column>Documentation</column>
+                <column>reports|modules</column>
+            </bottomNav>
+            <bottomDescription>
+                The Java EE 7 Migration of Spring Petclinic
+            </bottomDescription>
+            <pages>
+                <index project="project-id">
+                    <shortTitle>Welcome</shortTitle>
+                    <breadcrumbs>true</breadcrumbs>
+                    <toc>true</toc>
+                    <sections>
+                        <carousel />
+                        <body />
+                        <sidebar />
+                        <thumbs>2</thumbs>
+                        <columns>3</columns>
+                    </sections>
+                </index>
+                <developer-info>
+                    <toc>sidebar</toc>
+                </developer-info>
+            </pages>
+        </reflowSkin>
+    </custom>
 </project>
