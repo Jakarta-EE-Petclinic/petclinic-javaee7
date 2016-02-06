@@ -12,7 +12,7 @@
     <bannerLeft>
         <name>Java EE 7 Petclinic</name>
         <src>/images/phasenraum_logo.gif</src>
-        <href>http://www.thomas-woehlke.de/p/javaee7-petclinic/</href>
+        <href>http://woehlke.org</href>
     </bannerLeft>
     <body>
         <menu ref="parent"/>
