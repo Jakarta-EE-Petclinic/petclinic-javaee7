@@ -4,7 +4,7 @@
     <groupId>org.woehlke.javaee7</groupId>
     <artifactId>petclinic</artifactId>
     <packaging>war</packaging>
-    <version>1.3-SNAPSHOT</version>
+    <version>1.3</version>
 
     <name>javaee7-petclinic</name>
     <description>JSF with Java EE 7 Version of Spring Petclinic. Runs on JBoss Wildfly.</description>
