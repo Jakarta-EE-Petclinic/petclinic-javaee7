@@ -51,9 +51,14 @@ function smoke() {
 	smokeTestWorkInProgress
 }
 
+function run() {
+  ./mvnw
+}
+
 function main() {
 		#smokeTestAll
 		smoke
+		#run
 		#smokeTestsAdHoc
 }
 
