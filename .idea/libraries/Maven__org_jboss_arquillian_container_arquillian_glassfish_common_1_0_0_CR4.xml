@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.jboss.arquillian.container:arquillian-glassfish-common:1.0.0.CR4">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/arquillian/container/arquillian-glassfish-common/1.0.0.CR4/arquillian-glassfish-common-1.0.0.CR4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/arquillian/container/arquillian-glassfish-common/1.0.0.CR4/arquillian-glassfish-common-1.0.0.CR4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/arquillian/container/arquillian-glassfish-common/1.0.0.CR4/arquillian-glassfish-common-1.0.0.CR4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

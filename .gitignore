@@ -1,5 +1,5 @@
 target/
-.idea
+#.idea
 *.iml
 .classpath
 .project
@@ -12,3 +12,5 @@ org.woehlke.jee6.petclinic.entities.Vet
 org.woehlke.javaee7.petclinic.entities.Owner
 org.woehlke.javaee7.petclinic.entities.Vet
 deployments
+/log/
+/.idea/workspace.xml

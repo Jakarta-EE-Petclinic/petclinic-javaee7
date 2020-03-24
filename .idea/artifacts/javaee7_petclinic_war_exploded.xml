@@ -1,0 +1,46 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="javaee7-petclinic:war exploded">
+    <output-path>$PROJECT_DIR$/target/javaee7-petclinic-1.3-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>javaee7-petclinic</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="javaee7-petclinic" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.1.4.GA" />
+          <element id="library" level="project" name="Maven: org.richfaces:richfaces:4.5.17.Final" />
+          <element id="library" level="project" name="Maven: org.richfaces:richfaces-core:4.5.17.Final" />
+          <element id="library" level="project" name="Maven: org.richfaces:richfaces-a4j:4.5.17.Final" />
+          <element id="library" level="project" name="Maven: net.sourceforge.cssparser:cssparser:0.9.13" />
+          <element id="library" level="project" name="Maven: org.w3c.css:sac:1.3" />
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.faces:jboss-jsf-api_2.2_spec:2.2.4" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-search-engine:4.5.0.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:4.0.4.Final" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-core:3.6.2" />
+          <element id="library" level="project" name="Maven: org.apache.avro:avro:1.7.6" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-facet:3.6.2" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-search-orm:4.5.0.Final" />
+          <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.0.3" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery:1.9.0" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.3.6" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.9" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:16.0.1" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.2.jbossorg-1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/javaee7-petclinic-1.3-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="javaee7-petclinic/web/Web" />
+    </root>
+  </artifact>
+</component>
