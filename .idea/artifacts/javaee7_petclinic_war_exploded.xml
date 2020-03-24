@@ -36,7 +36,6 @@
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-spatial:3.6.2" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-spellchecker:3.6.2" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-grouping:3.6.2" />
-          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-smartcn:3.6.2" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-stempel:3.6.2" />
           <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:4.0.4.Final" />
@@ -53,6 +52,14 @@
           <element id="library" level="project" name="Maven: org.jboss:jandex:1.2.1.Final" />
           <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.0.3" />
           <element id="library" level="project" name="Maven: org.webjars:jquery:1.9.0" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-model:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-repository-metadata:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-settings:3.0.5" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-interpolation:1.14" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-utils:3.0.15" />
+          <element id="library" level="project" name="Maven: org.sonatype.plexus:plexus-sec-dispatcher:1.4" />
+          <element id="library" level="project" name="Maven: org.sonatype.plexus:plexus-cipher:1.4" />
+          <element id="library" level="project" name="Maven: org.apache.maven.wagon:wagon-provider-api:2.4" />
           <element id="library" level="project" name="Maven: org.jboss.arquillian.config:arquillian-config-api:1.1.4.Final" />
           <element id="library" level="project" name="Maven: org.jboss.arquillian.test:arquillian-test-api:1.1.4.Final" />
           <element id="library" level="project" name="Maven: org.jboss.arquillian.test:arquillian-test-spi:1.1.2.Final-wildfly-1" />
@@ -68,6 +75,48 @@
           <element id="library" level="project" name="Maven: com.google.guava:guava:16.0.1" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.2.jbossorg-1" />
+          <element id="library" level="project" name="Maven: org.apache.maven.plugins:maven-scm-plugin:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-project:2.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-profile:2.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-artifact-manager:2.2.1" />
+          <element id="library" level="project" name="Maven: backport-util-concurrent:backport-util-concurrent:3.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-plugin-registry:2.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-artifact:2.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-plugin-api:2.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-local:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.shared:file-management:1.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven.shared:maven-shared-io:1.1" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-svnexe:1.11.2" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-api:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-svn-commons:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-gitexe:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-git-commons:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-manager-plexus:1.11.2" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-container-default:1.0-alpha-9" />
+          <element id="library" level="project" name="Maven: classworlds:classworlds:1.1-alpha-2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-client:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-accurev:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-bazaar:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-clearcase:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-cvsexe:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-cvs-commons:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-cvsjava:1.11.2" />
+          <element id="library" level="project" name="Maven: org.netbeans.lib:cvsclient:20060125" />
+          <element id="library" level="project" name="Maven: ch.ethz.ganymed:ganymed-ssh2:build210" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-hg:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-jazz:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-perforce:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-starteam:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-synergy:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-vss:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-tfs:1.11.2" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-jgit:1.11.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.jgit:org.eclipse.jgit:4.5.4.201711221230-r" />
+          <element id="library" level="project" name="Maven: com.jcraft:jsch:0.1.53" />
+          <element id="library" level="project" name="Maven: com.googlecode.javaewah:JavaEWAH:0.7.9" />
+          <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-integrity:1.11.2" />
+          <element id="library" level="project" name="Maven: com.mks.api:mksapi-jar:4.10.9049" />
           <element id="library" level="project" name="Maven: org.jboss.xnio:xnio-api:3.3.0.Final" />
           <element id="library" level="project" name="Maven: org.jboss.xnio:xnio-nio:3.3.0.Final" />
           <element id="library" level="project" name="Maven: org.jboss.marshalling:jboss-marshalling:1.4.9.Final" />
