@@ -803,54 +803,6 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-scm-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm-providers</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm-providers-svn</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm-provider-svnexe</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm-provider-svn-commons</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm-providers-git</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm-provider-gitexe</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm-provider-git-commons</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm-manager-plexus</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm-managers</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm-client</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
                     <preparationGoals>clean</preparationGoals>
@@ -949,6 +901,47 @@
                         <version>${version.javax.javaee-endorsed-api}</version>
                         <type>jar</type>
                     </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-scm-plugin</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-svnexe</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-svn-commons</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-git-commons</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-manager-plexus</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-client</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-providers-standard</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                        <type>pom</type>
+                    </dependency>
                 </dependencies>
             </dependencyManagement>
             <dependencies>
@@ -975,6 +968,39 @@
                     <groupId>javax</groupId>
                     <artifactId>javaee-endorsed-api</artifactId>
                     <type>jar</type>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-scm-plugin</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-svnexe</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-svn-commons</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-gitexe</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-git-commons</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-manager-plexus</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-client</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-providers-standard</artifactId>
+                    <type>pom</type>
                 </dependency>
             </dependencies>
             <build>
@@ -1098,6 +1124,47 @@
                         <version>${version.javax.javaee-endorsed-api}</version>
                         <type>jar</type>
                     </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-scm-plugin</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-svnexe</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-svn-commons</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-git-commons</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-manager-plexus</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-client</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-providers-standard</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                        <type>pom</type>
+                    </dependency>
                 </dependencies>
             </dependencyManagement>
             <dependencies>
@@ -1124,6 +1191,39 @@
                     <groupId>javax</groupId>
                     <artifactId>javaee-endorsed-api</artifactId>
                     <type>jar</type>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-scm-plugin</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-svnexe</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-svn-commons</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-gitexe</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-git-commons</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-manager-plexus</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-client</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-providers-standard</artifactId>
+                    <type>pom</type>
                 </dependency>
             </dependencies>
             <build>
@@ -1234,6 +1334,47 @@
                         <version>${version.org.jboss.arquillian.container.arquillian-glassfish-remote-3.1}</version>
                         <scope>test</scope>
                     </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-scm-plugin</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-svnexe</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-svn-commons</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-git-commons</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-manager-plexus</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-client</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-providers-standard</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                        <type>pom</type>
+                    </dependency>
                 </dependencies>
             </dependencyManagement>
             <dependencies>
@@ -1271,6 +1412,39 @@
                     <groupId>org.jboss.arquillian.container</groupId>
                     <artifactId>arquillian-glassfish-remote-3.1</artifactId>
                     <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-scm-plugin</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-svnexe</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-svn-commons</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-gitexe</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-git-commons</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-manager-plexus</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-client</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-providers-standard</artifactId>
+                    <type>pom</type>
                 </dependency>
             </dependencies>
             <build>
@@ -1320,6 +1494,47 @@
                         <version>${version.org.jboss.arquillian.container.arquillian-glassfish-managed-3.1}</version>
                         <scope>test</scope>
                     </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-scm-plugin</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-svnexe</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-svn-commons</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-git-commons</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-manager-plexus</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-client</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-providers-standard</artifactId>
+                        <version>${version.org.apache.maven.scm}</version>
+                        <type>pom</type>
+                    </dependency>
                 </dependencies>
             </dependencyManagement>
             <dependencies>
@@ -1327,6 +1542,39 @@
                     <groupId>org.jboss.arquillian.container</groupId>
                     <artifactId>arquillian-glassfish-managed-3.1</artifactId>
                     <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-scm-plugin</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-svnexe</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-svn-commons</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-gitexe</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-git-commons</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-manager-plexus</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-client</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-providers-standard</artifactId>
+                    <type>pom</type>
                 </dependency>
             </dependencies>
             <build>
