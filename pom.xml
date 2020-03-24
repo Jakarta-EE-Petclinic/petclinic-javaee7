@@ -598,6 +598,7 @@
     </dependencies>
 
     <build>
+        <finalName>${project.artifactId}</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -837,6 +838,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <build>
+                <finalName>${project.artifactId}</finalName>
                 <pluginManagement>
                     <plugins>
                         <plugin>
@@ -918,6 +920,7 @@
                 </dependency>
             </dependencies>
             <build>
+                <finalName>${project.artifactId}</finalName>
                 <pluginManagement>
                     <plugins>
                         <plugin>
@@ -1041,6 +1044,7 @@
                 </dependency>
             </dependencies>
             <build>
+                <finalName>${project.artifactId}</finalName>
                 <pluginManagement>
                     <plugins>
                         <plugin>
@@ -1173,9 +1177,24 @@
                 </dependency>
             </dependencies>
             <build>
+                <finalName>${project.artifactId}</finalName>
                 <pluginManagement>
                     <plugins>
-
+                            <plugin>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-dependency-plugin</artifactId>
+                                <version>2.10</version>
+                            </plugin>
+                            <plugin>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-surefire-plugin</artifactId>
+                                <version>2.16</version>
+                            </plugin>
+                            <plugin>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-war-plugin</artifactId>
+                                <version>2.3</version>
+                            </plugin>
                     </plugins>
                 </pluginManagement>
                 <plugins>
@@ -1203,6 +1222,7 @@
                 </dependency>
             </dependencies>
             <build>
+                <finalName>${project.artifactId}</finalName>
                 <pluginManagement>
                     <plugins>
                         <plugin>
