@@ -110,6 +110,7 @@
           <element id="library" level="project" name="Maven: org.jboss:jboss-vfs:3.2.5.Final" />
           <element id="library" level="project" name="Maven: io.undertow:undertow-core:1.1.8.Final" />
           <element id="library" level="project" name="Maven: org.jboss.msc:jboss-msc:1.2.2.Final" />
+          <element id="library" level="project" name="Maven: javax:javaee-endorsed-api:7.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
