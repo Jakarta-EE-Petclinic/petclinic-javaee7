@@ -56,7 +56,7 @@ function run() {
 }
 
 function main() {
-		#smokeTestAll
+		smokeTestAll
 		smoke
 		#run
 		#smokeTestsAdHoc
