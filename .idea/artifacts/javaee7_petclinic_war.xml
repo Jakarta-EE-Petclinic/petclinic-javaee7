@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="javaee7-petclinic.war">
+    <root id="archive" name="petclinic.war">
       <element id="artifact" artifact-name="javaee7-petclinic:war exploded" />
     </root>
   </artifact>
