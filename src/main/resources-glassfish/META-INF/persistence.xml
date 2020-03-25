@@ -20,10 +20,21 @@
             <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
             <property name="eclipselink.logging.level.sql" value="FINE"/>
             <property name="eclipselink.logging.parameters" value="true"/>
-            <!--
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
-            -->
             <property name="jpa.showSql" value="true"/>
         </properties>
     </persistence-unit>
+
+    <persistence-unit name="default" transaction-type="JTA">
+        <properties>
+            <property name="javax.persistence.jdbc.driver"
+                      value="org.apache.derby.jdbc.EmbeddedDriver"/>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:derby:target/glassfish4/javadb;create=true"/>
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="jpa.showSql" value="true"/>
+        </properties>
+    </persistence-unit>
+
 </persistence>
