@@ -72,10 +72,6 @@
         <version.javax.javaee-endorsed-api>7.0</version.javax.javaee-endorsed-api>
     </properties>
 
-    <prerequisites>
-        <maven>3.6.3</maven>
-    </prerequisites>
-
     <organization>
         <name>Jakarta-EE-Petclinic</name>
         <url>https://github.com/Jakarta-EE-Petclinic/javaee7-petclinic</url>
