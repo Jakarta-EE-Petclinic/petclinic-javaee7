@@ -70,7 +70,6 @@
         <version.org.glassfish.jersey.media.jersey-media-json-processing>2.4</version.org.glassfish.jersey.media.jersey-media-json-processing>
         <version.org.jboss.arquillian.container.arquillian-glassfish-remote-3.1>1.0.0.CR4</version.org.jboss.arquillian.container.arquillian-glassfish-remote-3.1>
         <version.org.jboss.arquillian.container.arquillian-glassfish-managed-3.1>1.0.2</version.org.jboss.arquillian.container.arquillian-glassfish-managed-3.1>
-        <version.docker-compose-maven-plugin>3.0.0</version.docker-compose-maven-plugin>
         <version.javax.javaee-endorsed-api>7.0</version.javax.javaee-endorsed-api>
     </properties>
 
@@ -1666,26 +1665,9 @@
                             <artifactId>maven-war-plugin</artifactId>
                             <version>${version.org.apache.maven.plugins.maven-war-plugin}</version>
                         </plugin>
-                        <plugin>
-                            <groupId>com.dkanejs.maven.plugins</groupId>
-                            <artifactId>docker-compose-maven-plugin</artifactId>
-                            <version>${version.docker-compose-maven-plugin}</version>
-                        </plugin>
                     </plugins>
                 </pluginManagement>
                 <plugins>
-                    <plugin>
-                        <groupId>com.dkanejs.maven.plugins</groupId>
-                        <artifactId>docker-compose-maven-plugin</artifactId>
-                        <configuration>
-                            <composeFile>${project.basedir}/docker-compose.yml</composeFile>
-                            <verbose>true</verbose>
-                            <removeImages>true</removeImages>
-                            <removeVolumes>true</removeVolumes>
-                            <ignorePullFailures>true</ignorePullFailures>
-                            <detachedMode>true</detachedMode>
-                        </configuration>
-                    </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-dependency-plugin</artifactId>
@@ -1974,11 +1956,6 @@
                             <version>${version.org.apache.maven.plugins.maven-surefire-plugin}</version>
                         </plugin>
                         <plugin>
-                            <groupId>com.dkanejs.maven.plugins</groupId>
-                            <artifactId>docker-compose-maven-plugin</artifactId>
-                            <version>${version.docker-compose-maven-plugin}</version>
-                        </plugin>
-                        <plugin>
                             <groupId>org.glassfish.embedded</groupId>
                             <artifactId>maven-embedded-glassfish-plugin</artifactId>
                             <version>${version.glassfish.server}</version>
@@ -1986,18 +1963,6 @@
                     </plugins>
                 </pluginManagement>
                 <plugins>
-                        <plugin>
-                            <groupId>com.dkanejs.maven.plugins</groupId>
-                            <artifactId>docker-compose-maven-plugin</artifactId>
-                            <configuration>
-                                <composeFile>${project.basedir}/docker-compose.yml</composeFile>
-                                <verbose>true</verbose>
-                                <removeImages>true</removeImages>
-                                <removeVolumes>true</removeVolumes>
-                                <ignorePullFailures>true</ignorePullFailures>
-                                <detachedMode>true</detachedMode>
-                            </configuration>
-                        </plugin>
                         <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-dependency-plugin</artifactId>
