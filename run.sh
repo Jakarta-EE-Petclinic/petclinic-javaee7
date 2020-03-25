@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-./mvnw
+#./mvnw
+
+./mvnw -Pglassfish-managed
