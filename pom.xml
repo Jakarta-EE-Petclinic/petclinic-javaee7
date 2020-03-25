@@ -1693,6 +1693,42 @@
             <dependencyManagement>
                 <dependencies>
                     <dependency>
+                        <groupId>org.glassfish</groupId>
+                        <artifactId>javax.json</artifactId>
+                        <version>${version.org.glassfish.javax.json}</version>
+                        <scope>test</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.glassfish.tyrus</groupId>
+                        <artifactId>tyrus-client</artifactId>
+                        <version>${version.org.glassfish.tyrus.tyrus-client}</version>
+                        <scope>test</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.glassfish.tyrus</groupId>
+                        <artifactId>tyrus-container-grizzly-client</artifactId>
+                        <version>${version.org.glassfish.tyrus.tyrus-container-grizzly-client}</version>
+                        <scope>test</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.glassfish.jersey.core</groupId>
+                        <artifactId>jersey-client</artifactId>
+                        <version>${version.org.glassfish.jersey.core.jersey-client}</version>
+                        <scope>test</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.glassfish.jersey.media</groupId>
+                        <artifactId>jersey-media-json-jackson</artifactId>
+                        <version>${version.org.glassfish.jersey.media.jersey-media-json-jackson}</version>
+                        <scope>test</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.glassfish.jersey.media</groupId>
+                        <artifactId>jersey-media-json-processing</artifactId>
+                        <version>${version.org.glassfish.jersey.media.jersey-media-json-processing}</version>
+                        <scope>test</scope>
+                    </dependency>
+                    <dependency>
                         <groupId>org.jboss.arquillian.container</groupId>
                         <artifactId>arquillian-glassfish-managed-3.1</artifactId>
                         <version>${version.org.jboss.arquillian.container.arquillian-glassfish-managed-3.1}</version>
@@ -1742,6 +1778,36 @@
                 </dependencies>
             </dependencyManagement>
             <dependencies>
+                <dependency>
+                    <groupId>org.glassfish</groupId>
+                    <artifactId>javax.json</artifactId>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.glassfish.tyrus</groupId>
+                    <artifactId>tyrus-client</artifactId>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.glassfish.tyrus</groupId>
+                    <artifactId>tyrus-container-grizzly-client</artifactId>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.glassfish.jersey.core</groupId>
+                    <artifactId>jersey-client</artifactId>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.glassfish.jersey.media</groupId>
+                    <artifactId>jersey-media-json-jackson</artifactId>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.glassfish.jersey.media</groupId>
+                    <artifactId>jersey-media-json-processing</artifactId>
+                    <scope>test</scope>
+                </dependency>
                 <dependency>
                     <groupId>org.jboss.arquillian.container</groupId>
                     <artifactId>arquillian-glassfish-managed-3.1</artifactId>
@@ -1831,7 +1897,7 @@
                                         <artifactItem>
                                             <groupId>org.glassfish.main.distributions</groupId>
                                             <artifactId>glassfish</artifactId>
-                                            <version>4.1</version>
+                                            <version>4.1.1</version>
                                             <type>zip</type>
                                             <outputDirectory>${project.build.directory}</outputDirectory>
                                         </artifactItem>
