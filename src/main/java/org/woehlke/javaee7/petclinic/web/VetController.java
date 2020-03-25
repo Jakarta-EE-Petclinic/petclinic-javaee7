@@ -70,7 +70,7 @@ public class VetController implements Serializable {
         this.vet = new Vet();
         this.specialties = specialtyDao.getAll();
         this.selectedSpecialties = new ArrayList<Specialty>();
-        return "newVet.jsf";
+        return "vetNew.jsf";
     }
 
     public String saveNewVet() {
@@ -79,7 +79,7 @@ public class VetController implements Serializable {
         }
         vetDao.addNew(this.vet);
         this.vets = vetDao.getAll();
-        return "vets.jsf";
+        return "vetList.jsf";
     }
 
     public List<Vet> getVets() {
@@ -92,7 +92,7 @@ public class VetController implements Serializable {
     public String getEditForm(long id) {
         this.vet = vetDao.findById(id);
         selectedSpecialties = vet.getSpecialties();
-        return "editVet.jsf";
+        return "vetEdit.jsf";
     }
 
     public String saveEditedVet() {
@@ -102,7 +102,7 @@ public class VetController implements Serializable {
         }
         vetDao.update(this.vet);
         this.vets = vetDao.getAll();
-        return "vets.jsf";
+        return "vetList.jsf";
     }
 
     public String deleteVet(long id) {
@@ -111,7 +111,7 @@ public class VetController implements Serializable {
         vetDao.update(this.vet);
         vetDao.delete(id);
         this.vets = vetDao.getAll();
-        return "vets.jsf";
+        return "vetList.jsf";
     }
 
     public String getSearchterm() {
@@ -132,7 +132,7 @@ public class VetController implements Serializable {
                 this.vets = vetDao.getAll();
             }
         }
-        return "vets.jsf";
+        return "vetList.jsf";
     }
 
     public int getScrollerPage() {

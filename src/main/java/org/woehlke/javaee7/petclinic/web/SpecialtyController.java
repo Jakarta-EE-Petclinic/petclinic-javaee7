@@ -60,22 +60,22 @@ public class SpecialtyController implements Serializable {
 
     public String getNewSpecialtyForm(){
         specialty = new Specialty();
-        return "newSpecialty.jsf";
+        return "specialtyNew.jsf";
     }
 
     public String saveNewSpecialty(){
         specialtyDao.addNew(this.specialty);
-        return "specialties.jsf";
+        return "specialtyList.jsf";
     }
 
     public String getEditForm(long id){
         this.specialty = specialtyDao.findById(id);
-        return "editSpecialty.jsf";
+        return "specialtyEdit.jsf";
     }
 
     public String saveEditedSpecialty(){
         specialtyDao.update(this.specialty);
-        return "specialties.jsf";
+        return "specialtyList.jsf";
     }
 
     public String delete(long id){
@@ -85,7 +85,7 @@ public class SpecialtyController implements Serializable {
             FacesContext ctx = FacesContext.getCurrentInstance();
             ctx.addMessage(null, new FacesMessage(languageBean.getMsgCantDeleteSpecialty()));
         }
-        return "specialties.jsf";
+        return "specialtyList.jsf";
     }
 
     public SortOrder getSpecialtySortOrder() {

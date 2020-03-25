@@ -63,22 +63,22 @@ public class PetTypeController implements Serializable {
 
     public String getNewPetTypeForm(){
         petType = new PetType();
-        return "newPetType.jsf";
+        return "petTypeNew.jsf";
     }
 
     public String saveNewPetType(){
         petTypeDao.addNew(this.petType);
-        return "petTypes.jsf";
+        return "petTypeList.jsf";
     }
 
     public String getEditForm(long id){
         this.petType = petTypeDao.findById(id);
-        return "editPetType.jsf";
+        return "petTypeEdit.jsf";
     }
 
     public String saveEditedPetType(){
         petTypeDao.update(this.petType);
-        return "petTypes.jsf";
+        return "petTypeList.jsf";
     }
 
     public String delete(long id){
@@ -88,7 +88,7 @@ public class PetTypeController implements Serializable {
             FacesContext ctx = FacesContext.getCurrentInstance();
             ctx.addMessage(null, new FacesMessage("cannot delete, object still in use"));
         }
-        return "petTypes.jsf";
+        return "petTypeList.jsf";
     }
 
     public void setScrollerPage(int scrollerPage) {

@@ -116,44 +116,44 @@ public class OwnerController implements Serializable {
                 this.ownerList = ownerDao.getAll();
             }
         }
-        return "owners.jsf";
+        return "ownerList.jsf";
     }
 
     public String getNewOwnerForm(){
         this.owner = new Owner();
-        return "newOwner.jsf";
+        return "ownerNew.jsf";
     }
 
     public String saveNewOwner(){
         ownerDao.addNew(this.owner);
         this.ownerList = ownerDao.getAll();
-        return "owners.jsf";
+        return "ownerList.jsf";
     }
 
     public String showOwner(long id){
         this.owner = ownerDao.findById(id);
-        return "showOwner.jsf";
+        return "ownerShow.jsf";
     }
 
     public String getEditForm(){
-        return "editOwner.jsf";
+        return "ownerEdit.jsf";
     }
 
     public String saveEditedOwner(){
         ownerDao.update(this.owner);
         this.ownerList = ownerDao.getAll();
-        return "showOwner.jsf";
+        return "ownerShow.jsf";
     }
 
     public String delete(long id){
         ownerDao.delete(id);
         this.ownerList = ownerDao.getAll();
-        return "owners.jsf";
+        return "ownerList.jsf";
     }
 
     public String getAddNewPetForm(){
         this.pet = new Pet();
-        return "addNewPet.jsf";
+        return "petNew.jsf";
     }
 
     public List<PetType> getAllPetTypes(){
@@ -166,13 +166,13 @@ public class OwnerController implements Serializable {
         this.owner.addPet(this.pet);
         petDao.addNew(this.pet);
         ownerDao.update(this.owner);
-        return "showOwner.jsf";
+        return "ownerShow.jsf";
     }
 
     public String editPetForm(long petId){
         this.pet = petDao.findById(petId);
         this.petTypeId = this.pet.getType().getId();
-        return "editPet.jsf";
+        return "petEdit.jsf";
     }
 
     public String saveEditedPet(){
@@ -181,14 +181,14 @@ public class OwnerController implements Serializable {
         petDao.update(this.pet);
         long ownerId = this.owner.getId();
         this.owner = this.ownerDao.findById(ownerId);
-        return "showOwner.jsf";
+        return "ownerShow.jsf";
     }
 
     public String addVisitToPetForm(long petId){
         this.pet = petDao.findById(petId);
         this.petTypeId = this.pet.getType().getId();
         this.visit = new Visit();
-        return "addVisitToPet.jsf";
+        return "petAddVisit.jsf";
     }
 
     public String saveVisit(){
@@ -199,7 +199,7 @@ public class OwnerController implements Serializable {
         long ownerId = this.owner.getId();
         this.owner = this.ownerDao.findById(ownerId);
         log.info("owner2: "+this.owner.toString());
-        return "showOwner.jsf";
+        return "ownerShow.jsf";
     }
 
     public void setScrollerPage(int scrollerPage) {
