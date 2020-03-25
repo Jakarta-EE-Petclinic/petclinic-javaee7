@@ -46,6 +46,7 @@
         <version.org.apache.maven.maven-repository-metadata>3.0.5</version.org.apache.maven.maven-repository-metadata>
         <version.javax.javaee-web-api>7.0</version.javax.javaee-web-api>
         <version.org.jboss.spec.jboss-javaee-web-7.0>1.0.0.Final</version.org.jboss.spec.jboss-javaee-web-7.0>
+        <version.maven-enforcer-plugin>3.0.0-M3</version.maven-enforcer-plugin>
         <version.org.apache.maven.plugins.maven-compiler-plugin>3.3</version.org.apache.maven.plugins.maven-compiler-plugin>
         <version.org.apache.maven.plugins.maven-war-plugin>3.2.3</version.org.apache.maven.plugins.maven-war-plugin>
         <version.org.apache.maven.plugins.maven-dependency-plugin>3.1.2</version.org.apache.maven.plugins.maven-dependency-plugin>
@@ -758,9 +759,43 @@
                     <artifactId>maven-surefire-report-plugin</artifactId>
                     <version>${version.org.apache.maven.plugins.maven-surefire-report-plugin}</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>${version.maven-enforcer-plugin}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>enforce-versions</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <bannedPlugins>
+                                    <level>WARN</level>
+                                    <excludes>
+                                        <exclude>org.apache.maven.plugins:maven-verifier-plugin</exclude>
+                                    </excludes>
+                                    <message>Please consider using the maven-invoker-plugin (http://maven.apache.org/plugins/maven-invoker-plugin/)!</message>
+                                </bannedPlugins>
+                                <requireMavenVersion>
+                                    <version>${version.maven}</version>
+                                </requireMavenVersion>
+                                <requireJavaVersion>
+                                    <version>${java.version}</version>
+                                </requireJavaVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
