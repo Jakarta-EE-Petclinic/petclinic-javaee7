@@ -7,31 +7,31 @@
                 xmlns:rich="http://richfaces.org/rich">>
 
         <ui:define name="content">
-            <h2 id="addNewVeterinarian">#{msg.addNewVeterinarian}</h2>
+            <h2 id="addNewVeterinarian">#{msg['addNewVeterinarian']}</h2>
             <h:form id="addNewVeterinarianForm">
                 <h:panelGroup>
                     <h:messages id="messages" layout="block" errorStyle="color: red"/>
                 </h:panelGroup>
 
                 <h:panelGrid id="grid" columns="2">
-                    <h:outputLabel value="#{msg.firstName}" for="firstName"/>
+                    <h:outputLabel value="#{msg['firstName']}" for="firstName"/>
                     <h:inputText id="firstName" styleClass="form-control"
                                  value="#{vetController.vet.firstName}"/>
-                    <h:outputLabel value="#{msg.lastName}" for="lastName"/>
+                    <h:outputLabel value="#{msg['lastName']}" for="lastName"/>
                     <h:inputText id="lastName" styleClass="form-control"
                                  value="#{vetController.vet.lastName}"/>
                 </h:panelGrid>
 
                 <rich:pickList id="selectedSpecialtiesPickList" value="#{vetController.selectedSpecialties}"
-                               sourceCaption="#{msg.availableSpecialties}"
-                               targetCaption="#{msg.selectedSpecialties}"
+                               sourceCaption="#{msg['availableSpecialties']}"
+                               targetCaption="#{msg['selectedSpecialties']}"
                                listWidth="165px" listHeight="100px" orderable="true">
                     <f:selectItems id="specialtiesItems" value="#{vetController.specialties}" var="specialty"
                                    itemValue="#{specialty}" itemLabel="#{specialty.name}" />
                     <f:converter converterId="SpecialtyConverter" />
                 </rich:pickList>
 
-                <h:commandButton id="save" value="#{msg.save}"
+                <h:commandButton id="save" value="#{msg['save']}"
                                  action="#{vetController.saveNewVet}" styleClass="btn"/>
             </h:form>
         </ui:define>

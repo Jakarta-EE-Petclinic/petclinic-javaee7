@@ -7,24 +7,24 @@
                 xmlns:rich="http://richfaces.org/rich">
 
         <ui:define name="content">
-            <h2 id="petTypes">#{msg.petTypes}</h2>
+            <h2 id="petTypes">#{msg['petTypes']}</h2>
             <h:form id="petTypesForm">
                 <rich:dataTable id="petTypesTable"  rows="5" value="#{petTypeController.petTypes}" var="petType" styleClass="table table-striped table-hover">
                     <rich:column id="colName" sortBy="#{petType.name}" sortOrder="#{petTypeController.petTypeSortOrder}">
                         <f:facet name="header">
-                            <a4j:commandLink id="colNameSort" value="#{msg.name}" render="petTypesTable" action="#{petTypeController.switchSortOrder}" />
+                            <a4j:commandLink id="colNameSort" value="#{msg['name']}" render="petTypesTable" action="#{petTypeController.switchSortOrder}" />
                         </f:facet>
                         <h:outputText id="name" value="#{petType.name}"/>
                     </rich:column>
                     <rich:column>
                         <f:facet name="header">
-                            <h:outputText value="#{msg.edit}"/>
+                            <h:outputText value="#{msg['edit']}"/>
                         </f:facet>
                         <h:commandLink id="edit" action="#{petTypeController.getEditForm(petType.id)}"><span class="glyphicon glyphicon-edit"/></h:commandLink>
                     </rich:column>
                     <rich:column>
                         <f:facet name="header">
-                            <h:outputText value="#{msg.delete}"/>
+                            <h:outputText value="#{msg['delete']}"/>
                         </f:facet>
                         <h:commandLink id="delete" action="#{petTypeController.delete(petType.id)}"><span class="glyphicon glyphicon-trash"/></h:commandLink>
                     </rich:column>
@@ -33,7 +33,7 @@
                                    page="#{petTypeController.scrollerPage}"
                                    id="scroller"/><br/>
                 <br/>
-                <span class="glyphicon glyphicon-plus-sign" /><h:commandLink id="getNewPetTypeForm" action="#{petTypeController.getNewPetTypeForm}"><h:outputText value="#{msg.addNewPetType}"/></h:commandLink>
+                <span class="glyphicon glyphicon-plus-sign" /><h:commandLink id="getNewPetTypeForm" action="#{petTypeController.getNewPetTypeForm}"><h:outputText value="#{msg['addNewPetType}"/></h:commandLink>
             </h:form>
         </ui:define>
 

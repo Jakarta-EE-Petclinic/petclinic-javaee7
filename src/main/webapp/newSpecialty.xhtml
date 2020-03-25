@@ -7,17 +7,17 @@
                 xmlns:rich="http://richfaces.org/rich">
 
         <ui:define name="content">
-            <h2 id="addNewSpecialty">#{msg.addNewSpecialty}</h2>
+            <h2 id="addNewSpecialty">#{msg['addNewSpecialty']}</h2>
             <h:form id="addNewSpecialtyForm">
                 <h:panelGroup>
                     <h:messages id="messages" layout="block" errorStyle="color: red"/>
                 </h:panelGroup>
                 <h:panelGrid id="grid" columns="2">
-                    <h:outputLabel value="#{msg.name}" for="name"/>
+                    <h:outputLabel value="#{msg['name']}" for="name"/>
                     <h:inputText id="name" styleClass="form-control"
                                  value="#{specialtyController.specialty.name}"/>
                 </h:panelGrid>
-                <h:commandButton id="save" value="#{msg.save}"
+                <h:commandButton id="save" value="#{msg['save']}"
                                  action="#{specialtyController.saveNewSpecialty}"/>
 
             </h:form>

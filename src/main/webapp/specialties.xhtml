@@ -7,7 +7,7 @@
                 xmlns:rich="http://richfaces.org/rich">
 
         <ui:define name="content">
-            <h2 id="specialties">#{msg.specialties}</h2>
+            <h2 id="specialties">#{msg['specialties']}</h2>
             <h:form id="specialtiesForm">
                 <h:panelGroup>
                     <h:messages id="messages" layout="block" errorStyle="color: red"/>
@@ -15,19 +15,19 @@
                 <rich:dataTable id="specialtiesTable" rows="5" value="#{specialtyController.specialties}" var="specialty" styleClass="table table-striped table-hover">
                     <rich:column id="colName" sortBy="#{specialty.name}" sortOrder="#{specialtyController.specialtySortOrder}">
                         <f:facet name="header">
-                            <a4j:commandLink id="colNameSort" value="#{msg.name}" render="specialtiesTable" action="#{specialtyController.switchSortOrder}" />
+                            <a4j:commandLink id="colNameSort" value="#{msg['name']}" render="specialtiesTable" action="#{specialtyController.switchSortOrder}" />
                         </f:facet>
                         <h:outputText id="name" value="#{specialty.name}"/>
                     </rich:column>
                     <rich:column id="colEdit">
                         <f:facet name="header">
-                            <h:outputText value="#{msg.edit}"/>
+                            <h:outputText value="#{msg['edit']}"/>
                         </f:facet>
                         <h:commandLink id="edit" action="#{specialtyController.getEditForm(specialty.id)}"><span class="glyphicon glyphicon-edit"/></h:commandLink>
                     </rich:column>
                     <rich:column id="colDelete">
                         <f:facet name="header">
-                            <h:outputText value="#{msg.delete}"/>
+                            <h:outputText value="#{msg['delete']}"/>
                         </f:facet>
                         <h:commandLink id="delete" action="#{specialtyController.delete(specialty.id)}"><span class="glyphicon glyphicon-trash"/></h:commandLink>
                     </rich:column>
@@ -36,7 +36,7 @@
                                    page="#{specialtyController.scrollerPage}"
                                    id="scroller"/><br/>
                 <br/>
-                <span class="glyphicon glyphicon-plus-sign" /><h:commandLink id="addNewSpecialty" action="#{specialtyController.getNewSpecialtyForm}">#{msg.addNewSpecialty}</h:commandLink>
+                <span class="glyphicon glyphicon-plus-sign" /><h:commandLink id="addNewSpecialty" action="#{specialtyController.getNewSpecialtyForm}">#{msg['addNewSpecialty']}</h:commandLink>
             </h:form>
         </ui:define>
 

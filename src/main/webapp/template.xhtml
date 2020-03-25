@@ -94,11 +94,11 @@
 
         <div class="masthead">
             <ul class="nav nav-justified">
-                <li><a href="./"><span class="glyphicon glyphicon-home"></span> #{msg.home}</a></li>
-                <li><a href="findOwners.jsf"><span class="glyphicon glyphicon-search"></span> #{msg.findOwners}</a></li>
-                <li><a href="vets.jsf"><span class="glyphicon glyphicon-search"></span> #{msg.veterinarians}</a></li>
-                <li><a href="specialties.jsf"><span class="glyphicon glyphicon-th-list"></span> #{msg.specialties}</a></li>
-                <li><a href="petTypes.jsf"><span class="glyphicon glyphicon-th-list"></span> #{msg.petTypes}</a></li>
+                <li><a href="./"><span class="glyphicon glyphicon-home"></span> #{msg['home']}</a></li>
+                <li><a href="findOwners.jsf"><span class="glyphicon glyphicon-search"></span> #{msg['findOwners']}</a></li>
+                <li><a href="vets.jsf"><span class="glyphicon glyphicon-search"></span> #{msg['veterinarians']}</a></li>
+                <li><a href="specialties.jsf"><span class="glyphicon glyphicon-th-list"></span> #{msg['specialties']}</a></li>
+                <li><a href="petTypes.jsf"><span class="glyphicon glyphicon-th-list"></span> #{msg['petTypes']}</a></li>
                 <li><a href="#" title="not available yet. Work in progress!!"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
             </ul>
         </div>
@@ -113,7 +113,7 @@
     </div>
     <div  style="float: right">
         <h:form>
-            <span class="glyphicon glyphicon-exclamation-sign"></span>#{msg.language}:
+            <span class="glyphicon glyphicon-exclamation-sign"></span>#{msg['language']}:
             <h:selectOneMenu value="#{language.localeCode}" onchange="submit()" valueChangeListener="#{language.countryLocaleCodeChanged}">
                 <f:selectItems value="#{language.countriesInMap}" />
             </h:selectOneMenu>

@@ -7,7 +7,7 @@
                 xmlns:rich="http://richfaces.org/rich">
 
         <ui:define name="content">
-            <h2 id="addNewPet">#{msg.addNewPet}</h2>
+            <h2 id="addNewPet">#{msg['addNewPet']}</h2>
             <h:form id="addNewPetForm">
 
                 <h:panelGroup>
@@ -15,27 +15,27 @@
                 </h:panelGroup>
 
                 <h:panelGrid id="grid" columns="2" styleClass="table table-striped">
-                    <h:outputLabel value="#{msg.owner} " for="firstName"/>
+                    <h:outputLabel value="#{msg['owner']} " for="firstName"/>
                     <h:panelGroup>
                         <h:outputText id="firstName"
                                       value="#{ownerController.owner.firstName}" />&#160;
                         <h:outputText id="lastName"
                                       value="#{ownerController.owner.lastName}"/>
                     </h:panelGroup>
-                    <h:outputLabel value="#{msg.name}" for="petName"/>
+                    <h:outputLabel value="#{msg['name']}" for="petName"/>
                     <h:inputText id="petName" styleClass="form-control"
                                  value="#{ownerController.pet.name}"/>
-                    <h:outputLabel value="#{msg.birthdate}" for="petBirthDate"/>
+                    <h:outputLabel value="#{msg['birthdate']}" for="petBirthDate"/>
                     <h:panelGroup>
                     <rich:calendar id="petBirthDate" locale="#{language.localeCode}"
                                  value="#{ownerController.pet.birthDate}"/>
                     </h:panelGroup>
-                    <h:outputLabel value="#{msg.petType}" for="petType"/>
+                    <h:outputLabel value="#{msg['petType']}" for="petType"/>
                     <h:selectOneListbox id="petType" value="#{ownerController.petTypeId}">
                         <f:selectItems id="petTypeItems" value="#{ownerController.allPetTypes}"
                                        var="petType" itemLabel="#{petType.name}" itemValue="#{petType.id}" />
                     </h:selectOneListbox>
-                    <h:commandButton id="add" value="#{msg.save}" style="float: left"
+                    <h:commandButton id="add" value="#{msg['save']}" style="float: left"
                                      action="#{ownerController.addNewPet}" styleClass="btn"/>
 
                 </h:panelGrid>
