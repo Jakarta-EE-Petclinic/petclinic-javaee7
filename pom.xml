@@ -2029,7 +2029,7 @@
                         <configuration>
                             <app>${project.build.directory}/${project.artifactId}.war</app>
                             <name>${project.artifactId}</name>
-                            <port>9090</port>
+                            <port>8080</port>
                             <contextRoot>${project.artifactId}</contextRoot>
                             <autoDelete>true</autoDelete>
                             <createTables>true</createTables>
