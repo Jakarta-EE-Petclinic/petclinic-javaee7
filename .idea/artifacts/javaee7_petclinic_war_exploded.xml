@@ -107,13 +107,6 @@
           <element id="library" level="project" name="Maven: com.mks.api:mksapi-jar:4.10.9049" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
-          <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-atom-provider:3.0.10.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-jaxrs:3.0.10.Final" />
-          <element id="library" level="project" name="Maven: javax.activation:activation:1.1.1" />
-          <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-jaxb-provider:3.0.10.Final" />
-          <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-impl:2.2.5.jboss-2" />
-          <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:2.6.1" />
-          <element id="library" level="project" name="Maven: com.sun.xml.txw2:txw2:20110809" />
           <element id="library" level="project" name="Maven: org.apache.derby:derby:10.13.1.1" />
           <element id="library" level="project" name="Maven: org.glassfish.main.common:simple-glassfish-api:4.1.1" />
         </element>
