@@ -423,12 +423,6 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>net.sourceforge.cobertura</groupId>
-                <artifactId>cobertura</artifactId>
-                <version>${version.net.sourceforge.cobertura.cobertura}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-scm-plugin</artifactId>
                 <version>${version.org.apache.maven.scm}</version>
@@ -671,11 +665,6 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>net.sourceforge.cobertura</groupId>
-            <artifactId>cobertura</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-scm-plugin</artifactId>
         </dependency>
@@ -812,10 +801,6 @@
                     <outputDirectory>target/site</outputDirectory>
                     <generateReports>true</generateReports>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>cobertura-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

@@ -43,6 +43,7 @@
           <element id="library" level="project" name="Maven: org.apache.avro:avro:1.7.6" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.2.jbossorg-1" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-facet:3.6.2" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-search-orm:4.5.0.Final" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:4.3.7.Final" />
@@ -74,7 +75,6 @@
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.9" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:16.0.1" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.2.jbossorg-1" />
           <element id="library" level="project" name="Maven: org.apache.maven.plugins:maven-scm-plugin:1.11.2" />
           <element id="library" level="project" name="Maven: org.apache.maven:maven-project:2.2.1" />
           <element id="library" level="project" name="Maven: org.apache.maven:maven-profile:2.2.1" />
