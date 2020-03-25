@@ -35,7 +35,7 @@ public class VetWebservice {
     }
 
     @GET
-    @Produces("")
+    @Produces("application/json")
     @Path("/json")
     public Vets getJson(){
         Vets vets = new Vets();
