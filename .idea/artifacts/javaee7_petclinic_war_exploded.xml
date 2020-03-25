@@ -113,8 +113,7 @@
           <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-impl:2.2.5.jboss-2" />
           <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:2.6.1" />
           <element id="library" level="project" name="Maven: com.sun.xml.txw2:txw2:20110809" />
-          <element id="library" level="project" name="Maven: org.apache.derby:derby:10.15.2.0" />
-          <element id="library" level="project" name="Maven: org.apache.derby:derbyshared:10.15.2.0" />
+          <element id="library" level="project" name="Maven: org.apache.derby:derby:10.13.1.1" />
           <element id="library" level="project" name="Maven: org.glassfish.main.common:simple-glassfish-api:4.1.1" />
         </element>
       </element>
