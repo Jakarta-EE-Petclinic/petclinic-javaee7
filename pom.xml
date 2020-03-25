@@ -388,17 +388,6 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpcore</artifactId>
-                <version>${version.org.apache.httpcomponents.httpcore}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpclient</artifactId>
-                <version>${version.org.apache.httpcomponents.httpclient}</version>
-            </dependency>
-            <dependency>
                 <groupId>xml-apis</groupId>
                 <artifactId>xml-apis</artifactId>
                 <version>${version.xml-apis.xml-apis}</version>
@@ -1017,6 +1006,17 @@
                         <version>${version.org.apache.maven.scm}</version>
                         <type>pom</type>
                     </dependency>
+                    <dependency>
+                        <groupId>org.apache.httpcomponents</groupId>
+                        <artifactId>httpcore</artifactId>
+                        <version>${version.org.apache.httpcomponents.httpcore}</version>
+                        <scope>test</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.httpcomponents</groupId>
+                        <artifactId>httpclient</artifactId>
+                        <version>${version.org.apache.httpcomponents.httpclient}</version>
+                    </dependency>
                 </dependencies>
             </dependencyManagement>
             <dependencies>
@@ -1081,6 +1081,15 @@
                     <groupId>org.jboss.resteasy</groupId>
                     <artifactId>resteasy-atom-provider</artifactId>
                     <scope>provided</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.httpcomponents</groupId>
+                    <artifactId>httpcore</artifactId>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.httpcomponents</groupId>
+                    <artifactId>httpclient</artifactId>
                 </dependency>
             </dependencies>
             <build>
@@ -1289,6 +1298,17 @@
                         <version>${version.org.apache.maven.scm}</version>
                         <type>pom</type>
                     </dependency>
+                    <dependency>
+                        <groupId>org.apache.httpcomponents</groupId>
+                        <artifactId>httpcore</artifactId>
+                        <version>${version.org.apache.httpcomponents.httpcore}</version>
+                        <scope>test</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.httpcomponents</groupId>
+                        <artifactId>httpclient</artifactId>
+                        <version>${version.org.apache.httpcomponents.httpclient}</version>
+                    </dependency>
                 </dependencies>
             </dependencyManagement>
             <dependencies>
@@ -1353,6 +1373,15 @@
                     <groupId>org.jboss.resteasy</groupId>
                     <artifactId>resteasy-atom-provider</artifactId>
                     <scope>provided</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.httpcomponents</groupId>
+                    <artifactId>httpcore</artifactId>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.httpcomponents</groupId>
+                    <artifactId>httpclient</artifactId>
                 </dependency>
             </dependencies>
             <build>
@@ -1834,6 +1863,16 @@
                         <artifactId>simple-glassfish-api</artifactId>
                         <version>${version.glassfish.server}</version>
                     </dependency>
+                    <dependency>
+                        <groupId>org.apache.httpcomponents</groupId>
+                        <artifactId>httpcore</artifactId>
+                        <version>${version.org.apache.httpcomponents.httpcore}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.httpcomponents</groupId>
+                        <artifactId>httpclient</artifactId>
+                        <version>${version.org.apache.httpcomponents.httpclient}</version>
+                    </dependency>
                 </dependencies>
             </dependencyManagement>
             <dependencies>
@@ -1921,6 +1960,14 @@
                 <dependency>
                     <groupId>org.glassfish.main.common</groupId>
                     <artifactId>simple-glassfish-api</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.httpcomponents</groupId>
+                    <artifactId>httpcore</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.httpcomponents</groupId>
+                    <artifactId>httpclient</artifactId>
                 </dependency>
             </dependencies>
             <build>
