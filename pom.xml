@@ -1783,6 +1783,7 @@
             </dependencies>
             <build>
                 <finalName>${project.artifactId}</finalName>
+                <defaultGoal>clean install</defaultGoal>
                 <pluginManagement>
                     <plugins>
                         <plugin>
