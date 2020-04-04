@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources-glassfish" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources-wildfly" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/resources" charset="UTF-8" />
   </component>
 </project>
