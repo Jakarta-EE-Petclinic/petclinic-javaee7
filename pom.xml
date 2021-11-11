@@ -38,7 +38,7 @@
         <version.org.jboss.spec.javax.faces.jboss-jsf-api_2.2_spec>2.2.4</version.org.jboss.spec.javax.faces.jboss-jsf-api_2.2_spec>
         <version.net.sourceforge.cssparser.cssparser>0.9.13</version.net.sourceforge.cssparser.cssparser>
         <version.org.jboss.shrinkwrap.descriptors.shrinkwrap-descriptors-api>1.1.0-alpha-5</version.org.jboss.shrinkwrap.descriptors.shrinkwrap-descriptors-api>
-        <version.junit.junit>4.12</version.junit.junit>
+        <version.junit.junit>4.13.1</version.junit.junit>
         <version.org.apache.httpcomponents.httpcore>4.3.2</version.org.apache.httpcomponents.httpcore>
         <version.org.apache.httpcomponents.httpclient>[4.5.13,)</version.org.apache.httpcomponents.httpclient>
         <version.xml-apis.xml-apis>1.4.01</version.xml-apis.xml-apis>
