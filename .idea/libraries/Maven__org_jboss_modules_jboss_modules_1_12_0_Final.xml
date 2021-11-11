@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.jboss.modules:jboss-modules:1.12.0.Final">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/modules/jboss-modules/1.12.0.Final/jboss-modules-1.12.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/modules/jboss-modules/1.12.0.Final/jboss-modules-1.12.0.Final-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/modules/jboss-modules/1.12.0.Final/jboss-modules-1.12.0.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

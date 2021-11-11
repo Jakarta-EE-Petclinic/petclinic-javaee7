@@ -15,16 +15,15 @@
           <element id="module-output" name="petclinic" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.1.4.GA" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.4.2.Final" />
           <element id="library" level="project" name="Maven: org.richfaces:richfaces:4.5.17.Final" />
           <element id="library" level="project" name="Maven: org.richfaces:richfaces-core:4.5.17.Final" />
           <element id="library" level="project" name="Maven: org.richfaces:richfaces-a4j:4.5.17.Final" />
           <element id="library" level="project" name="Maven: net.sourceforge.cssparser:cssparser:0.9.13" />
           <element id="library" level="project" name="Maven: org.w3c.css:sac:1.3" />
-          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
           <element id="library" level="project" name="Maven: org.jboss.spec.javax.faces:jboss-jsf-api_2.2_spec:2.2.4" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-search-engine:4.5.0.Final" />
-          <element id="library" level="project" name="Maven: org.hibernate:hibernate-search-analyzers:4.5.1.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-search-analyzers:4.5.0.Final" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-analyzers:3.6.2" />
           <element id="library" level="project" name="Maven: org.apache.solr:solr-analysis-extras:3.6.2" />
           <element id="library" level="project" name="Maven: org.apache.solr:solr-core:3.6.2" />
@@ -32,50 +31,57 @@
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-highlighter:3.6.2" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-kuromoji:3.6.2" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-memory:3.6.2" />
-          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-misc:3.6.2" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-misc:5.5.5" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-phonetic:3.6.2" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-spatial:3.6.2" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-spellchecker:3.6.2" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-grouping:3.6.2" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-smartcn:3.6.2" />
           <element id="library" level="project" name="Maven: org.apache.lucene:lucene-stempel:3.6.2" />
-          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:4.0.4.Final" />
-          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-core:3.6.2" />
+          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.0.5.Final" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-core:5.5.5" />
           <element id="library" level="project" name="Maven: org.apache.avro:avro:1.7.6" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.2.jbossorg-1" />
-          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-facet:3.6.2" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.32" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-facet:5.5.5" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-queries:5.5.5" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-search-orm:4.5.0.Final" />
-          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:4.3.7.Final" />
-          <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
-          <element id="library" level="project" name="Maven: org.javassist:javassist:3.18.1-GA" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.3.23.Final" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.27.0-GA" />
+          <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.11.12" />
           <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
-          <element id="library" level="project" name="Maven: org.jboss:jandex:1.2.1.Final" />
+          <element id="library" level="project" name="Maven: org.jboss:jandex:2.4.1.Final" />
+          <element id="library" level="project" name="Maven: org.dom4j:dom4j:2.1.3" />
+          <element id="library" level="project" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.3-b02" />
+          <element id="library" level="project" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2" />
+          <element id="library" level="project" name="Maven: org.glassfish.jaxb:txw2:2.3.3-b02" />
+          <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:3.0.10" />
+          <element id="library" level="project" name="Maven: com.sun.activation:jakarta.activation:1.2.2" />
           <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.0.3" />
           <element id="library" level="project" name="Maven: org.webjars:jquery:1.9.0" />
           <element id="library" level="project" name="Maven: org.apache.maven:maven-model:3.0.5" />
           <element id="library" level="project" name="Maven: org.apache.maven:maven-repository-metadata:3.0.5" />
           <element id="library" level="project" name="Maven: org.apache.maven:maven-settings:3.0.5" />
           <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-interpolation:1.14" />
-          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-utils:3.0.15" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-utils:3.1.1" />
           <element id="library" level="project" name="Maven: org.sonatype.plexus:plexus-sec-dispatcher:1.4" />
           <element id="library" level="project" name="Maven: org.sonatype.plexus:plexus-cipher:1.4" />
           <element id="library" level="project" name="Maven: org.apache.maven.wagon:wagon-provider-api:2.4" />
           <element id="library" level="project" name="Maven: org.jboss.arquillian.config:arquillian-config-api:1.1.4.Final" />
           <element id="library" level="project" name="Maven: org.jboss.arquillian.test:arquillian-test-api:1.1.4.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.arquillian.test:arquillian-test-spi:1.1.2.Final-wildfly-1" />
-          <element id="library" level="project" name="Maven: org.jboss.arquillian.container:arquillian-container-test-api:1.1.2.Final-wildfly-1" />
-          <element id="library" level="project" name="Maven: org.jboss.arquillian.container:arquillian-container-test-spi:1.1.2.Final-wildfly-1" />
+          <element id="library" level="project" name="Maven: org.jboss.arquillian.test:arquillian-test-spi:1.1.4.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.arquillian.container:arquillian-container-test-api:1.1.4.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.arquillian.container:arquillian-container-test-spi:1.6.0.Final" />
           <element id="library" level="project" name="Maven: org.jboss.arquillian.config:arquillian-config-impl-base:1.1.4.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.arquillian.container:arquillian-container-spi:1.1.2.Final-wildfly-1" />
+          <element id="library" level="project" name="Maven: org.jboss.arquillian.container:arquillian-container-spi:1.1.4.Final" />
           <element id="library" level="project" name="Maven: org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-spi:2.0.0-alpha-5" />
           <element id="library" level="project" name="Maven: org.easytesting:fest-assert:1.4" />
           <element id="library" level="project" name="Maven: org.easytesting:fest-util:1.1.6" />
-          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.5.13.redhat-00002" />
-          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.9" />
-          <element id="library" level="project" name="Maven: com.google.guava:guava:16.0.1" />
-          <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.5.13" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.15" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:30.1-jre" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.10.0" />
           <element id="library" level="project" name="Maven: org.apache.maven.plugins:maven-scm-plugin:1.11.2" />
           <element id="library" level="project" name="Maven: org.apache.maven:maven-project:2.2.1" />
           <element id="library" level="project" name="Maven: org.apache.maven:maven-profile:2.2.1" />
@@ -113,53 +119,87 @@
           <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-vss:1.11.2" />
           <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-tfs:1.11.2" />
           <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-jgit:1.11.2" />
-          <element id="library" level="project" name="Maven: org.eclipse.jgit:org.eclipse.jgit:4.5.4.201711221230-r" />
-          <element id="library" level="project" name="Maven: com.jcraft:jsch:0.1.53" />
-          <element id="library" level="project" name="Maven: com.googlecode.javaewah:JavaEWAH:0.7.9" />
+          <element id="library" level="project" name="Maven: org.eclipse.jgit:org.eclipse.jgit:5.13.0.202109080827-r" />
+          <element id="library" level="project" name="Maven: com.googlecode.javaewah:JavaEWAH:1.1.12" />
           <element id="library" level="project" name="Maven: org.apache.maven.scm:maven-scm-provider-integrity:1.11.2" />
           <element id="library" level="project" name="Maven: com.mks.api:mksapi-jar:4.10.9049" />
-          <element id="library" level="project" name="Maven: org.jboss.xnio:xnio-api:3.3.0.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.xnio:xnio-nio:3.3.0.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.marshalling:jboss-marshalling:1.4.9.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.marshalling:jboss-marshalling-river:1.4.9.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.remoting:jboss-remoting:4.0.7.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.remotingjmx:remoting-jmx:2.0.0.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.sasl:jboss-sasl:1.0.4.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.arquillian.core:arquillian-core-api:1.1.2.Final-wildfly-1" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-build-config:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-security-manager:1.0.0.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.arquillian.core:arquillian-core-spi:1.1.2.Final-wildfly-1" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-controller-client:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-protocol:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.jboss:jboss-dmr:1.2.0.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.threads:jboss-threads:2.1.1.Final" />
-          <element id="library" level="project" name="Maven: org.jboss:jboss-common-core:2.2.22.GA" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-arquillian-testenricher-msc:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-server:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-controller:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-core-security:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-core-security-api:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.jboss:staxmapper:1.1.0.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-domain-http-interface:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-domain-management:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-deployment-repository:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-patching:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-cli:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.aesh:aesh:0.33.11" />
-          <element id="library" level="project" name="Maven: org.fusesource.jansi:jansi:1.9" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-platform-mbean:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-process-controller:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-remoting:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-io:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-network:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.wildfly:wildfly-version:8.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.invocation:jboss-invocation:1.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.logmanager:jboss-logmanager:1.5.2.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.modules:jboss-modules:1.3.3.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.stdio:jboss-stdio:1.0.2.GA" />
-          <element id="library" level="project" name="Maven: org.jboss:jboss-vfs:3.2.5.Final" />
-          <element id="library" level="project" name="Maven: io.undertow:undertow-core:1.1.8.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.msc:jboss-msc:1.2.2.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.xnio:xnio-api:3.8.4.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.client:wildfly-client-config:1.0.1.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.threads:jboss-threads:2.4.0.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.xnio:xnio-nio:3.8.4.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.marshalling:jboss-marshalling:2.0.12.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.remoting:jboss-remoting:5.0.23.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.arquillian.core:arquillian-core-api:1.1.4.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.arquillian.core:arquillian-core-spi:1.1.4.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.msc:jboss-msc:1.4.13.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-auth:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-util:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-auth-server:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-x500:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-permission:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-realm:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-security-manager:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-security-manager-action:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-remoting:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-domain-management:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-http-util:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-sasl-digest:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-mechanism-digest:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-io:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-audit:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-auth-server-http:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-auth-server-sasl:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-auth-server-deprecated:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-auth-util:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-mechanism-gssapi:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-sasl:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-ssl:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-sasl-anonymous:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-core-security:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-controller-client:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-protocol:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-sasl-localuser:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.jboss:jboss-dmr:1.6.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-base:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.common:wildfly-common:1.5.4.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.arquillian:wildfly-arquillian-testenricher-msc:5.0.0.Alpha1" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-server:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-controller:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-credential-source-impl:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-password-impl:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-x500-cert-acme:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-x500-cert-util:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.logmanager:jboss-logmanager:2.1.18.Final" />
+          <element id="library" level="project" name="Maven: org.jboss:staxmapper:1.3.0.Final" />
+          <element id="library" level="project" name="Maven: org.projectodd.vdx:vdx-wildfly:1.1.6" />
+          <element id="library" level="project" name="Maven: org.projectodd.vdx:vdx-core:1.1.6" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-core-management-client:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-domain-http-interface:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-http:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security.elytron-web:undertow-server:1.10.0.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-deployment-repository:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-platform-mbean:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-process-controller:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-network:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-client:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-credential-store:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-encryption:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-keystore:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-mechanism:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-provider-util:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-x500-cert:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-credential:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.security:wildfly-elytron-asn1:1.17.1.Final" />
+          <element id="library" level="project" name="Maven: org.wildfly.core:wildfly-version:17.0.3.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.classfilewriter:jboss-classfilewriter:1.2.5.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.invocation:jboss-invocation:1.7.0.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.modules:jboss-modules:1.12.0.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.stdio:jboss-stdio:1.1.0.Final" />
+          <element id="library" level="project" name="Maven: org.jboss:jboss-vfs:3.2.15.Final" />
+          <element id="library" level="project" name="Maven: io.undertow:undertow-core:2.2.12.Final" />
+          <element id="library" level="project" name="Maven: org.eclipse.jgit:org.eclipse.jgit.ssh.apache:5.13.0.202109080827-r" />
+          <element id="library" level="project" name="Maven: org.apache.sshd:sshd-common:2.7.0" />
+          <element id="library" level="project" name="Maven: org.apache.sshd:sshd-core:2.7.0" />
           <element id="library" level="project" name="Maven: javax:javaee-endorsed-api:7.0" />
         </element>
       </element>
