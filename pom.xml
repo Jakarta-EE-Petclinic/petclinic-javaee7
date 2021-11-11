@@ -19,7 +19,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.report.sourceEncoding>UTF-8</project.report.sourceEncoding>
-        <jboss.version>8.2.1.Final</jboss.version>
+        <jboss.version>23.0.2.Final</jboss.version>
         <version.glassfish.server>4.1.1</version.glassfish.server>
         <version.glassfish.server.derby>10.13.1.1</version.glassfish.server.derby>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
