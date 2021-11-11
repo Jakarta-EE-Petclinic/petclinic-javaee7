@@ -69,16 +69,28 @@ The OpenShift `jbossas` cartridge documentation can be found at:
 
 https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-jbossas/README.md
 
-## First Steps ##
 
-add some PetTypes like dog,cat,mouse,...
+## Software Design
+### Domain Class Modell
+![Figure Domain Class Modell](jakartaee-petclinic-docs/src/images/DomainClassModell.jpg)
+### Use Cases
+![Figure Uses Cases Vet](jakartaee-petclinic-docs/src/images/UseCases.jpg)
+![Figure Uses Cases Owner](jakartaee-petclinic-docs/src/images/UseCasesOwner.jpg)
+### Page Flow
+![Figure Pageflow](jakartaee-petclinic-docs/src/images/Pageflow.jpg)
+### Screens
+#### Add Vet with ManyToMany Relation to Specialty
+![Figure Add Vet with ManyToMany Relation to Specialty](jakartaee-petclinic-docs/src/images/screenAddVet.png)
+#### New Visit
+![Figure New Visit](jakartaee-petclinic-docs/src/images/screenNewVisit.png])
+#### Owner
+![Figure Owner](jakartaee-petclinic-docs/src/images/screenOwner.png)
 
-add some Specialties for Vetinarians like dentist, anesthetist, radiology,...
+### First Steps to use
+* add some PetTypes like dog,cat,mouse,...
+* add some Specialties for Vetinarians like dentist, anesthetist, radiology,...
+* add a Vetinarian
+* add an Owner, add him am a Pet and his Pet a visit.
 
-add a Vetinarian
-
-add an Owner, add him am a Pet and his Pet a visit.
-
-## visit Spring Petclinic ##
-
-https://github.com/spring-projects/spring-petclinic
+#### visit Spring Petclinic
+* [github.com/spring-projects/spring-petclinic](https://github.com/spring-projects/spring-petclinic)
