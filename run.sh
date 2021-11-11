@@ -2,4 +2,5 @@
 
 #./mvnw
 
-./mvnw -Pglassfish-managed
+#./mvnw -Pglassfish-managed
+./mvnw -Pwildfly-managed

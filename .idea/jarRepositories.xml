@@ -2,9 +2,44 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Central" />
+      <option name="name" value="Central" />
+      <option name="url" value="https://repo1.maven.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="JBossReleases" />
+      <option name="name" value="JBoss Releases" />
+      <option name="url" value="http://tw-asus7:8081/artifactory/mvn" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="snapshots" />
+      <option name="name" value="mvn" />
+      <option name="url" value="http://tw-asus7:8081/artifactory/mvn" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Central" />
+      <option name="name" value="Central" />
+      <option name="url" value="http://tw-asus7:8081/artifactory/mvn" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="JCenter" />
+      <option name="name" value="JCenter" />
+      <option name="url" value="http://tw-asus7:8081/artifactory/mvn" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="RedhatEARepository" />
       <option name="name" value="RedhatEARepository" />
-      <option name="url" value="https://maven.repository.redhat.com/earlyaccess/all/" />
+      <option name="url" value="http://tw-asus7:8081/artifactory/mvn" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="JBoss3rdpartyRepository" />
@@ -13,23 +48,8 @@
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
-      <option name="name" value="Central Repository" />
-      <option name="url" value="https://repo.maven.apache.org/maven2" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="central" />
-      <option name="name" value="Maven Central repository" />
-      <option name="url" value="https://repo1.maven.org/maven2" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="Central" />
-      <option name="name" value="Central" />
-      <option name="url" value="https://repo1.maven.org/maven2/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="JCenter" />
-      <option name="name" value="JCenter" />
-      <option name="url" value="https://jcenter.bintray.com/" />
+      <option name="name" value="mvn" />
+      <option name="url" value="http://tw-asus7:8081/artifactory/mvn" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="JBossReleases" />
@@ -37,9 +57,24 @@
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/releases/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="JBoss3rdpartyRepository" />
+      <option name="name" value="JBoss 3rd-party Repository" />
+      <option name="url" value="http://tw-asus7:8081/artifactory/mvn" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="RedhatEARepository" />
+      <option name="name" value="RedhatEARepository" />
+      <option name="url" value="https://maven.repository.redhat.com/earlyaccess/all/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="JCenter" />
+      <option name="name" value="JCenter" />
+      <option name="url" value="https://jcenter.bintray.com/" />
     </remote-repository>
   </component>
 </project>

@@ -18,7 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="javaee7-petclinic" options="-endorseddirs $PROJECT_DIR$/target/endorsed" />
-      <module name="petclinic" options="-endorseddirs C:\Users\tw\IdeaProjects\Jakarta-EE-Petclinic\javaee7-petclinic\target/endorsed" />
+      <module name="petclinic" options="-endorseddirs $PROJECT_DIR$/target/endorsed" />
     </option>
   </component>
 </project>

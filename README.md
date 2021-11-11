@@ -72,19 +72,19 @@ https://github.com/openshift/origin-server/tree/master/cartridges/openshift-orig
 
 ## Software Design
 ### Domain Class Modell
-![Figure Domain Class Modell](jakartaee-petclinic-docs/src/images/DomainClassModell.jpg)
+![Figure Domain Class Modell](src/site/resources/images/DomainClassModell.jpg)
 ### Use Cases
-![Figure Uses Cases Vet](jakartaee-petclinic-docs/src/images/UseCases.jpg)
-![Figure Uses Cases Owner](jakartaee-petclinic-docs/src/images/UseCasesOwner.jpg)
+![Figure Uses Cases Vet](src/site/resources/images/UseCases.jpg)
+![Figure Uses Cases Owner](src/site/resources/images/UseCasesOwner.jpg)
 ### Page Flow
-![Figure Pageflow](jakartaee-petclinic-docs/src/images/Pageflow.jpg)
+![Figure Pageflow](src/site/resources/images/Pageflow.jpg)
 ### Screens
 #### Add Vet with ManyToMany Relation to Specialty
-![Figure Add Vet with ManyToMany Relation to Specialty](jakartaee-petclinic-docs/src/images/screenAddVet.png)
+![Figure Add Vet with ManyToMany Relation to Specialty](src/site/resources/images/screenAddVet.png)
 #### New Visit
-![Figure New Visit](jakartaee-petclinic-docs/src/images/screenNewVisit.png])
+![Figure New Visit](src/site/resources/images/screenNewVisit.png)
 #### Owner
-![Figure Owner](jakartaee-petclinic-docs/src/images/screenOwner.png)
+![Figure Owner](src/site/resources/images/screenOwner.png)
 
 ### First Steps to use
 * add some PetTypes like dog,cat,mouse,...
