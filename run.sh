@@ -3,4 +3,4 @@
 #./mvnw
 
 #./mvnw -Pglassfish-managed
-./mvnw -Pwildfly-managed
+./mvnw -Pwildfly-managed -DskipTests=true
